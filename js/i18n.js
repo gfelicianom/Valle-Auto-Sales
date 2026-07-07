@@ -139,9 +139,19 @@ const I18N = {
     story_p3: "El tiempo siguió su marcha. El hijo mayor de Eligio, Giovanni Feliciano, crecía y se integraba al negocio — igual que los hijos de su hermano. Para que ambas familias y sus hijos pudieran seguir creciendo, los hermanos decidieron que era momento de que cada uno tuviera su propio dealer. Dividieron el terreno. Eligio conservó su parte y construyó, en concreto sólido, el primer hogar en concreto de Valle Auto Sales — el nombre que llevaba desde aquel primer local alquilado. Su hermano cambió de nombre y continuó su propio negocio.",
     story_p4: "Hasta el día de hoy, Valle Auto Sales es de Eligio Feliciano Valle — y si se fija bien, su segundo apellido, Valle, es el mismo nombre que el dealer ha llevado desde el principio. Su hijo Giovanni Feliciano Méndez trabaja junto a él, en compañía de la esposa de Giovanni, Maritza García Soto. Sigue siendo, como siempre fue, un negocio de familia.",
     story_visit: "Pase a visitarnos — aquí lo atiende la familia.",
+    story_photo_caption: "Eligio y Giovanni — dos generaciones al frente de Valle Auto Sales.",
+
+    // Reviews / social
+    reviews_badge: "4.5 ★ en Google",
+    reviews_count: "47 reseñas de nuestros clientes",
+    reviews_link: "Lea las reseñas →",
+    fb_follow: "Síganos en Facebook",
 
     // Contact
     contact_title: "Contacto / Visítenos",
+    contact_hours: "Horario",
+    hours_weekdays: "Lunes a Sábado: 8:00 AM – 6:00 PM",
+    hours_sunday: "Domingo: Cerrado",
     contact_phones: "Teléfonos",
     contact_email: "Email",
     contact_address: "Dirección física",
@@ -283,8 +293,17 @@ const I18N = {
     story_p3: "Time kept moving. Eligio's oldest son, Giovanni Feliciano, was growing up and becoming part of the business — and so were his brother's children. To let both families and their children keep growing, the brothers decided it was time for each to have his own dealership. They divided the land. Eligio kept his portion and built, in solid concrete, the first concrete home of Valle Auto Sales — the name it had carried since that very first rented location. His brother rebranded and continued his own business.",
     story_p4: "To this day, Valle Auto Sales is owned by Eligio Feliciano Valle — and if you look closely, his second last name, Valle, is the very name the dealership has carried from the beginning. His son Giovanni Feliciano Méndez works alongside him, together with Giovanni's wife, Maritza García Soto. It remains, as it always was, a family business.",
     story_visit: "Come visit us — you'll be welcomed by the family.",
+    story_photo_caption: "Eligio and Giovanni — two generations leading Valle Auto Sales.",
+
+    reviews_badge: "4.5 ★ on Google",
+    reviews_count: "47 reviews from our customers",
+    reviews_link: "Read the reviews →",
+    fb_follow: "Follow us on Facebook",
 
     contact_title: "Contact / Visit Us",
+    contact_hours: "Hours",
+    hours_weekdays: "Monday–Saturday: 8:00 AM – 6:00 PM",
+    hours_sunday: "Sunday: Closed",
     contact_phones: "Phones",
     contact_email: "Email",
     contact_address: "Physical address",

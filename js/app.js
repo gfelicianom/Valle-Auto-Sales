@@ -61,11 +61,16 @@ function renderHome() {
   app.innerHTML = `
   <section class="hero">
     <div class="hero-inner">
-      <h1>${t("hero_title")}</h1>
-      <p>${t("hero_sub")}</p>
-      <div class="hero-ctas">
-        <a href="#/inventario" class="btn btn-red">${t("hero_cta")}</a>
-        <a href="#/contacto" class="btn btn-outline">${t("hero_cta2")}</a>
+      <div class="hero-copy">
+        <h1>${t("hero_title")}</h1>
+        <p>${t("hero_sub")}</p>
+        <div class="hero-ctas">
+          <a href="#/inventario" class="btn btn-red">${t("hero_cta")}</a>
+          <a href="#/contacto" class="btn btn-outline">${t("hero_cta2")}</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="img/dealership.jpg" alt="Valle Auto Sales, Aguada, Puerto Rico" loading="eager">
       </div>
     </div>
   </section>
@@ -88,6 +93,11 @@ function renderHome() {
       <div class="home-panel panel-visit">
         <h2>${t("visit_title")}</h2>
         <p>${t("visit_text")}</p>
+        <div class="reviews-badge">
+          <span class="reviews-stars">${t("reviews_badge")}</span>
+          <span class="reviews-count">${t("reviews_count")}</span>
+          <a href="${MAP_LINK}" target="_blank" rel="noopener">${t("reviews_link")}</a>
+        </div>
         <a href="${MAP_LINK}" target="_blank" rel="noopener" class="btn btn-green">${t("visit_cta")}</a>
       </div>
     </div>
@@ -454,6 +464,10 @@ function renderStory() {
   <section class="section">
     <div class="section-inner">
       <h1 class="section-title">${t("story_title")}</h1>
+      <figure class="story-photo">
+        <img src="img/family.jpg" alt="${esc(t("story_photo_caption"))}" loading="lazy">
+        <figcaption>${t("story_photo_caption")}</figcaption>
+      </figure>
       <div class="story-body">
         <p>${t("story_p1")}</p>
         <p>${t("story_p2")}</p>
@@ -466,6 +480,7 @@ function renderStory() {
 }
 
 const MAP_LINK = "https://maps.app.goo.gl/Y89TvFvftSZ9DvCD8";
+const FB_LINK = "https://www.facebook.com/valleautosales";
 const MAP_EMBED = "https://www.google.com/maps?q=9R3Q%2B93%20Aguada%2C%20Puerto%20Rico&output=embed";
 
 function renderContact() {
@@ -484,6 +499,9 @@ function renderContact() {
           <p>${t("address_physical")}</p>
           <h3>${t("contact_postal")}</h3>
           <p>${t("address_postal")}</p>
+          <h3>${t("contact_hours")}</h3>
+          <p>${t("hours_weekdays")}<br>${t("hours_sunday")}</p>
+          <a href="${FB_LINK}" target="_blank" rel="noopener">${t("fb_follow")}</a>
           <p style="margin-top:1rem;font-style:italic;color:var(--gray-soft)">${t("contact_hours_note")}</p>
           <a href="${MAP_LINK}" target="_blank" rel="noopener" class="btn btn-green directions-btn">📍 ${t("contact_directions")}</a>
         </div>
