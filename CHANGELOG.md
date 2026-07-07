@@ -6,7 +6,7 @@ Development history for the Valle Auto Sales website.
 
 ### Added
 
-- Codex added the supplied `ValleAuto.svg` logo as `img/brand/valle-auto-logo.svg` and integrated it into the site header and footer.
+- Codex replaced the initial logo with the full-name `Valle Auto Sales long logo.svg` asset as `img/brand/valle-auto-sales-logo.svg`.
 
 ### Changed
 
@@ -16,5 +16,5 @@ Development history for the Valle Auto Sales website.
 
 ### Verified
 
-- Codex previewed the logo integration at desktop and mobile widths, confirming the header has no horizontal overflow and the SVG loads in the header/footer.
+- Codex previewed the full-name logo integration at desktop and mobile widths, confirming the header has no horizontal overflow and the SVG loads in the header/footer.
 - Codex previewed the site at `http://localhost:8000/#/inventario` and confirmed all 10 inventory cards loaded photos from `img/cars/...`.

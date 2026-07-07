@@ -6,7 +6,7 @@ Pure static site — no build step. Host it free on Netlify, Vercel, or GitHub P
 ## Files
 
 - `index.html` — the single page (all sections render into it)
-- `img/brand/valle-auto-logo.svg` — primary logo used in the header and footer
+- `img/brand/valle-auto-sales-logo.svg` — primary logo used in the header and footer
 - `css/styles.css` — brand styles (black / red / chrome, matching the business card)
 - `js/i18n.js` — every text string in Spanish and English
 - `js/data.js` — inventory: Google Sheet loader + sample cars + **the config values you need to set**
