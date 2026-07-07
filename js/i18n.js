@@ -60,9 +60,11 @@ const I18N = {
     origin_local: "Local",
     origin_imported: "Importado",
     miles: "millas",
+    price_ask: "Consulte precio",
 
     // Body types
     bt_sedan: "Sedán",
+    bt_suv: "SUV",
     bt_suv_small: "SUV pequeña",
     bt_suv_mid: "SUV mediana",
     bt_suv_large: "SUV grande",
@@ -208,8 +210,10 @@ const I18N = {
     origin_local: "Local",
     origin_imported: "Imported",
     miles: "miles",
+    price_ask: "Call for price",
 
     bt_sedan: "Sedan",
+    bt_suv: "SUV",
     bt_suv_small: "Small SUV",
     bt_suv_mid: "Mid-size SUV",
     bt_suv_large: "Large SUV",

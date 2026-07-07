@@ -1,38 +1,59 @@
 /* ============================================================
    Valle Auto Sales — Inventory data
    ------------------------------------------------------------
-   The inventory reads from a Google Sheet so the family can
-   update it without touching code. See README.md for setup.
+   The inventory reads from the "Valle Auto Sales Inventory CMS"
+   Google Sheet so the family can update it without touching code.
 
-   1. Create a Google Sheet with a tab named "Inventory" and
-      these exact column headers in row 1:
-      id | make | model | year | color | mileage | price |
-      body_type | origin | registration_fee | condition_tags |
-      photo_urls | featured | sold | notes
-   2. File → Share → "Anyone with the link" (Viewer).
-   3. Paste the sheet's ID below (the long code in its URL).
+   Sheet layout (tab "Inventory", one row per car):
+     status            active | sold | draft (draft rows are hidden)
+     inventory_id      unique id, e.g. v-001
+     sort_order        display order (lower = first)
+     featured          TRUE/FALSE — show on the home page
+     website_slug      (unused by the site, kept for reference)
+     title             e.g. "Nissan Versa 2021" (fallback if make/model empty)
+     year / make / model / trim
+     body_style        Sedan, SUV, Pickup, Hatchback, Van, Coupe…
+     mileage           number
+     price_usd         number
+     condition         free text, shown on the detail page
+     features          free text, shown on the detail page
+     financing_available / warranty_available / credit_friendly  TRUE/FALSE
+     headline_es / description_es   (unused — site builds its own)
+     image_url         primary photo (Photos tab overrides if present)
+     color / origin    OPTIONAL — add these columns to enable the
+                       color swatches and Local/Importado badges.
+                       color: blanco, negro, gris, plata, rojo, azul,
+                              verde, marron, dorado, amarillo,
+                              anaranjado, vino
+                       origin: local | imported
 
-   While SHEET_ID is empty, the site shows SAMPLE_CARS so you
-   can see how everything looks.
+   Tab "Photos" (one row per photo):
+     inventory_id | sort_order | image_url
+
+   The sheet must be shared "Anyone with the link — Viewer" or
+   Google blocks the read and the site shows SAMPLE_CARS instead.
    ============================================================ */
 
-const SHEET_ID = "";          // ← paste Google Sheet ID here
+const SHEET_ID = "1RdKHhhBWB8s3SeydByroI2M01lVK2mMDiEOSWnQRt-Y";
 const SHEET_TAB = "Inventory";
+const PHOTOS_TAB = "Photos";
 
 /* Formspree form ID for the financing lead form (see README).
    While empty, the form falls back to opening the visitor's
    email app addressed to valleauto@yahoo.com. */
 const FORMSPREE_ID = "";      // ← paste Formspree form ID here
 
-/* Canonical values used in the sheet:
-   body_type: sedan, suv_small, suv_mid, suv_large, pickup,
-              hatchback, van, coupe, other
-   origin:    local | imported
-   color:     blanco, negro, gris, plata, rojo, azul, verde,
-              marron, dorado, amarillo, anaranjado, vino
-   condition_tags (comma-separated): clean, accident_repaired,
-              engine_replaced, body_repair, reconditioned
-   featured / sold: yes | no                                   */
+/* ---------- Local photo mirror ----------
+   The sheet's photo links point at Facebook's CDN, and those URLs
+   expire after a while. These are permanent copies saved in this
+   repo (img/cars/<inventory_id>-<n>.jpg) that take priority.
+   To retire this list: put "img/cars/v-001-1.jpg"-style paths
+   directly in the sheet's Photos tab and delete the entry here.
+   Value = how many photos img/cars/ has for that car. */
+const LOCAL_PHOTOS = {
+  "v-001": 1, "v-002": 1, "v-003": 1, "v-004": 1, "v-005": 1,
+  "v-006": 1, "v-007": 1, "v-008": 1, "v-009": 1, "v-010": 1
+};
 
 const COLOR_SWATCHES = {
   blanco: "#f5f5f2", negro: "#1c1c1e", gris: "#8e8e93", plata: "#c7c9cc",
@@ -75,51 +96,121 @@ function parseYesNo(v) {
   return /^(yes|si|sí|y|true|1|x)$/i.test(String(v || "").trim());
 }
 
-function normalizeCar(raw) {
+const BODY_STYLE_MAP = {
+  sedan: "sedan", "sedán": "sedan",
+  suv: "suv", suv_small: "suv_small", suv_mid: "suv_mid", suv_large: "suv_large",
+  crossover: "suv", cuv: "suv",
+  pickup: "pickup", truck: "pickup", camioneta: "pickup",
+  hatchback: "hatchback",
+  van: "van", minivan: "van",
+  coupe: "coupe", "coupé": "coupe"
+};
+
+async function fetchSheetTab(tab) {
+  const url = "https://docs.google.com/spreadsheets/d/" + SHEET_ID +
+    "/gviz/tq?tqx=out:json&headers=1&sheet=" + encodeURIComponent(tab);
+  const res = await fetch(url);
+  const text = await res.text();
+  const json = JSON.parse(text.substring(text.indexOf("{"), text.lastIndexOf("}") + 1));
+  if (!json.table) throw new Error(json.errors ? json.errors[0].reason : "no table");
+  const cols = json.table.cols.map(c => (c.label || "").trim().toLowerCase());
+  return json.table.rows.map(r => {
+    const raw = {};
+    cols.forEach((label, i) => {
+      const cell = r.c && r.c[i];
+      raw[label] = cell && cell.v !== null && cell.v !== undefined ? cell.v : "";
+    });
+    return raw;
+  });
+}
+
+function normalizeCmsRow(raw) {
+  const status = String(raw.status || "").trim().toLowerCase();
+  const trim = String(raw.trim || "").trim();
+  const bodyRaw = String(raw.body_style || raw.body_type || "").trim().toLowerCase().replace(/\s+/g, "_");
   const tags = String(raw.condition_tags || "")
     .split(",").map(s => s.trim().toLowerCase().replace(/\s+/g, "_"))
     .filter(s => CONDITION_TAG_KEYS.includes(s));
-  const photos = String(raw.photo_urls || "")
-    .split(",").map(s => s.trim()).filter(s => /^https?:\/\//.test(s));
+  const notes = [String(raw.condition || "").trim(), String(raw.features || "").trim()]
+    .filter(Boolean).join(" · ");
+  const originRaw = String(raw.origin || "").trim();
   return {
-    id: String(raw.id || "").trim(),
+    id: String(raw.inventory_id || raw.id || "").trim(),
+    status: status || "active",
+    sort_order: parseInt(raw.sort_order, 10) || 9999,
     make: String(raw.make || "").trim(),
-    model: String(raw.model || "").trim(),
+    model: (String(raw.model || "").trim() + (trim ? " " + trim : "")).trim(),
+    title: String(raw.title || "").trim(),
     year: parseInt(raw.year, 10) || 0,
     color: String(raw.color || "").trim().toLowerCase(),
     mileage: parseInt(String(raw.mileage).replace(/[^\d]/g, ""), 10) || 0,
-    price: parseFloat(String(raw.price).replace(/[^\d.]/g, "")) || 0,
-    body_type: String(raw.body_type || "other").trim().toLowerCase().replace(/\s+/g, "_"),
-    origin: /import/i.test(String(raw.origin || "")) ? "imported" : "local",
+    price: parseFloat(String(raw.price_usd || raw.price).replace(/[^\d.]/g, "")) || 0,
+    body_type: BODY_STYLE_MAP[bodyRaw] || (bodyRaw ? "other" : "other"),
+    /* "" = column not filled in — the UI hides the badge */
+    origin: originRaw ? (/import/i.test(originRaw) ? "imported" : "local") : "",
     registration_fee: String(raw.registration_fee || "").trim(),
     condition_tags: tags,
-    photo_urls: photos,
+    photo_urls: String(raw.image_url || "").trim().startsWith("http") ? [String(raw.image_url).trim()] : [],
     featured: parseYesNo(raw.featured),
-    sold: parseYesNo(raw.sold),
-    notes: String(raw.notes || "").trim()
+    sold: status === "sold" || status === "vendido" || parseYesNo(raw.sold),
+    notes: notes
   };
 }
 
+/* Sample data uses the legacy column names — adapt then normalize */
+function sampleCars() {
+  return SAMPLE_CARS.map(c => normalizeCmsRow({
+    inventory_id: c.id, status: c.sold ? "sold" : "active", sort_order: "",
+    make: c.make, model: c.model, year: c.year, color: c.color,
+    mileage: c.mileage, price_usd: c.price, body_style: c.body_type,
+    origin: c.origin, registration_fee: c.registration_fee,
+    condition_tags: c.condition_tags.join(","), image_url: c.photo_urls[0] || "",
+    featured: c.featured ? "yes" : "no"
+  }));
+}
+
 async function loadInventory() {
-  if (!SHEET_ID) return SAMPLE_CARS.map(c => normalizeCar({ ...c, condition_tags: c.condition_tags.join(","), photo_urls: c.photo_urls.join(","), featured: c.featured ? "yes" : "no", sold: c.sold ? "yes" : "no" }));
+  if (!SHEET_ID) return sampleCars();
   try {
-    const url = "https://docs.google.com/spreadsheets/d/" + SHEET_ID +
-      "/gviz/tq?tqx=out:json&headers=1&sheet=" + encodeURIComponent(SHEET_TAB);
-    const res = await fetch(url);
-    const text = await res.text();
-    const json = JSON.parse(text.substring(text.indexOf("{"), text.lastIndexOf("}") + 1));
-    const cols = json.table.cols.map(c => (c.label || "").trim().toLowerCase());
-    const cars = json.table.rows.map(r => {
-      const raw = {};
-      cols.forEach((label, i) => {
-        const cell = r.c[i];
-        raw[label] = cell ? (cell.v !== null && cell.v !== undefined ? cell.v : "") : "";
-      });
-      return normalizeCar(raw);
-    }).filter(c => c.id && c.make);
-    return cars.length ? cars : SAMPLE_CARS.map(normalizeCar);
+    const [invRows, photoRows] = await Promise.all([
+      fetchSheetTab(SHEET_TAB),
+      fetchSheetTab(PHOTOS_TAB).catch(() => [])
+    ]);
+
+    /* Group photos by inventory_id, ordered by sort_order.
+       Accepts full URLs and repo-relative paths (img/cars/…). */
+    const photosByCar = {};
+    photoRows.forEach(p => {
+      const id = String(p.inventory_id || "").trim();
+      const url = String(p.image_url || "").trim();
+      if (!id || !(/^https?:\/\//.test(url) || /^img\//.test(url))) return;
+      (photosByCar[id] = photosByCar[id] || []).push({ url, order: parseInt(p.sort_order, 10) || 9999 });
+    });
+
+    const cars = invRows.map(normalizeCmsRow)
+      .filter(c => c.id && (c.make || c.title))
+      .filter(c => c.status === "active" || c.sold);  /* draft/hidden rows stay off the site */
+
+    cars.forEach(c => {
+      /* if make/model are blank, split them out of the title ("Nissan Versa 2021") */
+      if (!c.make && c.title) {
+        const words = c.title.replace(/\b(19|20)\d{2}\b/g, "").trim().split(/\s+/);
+        c.make = words.shift() || "";
+        c.model = words.join(" ");
+        if (!c.year) { const m = c.title.match(/\b(19|20)\d{2}\b/); if (m) c.year = +m[0]; }
+      }
+      if (LOCAL_PHOTOS[c.id]) {
+        c.photo_urls = Array.from({ length: LOCAL_PHOTOS[c.id] }, (_, i) => `img/cars/${c.id}-${i + 1}.jpg`);
+      } else {
+        const gallery = (photosByCar[c.id] || []).sort((a, b) => a.order - b.order).map(p => p.url);
+        if (gallery.length) c.photo_urls = gallery;
+      }
+    });
+
+    cars.sort((a, b) => a.sort_order - b.sort_order);
+    return cars.length ? cars : sampleCars();
   } catch (e) {
     console.warn("Could not load Google Sheet, using sample data.", e);
-    return SAMPLE_CARS.map(c => normalizeCar({ ...c, condition_tags: c.condition_tags.join(","), photo_urls: c.photo_urls.join(","), featured: c.featured ? "yes" : "no", sold: c.sold ? "yes" : "no" }));
+    return sampleCars();
   }
 }

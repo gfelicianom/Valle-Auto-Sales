@@ -16,7 +16,7 @@ let FILTERS = FILTERS_DEFAULT();
 /* ---------- helpers ---------- */
 
 const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
-const fmtPrice = p => "$" + Number(p).toLocaleString("en-US");
+const fmtPrice = p => Number(p) > 0 ? "$" + Number(p).toLocaleString("en-US") : t("price_ask");
 const fmtMiles = m => Number(m).toLocaleString("en-US");
 const carName = c => `${c.make} ${c.model} ${c.year}`;
 const colorLabel = c => t("c_" + c.color) === "c_" + c.color ? (c.color.charAt(0).toUpperCase() + c.color.slice(1)) : t("c_" + c.color);
@@ -28,9 +28,12 @@ function colorDot(c) {
 }
 
 function carCard(c) {
+  /* placeholder always renders underneath; an expired photo URL removes
+     itself (onerror) and the placeholder shows through */
+  const placeholder = `<span class="ph-icon">🚗</span><span class="ph-label">${t("photo_placeholder")}</span>`;
   const photo = c.photo_urls.length
-    ? `<img src="${esc(c.photo_urls[0])}" alt="${esc(carName(c))}" loading="lazy">`
-    : `<span class="ph-icon">🚗</span><span class="ph-label">${t("photo_placeholder")}</span>`;
+    ? placeholder + `<img src="${esc(c.photo_urls[0])}" alt="${esc(carName(c))}" loading="lazy" onerror="this.remove()">`
+    : placeholder;
   return `
   <a class="car-card ${c.sold ? "is-sold" : ""}" href="#/auto/${encodeURIComponent(c.id)}">
     <div class="car-photo">
@@ -43,9 +46,9 @@ function carCard(c) {
       <div class="car-price">${fmtPrice(c.price)}</div>
       <div class="car-meta">
         <span>${fmtMiles(c.mileage)} ${t("miles")}</span>
-        <span>${colorDot(c)}${colorLabel(c)}</span>
+        ${c.color ? `<span>${colorDot(c)}${colorLabel(c)}</span>` : ""}
         <span>${bodyLabel(c)}</span>
-        <span class="badge ${c.origin === "imported" ? "badge-imported" : "badge-local"}">${t(c.origin === "imported" ? "origin_imported" : "origin_local")}</span>
+        ${c.origin ? `<span class="badge ${c.origin === "imported" ? "badge-imported" : "badge-local"}">${t(c.origin === "imported" ? "origin_imported" : "origin_local")}</span>` : ""}
       </div>
     </div>
   </a>`;
@@ -134,9 +137,11 @@ function renderInventory() {
   const models = [...new Set(CARS.filter(c => !f.make || c.make === f.make).map(c => c.model))].sort();
   const colors = [...new Set(CARS.map(c => c.color))].sort();
   const bodies = [...new Set(CARS.map(c => c.body_type))];
-  const bodyOpts = ["sedan", "suv_small", "suv_mid", "suv_large", "pickup", "hatchback", "van", "coupe", "other"]
+  const bodyOpts = ["sedan", "suv", "suv_small", "suv_mid", "suv_large", "pickup", "hatchback", "van", "coupe", "other"]
     .filter(b => bodies.includes(b)).map(b => ({ value: b, label: t("bt_" + b) }));
-  if (bodies.some(b => b.startsWith("suv"))) bodyOpts.unshift({ value: "suv", label: "SUV — " + t("f_all") });
+  if (bodies.some(b => b.startsWith("suv_"))) bodyOpts.unshift({ value: "suv", label: "SUV — " + t("f_all") });
+  const hasColors = colors.some(Boolean);
+  const hasOrigins = CARS.some(c => c.origin);
 
   const list = applyFilters();
 
@@ -169,17 +174,19 @@ function renderInventory() {
           <label>${t("f_model")}</label>
           <select class="filter-select" data-f="model">${filterOptions(models.map(m => ({ value: m, label: m })), f.model, t("f_all"))}</select>
         </div>
+        ${hasColors ? `
         <div class="filter-group">
           <label>${t("f_color")}</label>
-          <select class="filter-select" data-f="color">${filterOptions(colors.map(c => ({ value: c, label: t("c_" + c) === "c_" + c ? c : t("c_" + c) })), f.color, t("f_all"))}</select>
-        </div>
+          <select class="filter-select" data-f="color">${filterOptions(colors.filter(Boolean).map(c => ({ value: c, label: t("c_" + c) === "c_" + c ? c : t("c_" + c) })), f.color, t("f_all"))}</select>
+        </div>` : ""}
+        ${hasOrigins ? `
         <div class="filter-group">
           <label>${t("f_origin")}</label>
           <select class="filter-select" data-f="origin">${filterOptions([
             { value: "local", label: t("origin_local") },
             { value: "imported", label: t("origin_imported") }
           ], f.origin, t("f_all"))}</select>
-        </div>
+        </div>` : ""}
         <div class="filter-group">
           <label>${t("f_year")}</label>
           <div class="range-row">
@@ -257,12 +264,13 @@ function renderCarDetail(id) {
   }
 
   const photos = c.photo_urls;
+  const galleryPlaceholder = `<span class="ph-icon" style="font-size:4rem">🚗</span><p>${t("photo_placeholder")}</p>`;
   const mainPhoto = photos.length
-    ? `<img id="galleryMain" src="${esc(photos[0])}" alt="${esc(carName(c))}">`
-    : `<span class="ph-icon" style="font-size:4rem">🚗</span><p>${t("photo_placeholder")}</p>`;
+    ? galleryPlaceholder + `<img id="galleryMain" src="${esc(photos[0])}" alt="${esc(carName(c))}" onerror="this.remove()">`
+    : galleryPlaceholder;
   const thumbs = photos.length > 1
     ? `<div class="gallery-thumbs">${photos.map((p, i) =>
-        `<button data-idx="${i}" class="${i === 0 ? "active" : ""}"><img src="${esc(p)}" alt=""></button>`).join("")}</div>`
+        `<button data-idx="${i}" class="${i === 0 ? "active" : ""}"><img src="${esc(p)}" alt="" onerror="this.closest('button').remove()"></button>`).join("")}</div>`
     : "";
 
   const interestHref = `#/financiamiento?car=${encodeURIComponent(c.id + " — " + carName(c) + " (" + colorLabel(c) + ")")}`;
@@ -284,16 +292,17 @@ function renderCarDetail(id) {
 
           <table class="spec-table">
             <tr><td>${t("d_year")}</td><td>${c.year}</td></tr>
-            <tr><td>${t("d_color")}</td><td>${colorDot(c)} ${colorLabel(c)}</td></tr>
+            ${c.color ? `<tr><td>${t("d_color")}</td><td>${colorDot(c)} ${colorLabel(c)}</td></tr>` : ""}
             <tr><td>${t("d_mileage")}</td><td>${fmtMiles(c.mileage)} ${t("miles")}</td></tr>
             <tr><td>${t("d_body")}</td><td>${bodyLabel(c)}</td></tr>
-            <tr><td>${t("f_origin")}</td><td><span class="badge ${c.origin === "imported" ? "badge-imported" : "badge-local"}">${t(c.origin === "imported" ? "origin_imported" : "origin_local")}</span></td></tr>
+            ${c.origin ? `<tr><td>${t("f_origin")}</td><td><span class="badge ${c.origin === "imported" ? "badge-imported" : "badge-local"}">${t(c.origin === "imported" ? "origin_imported" : "origin_local")}</span></td></tr>` : ""}
           </table>
 
+          ${c.origin ? `
           <div class="info-card">
             <h3>${t("d_origin_title")}</h3>
             <p>${t(c.origin === "imported" ? "d_origin_imported" : "d_origin_local")}</p>
-          </div>
+          </div>` : ""}
 
           ${c.origin === "imported" ? `
           <div class="info-card">
@@ -475,7 +484,7 @@ function renderContact() {
           <p>${t("address_physical")}</p>
           <h3>${t("contact_postal")}</h3>
           <p>${t("address_postal")}</p>
-          <p style="margin-top:1rem;font-style:italic;color:#5b6660">${t("contact_hours_note")}</p>
+          <p style="margin-top:1rem;font-style:italic;color:var(--gray-soft)">${t("contact_hours_note")}</p>
           <a href="${MAP_LINK}" target="_blank" rel="noopener" class="btn btn-green directions-btn">📍 ${t("contact_directions")}</a>
         </div>
         <div class="map-wrap">
