@@ -7,6 +7,7 @@ Development history for the Valle Auto Sales website.
 ### Added
 
 - Codex replaced the initial logo with the full-name `Valle Auto Sales long logo.svg` asset as `img/brand/valle-auto-sales-logo.svg`.
+- Codex resized the header logo box and refreshed the stylesheet URL so the full wordmark and car stroke fit without clipping.
 
 ### Changed
 
