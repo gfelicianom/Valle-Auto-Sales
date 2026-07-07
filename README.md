@@ -10,6 +10,7 @@ Pure static site — no build step. Host it free on Netlify, Vercel, or GitHub P
 - `js/i18n.js` — every text string in Spanish and English
 - `js/data.js` — inventory: Google Sheet loader + sample cars + **the config values you need to set**
 - `js/app.js` — pages, filters, routing, lead form
+- `CHANGELOG.md` — site-development history and who made each change
 
 ## 1. The Google Sheet (inventory)
 
@@ -72,11 +73,22 @@ The form deliberately has **no** SSN or bank-account fields, and shows a privacy
      in `image_url`. Relative paths work — no photo host needed, and the
      links never expire.
 - **Current state:** the Facebook photos for v-001 – v-010 were downloaded
-  into `img/cars/` and the site uses those local copies via the
-  `LOCAL_PHOTOS` list at the top of `js/data.js` (it overrides the sheet's
-  expiring Facebook links). Once the sheet's Photos tab is updated to the
-  `img/cars/…` paths, that list can be deleted.
+  into `img/cars/`, and the Inventory/Photos tabs now point at those
+  `img/cars/…` paths instead of expiring Facebook CDN links.
 
 ## Run locally
 
-Any static server works, e.g.: `npx serve .` in this folder, then open the printed URL.
+Do not open `index.html` directly from Finder. Use a local server so the site behaves like it will online:
+
+```bash
+python3 -m http.server 8000
+```
+
+Then open `http://localhost:8000/#/inventario`.
+
+## Development workflow
+
+- Keep the README focused on how the site works and how to operate it.
+- Keep `CHANGELOG.md` updated with visible site changes, inventory/data-flow changes, and setup decisions.
+- When Codex makes a change, the changelog entry and git commit should say `Codex` so the source of the work is traceable.
+- Commit related changes together after they have been previewed locally.

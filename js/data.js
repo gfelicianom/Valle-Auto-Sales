@@ -43,18 +43,6 @@ const PHOTOS_TAB = "Photos";
    email app addressed to valleauto@yahoo.com. */
 const FORMSPREE_ID = "";      // ← paste Formspree form ID here
 
-/* ---------- Local photo mirror ----------
-   The sheet's photo links point at Facebook's CDN, and those URLs
-   expire after a while. These are permanent copies saved in this
-   repo (img/cars/<inventory_id>-<n>.jpg) that take priority.
-   To retire this list: put "img/cars/v-001-1.jpg"-style paths
-   directly in the sheet's Photos tab and delete the entry here.
-   Value = how many photos img/cars/ has for that car. */
-const LOCAL_PHOTOS = {
-  "v-001": 1, "v-002": 1, "v-003": 1, "v-004": 1, "v-005": 1,
-  "v-006": 1, "v-007": 1, "v-008": 1, "v-009": 1, "v-010": 1
-};
-
 const COLOR_SWATCHES = {
   blanco: "#f5f5f2", negro: "#1c1c1e", gris: "#8e8e93", plata: "#c7c9cc",
   rojo: "#b3282d", azul: "#2b5aa7", verde: "#2e6b4f", marron: "#6b4a2f",
@@ -62,6 +50,7 @@ const COLOR_SWATCHES = {
 };
 
 const CONDITION_TAG_KEYS = ["clean", "accident_repaired", "engine_replaced", "body_repair", "reconditioned"];
+const VALID_IMAGE_URL = /^(https?:\/\/|img\/)/;
 
 const SAMPLE_CARS = [
   { id: "VA-001", make: "Toyota", model: "Corolla", year: 2019, color: "gris", mileage: 42000, price: 15995,
@@ -150,7 +139,7 @@ function normalizeCmsRow(raw) {
     origin: originRaw ? (/import/i.test(originRaw) ? "imported" : "local") : "",
     registration_fee: String(raw.registration_fee || "").trim(),
     condition_tags: tags,
-    photo_urls: String(raw.image_url || "").trim().startsWith("http") ? [String(raw.image_url).trim()] : [],
+    photo_urls: VALID_IMAGE_URL.test(String(raw.image_url || "").trim()) ? [String(raw.image_url).trim()] : [],
     featured: parseYesNo(raw.featured),
     sold: status === "sold" || status === "vendido" || parseYesNo(raw.sold),
     notes: notes
@@ -199,12 +188,8 @@ async function loadInventory() {
         c.model = words.join(" ");
         if (!c.year) { const m = c.title.match(/\b(19|20)\d{2}\b/); if (m) c.year = +m[0]; }
       }
-      if (LOCAL_PHOTOS[c.id]) {
-        c.photo_urls = Array.from({ length: LOCAL_PHOTOS[c.id] }, (_, i) => `img/cars/${c.id}-${i + 1}.jpg`);
-      } else {
-        const gallery = (photosByCar[c.id] || []).sort((a, b) => a.order - b.order).map(p => p.url);
-        if (gallery.length) c.photo_urls = gallery;
-      }
+      const gallery = (photosByCar[c.id] || []).sort((a, b) => a.order - b.order).map(p => p.url);
+      if (gallery.length) c.photo_urls = gallery;
     });
 
     cars.sort((a, b) => a.sort_order - b.sort_order);
