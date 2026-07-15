@@ -1,3 +1,29 @@
 {
-  "cars": []
+  "cars": [
+    {
+      "id": "v-001",
+      "status": "active",
+      "make": "Toyota",
+      "model": "RAV4 Premium",
+      "year": 2023,
+      "color": "verde",
+      "mileage": 43662,
+      "price": 31995,
+      "body_type": "suv",
+      "origin": "",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Techo solar y asientos de cuero.\nSunroof and leather seats.",
+      "featured": false,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-001-1.jpg",
+        "img/cars/v-001-2.jpg",
+        "img/cars/v-001-3.jpg",
+        "img/cars/v-001-4.jpg",
+        "img/cars/v-001-5.jpg",
+        "img/cars/v-001-6.jpg"
+      ]
+    }
+  ]
 }
