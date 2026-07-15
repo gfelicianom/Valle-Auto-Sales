@@ -73,9 +73,13 @@ The form deliberately has **no** SSN or bank-account fields, and shows a privacy
   2. In the sheet's **Photos** tab, put that same path (`img/cars/v-011-1.jpg`)
      in `image_url`. Relative paths work — no photo host needed, and the
      links never expire.
-- **Current state:** the Facebook photos for v-001 – v-010 were downloaded
-  into `img/cars/`, and the Inventory/Photos tabs now point at those
-  `img/cars/…` paths instead of expiring Facebook CDN links.
+- **Current state (July 2026):** the sample inventory (v-001 – v-010 photos
+  and data) was cleared and the Google Sheet disconnected (`SHEET_ID = ""`),
+  in preparation for the move to the Airtable base
+  "Inventario Valle Auto Sales" (`app9Rj2rqXxh1QSTy`). The site shows the
+  empty-inventory message until the Airtable → `js/inventory.json` sync
+  lands. The Sheet instructions above are kept for reference until the
+  migration is complete.
 
 ## Run locally
 

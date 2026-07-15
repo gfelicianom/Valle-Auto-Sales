@@ -2,6 +2,12 @@
 
 Development history for the Valle Auto Sales website.
 
+## 2026-07-15
+
+### Changed
+
+- Claude cleared the sample inventory for the Airtable migration: deleted `img/cars/v-001-1.jpg` – `v-010-1.jpg`, emptied `SAMPLE_CARS`, and disconnected the Google Sheet (`SHEET_ID = ""`) in `js/data.js`. The site shows the empty-inventory message until the Airtable ("Inventario Valle Auto Sales", base `app9Rj2rqXxh1QSTy`) → `js/inventory.json` sync is built.
+
 ## 2026-07-07
 
 ### Added

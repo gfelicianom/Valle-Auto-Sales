@@ -34,7 +34,10 @@
    Google blocks the read and the site shows SAMPLE_CARS instead.
    ============================================================ */
 
-const SHEET_ID = "1RdKHhhBWB8s3SeydByroI2M01lVK2mMDiEOSWnQRt-Y";
+/* Sheet CMS retired 2026-07 — inventory is moving to Airtable
+   (base app9Rj2rqXxh1QSTy) with a sync that writes js/inventory.json.
+   Leave SHEET_ID empty. */
+const SHEET_ID = "";
 const SHEET_TAB = "Inventory";
 const PHOTOS_TAB = "Photos";
 
@@ -52,32 +55,9 @@ const COLOR_SWATCHES = {
 const CONDITION_TAG_KEYS = ["clean", "accident_repaired", "engine_replaced", "body_repair", "reconditioned"];
 const VALID_IMAGE_URL = /^(https?:\/\/|img\/)/;
 
-const SAMPLE_CARS = [
-  { id: "VA-001", make: "Toyota", model: "Corolla", year: 2019, color: "gris", mileage: 42000, price: 15995,
-    body_type: "sedan", origin: "imported", registration_fee: "", condition_tags: ["clean"],
-    photo_urls: [], featured: true, sold: false, notes: "" },
-  { id: "VA-002", make: "Toyota", model: "Corolla Hatchback", year: 2023, color: "rojo", mileage: 18500, price: 24500,
-    body_type: "hatchback", origin: "imported", registration_fee: "$350", condition_tags: ["reconditioned"],
-    photo_urls: [], featured: true, sold: false, notes: "" },
-  { id: "VA-003", make: "Hyundai", model: "Elantra", year: 2021, color: "plata", mileage: 33000, price: 17900,
-    body_type: "sedan", origin: "local", registration_fee: "", condition_tags: ["clean"],
-    photo_urls: [], featured: true, sold: false, notes: "" },
-  { id: "VA-004", make: "Nissan", model: "Altima", year: 2020, color: "blanco", mileage: 51000, price: 16500,
-    body_type: "sedan", origin: "imported", registration_fee: "", condition_tags: ["accident_repaired", "body_repair"],
-    photo_urls: [], featured: false, sold: false, notes: "" },
-  { id: "VA-005", make: "Mitsubishi", model: "Eclipse Cross", year: 2022, color: "blanco", mileage: 27000, price: 21900,
-    body_type: "suv_small", origin: "local", registration_fee: "", condition_tags: ["reconditioned"],
-    photo_urls: [], featured: false, sold: false, notes: "" },
-  { id: "VA-006", make: "Kia", model: "Rio", year: 2021, color: "azul", mileage: 38000, price: 13900,
-    body_type: "hatchback", origin: "imported", registration_fee: "", condition_tags: ["clean"],
-    photo_urls: [], featured: false, sold: false, notes: "" },
-  { id: "VA-007", make: "Toyota", model: "Tacoma", year: 2018, color: "negro", mileage: 68000, price: 27500,
-    body_type: "pickup", origin: "local", registration_fee: "", condition_tags: ["engine_replaced"],
-    photo_urls: [], featured: false, sold: false, notes: "" },
-  { id: "VA-008", make: "Honda", model: "CR-V", year: 2019, color: "verde", mileage: 47000, price: 19900,
-    body_type: "suv_mid", origin: "imported", registration_fee: "", condition_tags: ["reconditioned"],
-    photo_urls: [], featured: false, sold: true, notes: "" }
-];
+/* Cleared 2026-07 for the Airtable migration — the site shows the
+   "no cars" empty state until the Airtable sync lands. */
+const SAMPLE_CARS = [];
 
 /* ---------- Google Sheet loading (gviz JSON endpoint) ---------- */
 
