@@ -9,51 +9,72 @@ Pure static site — no build step. Host it free on Netlify, Vercel, or GitHub P
 - `img/brand/valle-auto-sales-logo.svg` — primary logo used in the header and footer
 - `css/styles.css` — brand styles (black / red / chrome, matching the business card)
 - `js/i18n.js` — every text string in Spanish and English
-- `js/data.js` — inventory: Google Sheet loader + sample cars + **the config values you need to set**
+- `js/data.js` — inventory loader + **the config values you need to set**
 - `js/app.js` — pages, filters, routing, lead form
+- `js/inventory.json` — generated inventory data (**never edit by hand**)
+- `img/cars/` — generated car photos (**never edit by hand**)
+- `scripts/sync-inventory.mjs` — Airtable → website sync script
+- `.github/workflows/sync-inventory.yml` — runs the sync every 2 hours
 - `CHANGELOG.md` — site-development history and who made each change
 
-## 1. The Google Sheet (inventory)
+## 1. The Airtable (inventory)
 
-The site reads from the **"Valle Auto Sales Inventory CMS"** sheet (its ID is
-already set in `js/data.js`). Two tabs matter:
+The inventory lives in the Airtable base **"Inventario Valle Auto Sales"**
+(`app9Rj2rqXxh1QSTy`), table **Vehículos**. A GitHub Action syncs it to the
+site every 2 hours (see section 2). The family only ever edits Airtable —
+from the website side it is the single source of truth.
 
-**Inventory** — one row per car:
+**Family workflow (all in the Airtable app, phone or computer):**
 
-| column | what it does |
+1. Add a row, give it the next `ID` (`v-011`, `v-012`, …).
+2. Fill in the fields — everything is Spanish dropdowns and numbers.
+3. Drag the photos into `Fotos`, best exterior shot first (it becomes the
+   cover). Suggested order: front ¾ exterior → rest of exterior → interior →
+   odometer/engine.
+4. Set `Estado` to `Activo` when the listing is ready. Cars with `Estado`
+   empty or `Borrador` stay hidden, `Vendido` shows the red VENDIDO tag.
+5. Wait for the next sync (up to ~2 hours) — or trigger it immediately from
+   GitHub → Actions → "Sync inventory from Airtable" → Run workflow.
+
+Field notes:
+
+| field | what it does |
 |---|---|
-| `status` | `active` = shown, `sold` = shown with the red VENDIDO tag, anything else (e.g. `draft`) = hidden |
-| `inventory_id` | unique id (`v-001`) — links photos to cars |
-| `sort_order` | display order, lower = first |
-| `featured` | `TRUE` = shows on the home page |
-| `title` | used as fallback if make/model are empty |
-| `year` / `make` / `model` / `trim` | shown on cards and the detail page |
-| `body_style` | `Sedan`, `SUV`, `Pickup`, `Hatchback`, `Van`, `Coupe`… (drives the type filter) |
-| `mileage` / `price_usd` | numbers |
-| `condition` / `features` | free text, shown in the "Notas" card on the detail page |
-| `image_url` | main photo (the Photos tab overrides this when it has rows for the car) |
+| `ID` | unique id (`v-001`) — photo files are named after it |
+| `Estado` | `Activo` = shown, `Vendido` = shown with VENDIDO tag, `Borrador`/empty = hidden |
+| `Destacado` | checked = shows in "Autos Destacados" on the home page |
+| `Año` `Marca` `Modelo` `Trim` | shown on cards and the detail page |
+| `Tipo` | drives the body-type filter |
+| `Color` | enables the color swatch + filter (bilingual automatically) |
+| `Millaje` / `Precio` | numbers; empty/0 price shows "Consulte precio" |
+| `Notas` | free text on the detail page, shown as-is in both languages |
+| `Fotos` | the gallery; attachment order = display order |
 
-Optional columns you can add anytime (the site picks them up automatically):
-- `color`: `blanco`, `negro`, `gris`, `plata`, `rojo`, `azul`, `verde`, `marron`, `dorado`, `amarillo`, `anaranjado`, `vino` — enables the color swatch + color filter
-- `origin`: `local` or `imported` — enables the Local/Importado badge, origin filter, and the tablilla/registro info card
-- `registration_fee`: e.g. `$350`
-- `condition_tags` (comma-separated): `clean`, `accident_repaired`, `engine_replaced`, `body_repair`, `reconditioned` — shows the "Condición y transparencia" checklist
+**Display order** is automatic: available cars before sold ones, featured
+first, then newest first. There is nothing to renumber.
 
-**Photos** — one row per photo: `inventory_id | sort_order | image_url`.
-All rows for a car become its gallery, ordered by `sort_order`.
+## 2. The sync (Airtable → website)
 
-⚠️ **Photo links**: URLs copied from Facebook (`scontent.…fbcdn.net`) **expire
-after a while** — the site hides broken photos gracefully, but the car then
-shows the placeholder. For permanent photos, upload the images to this repo's
-`img/` folder (e.g. `img/cars/v-001-1.jpg`) and use those URLs instead.
+`scripts/sync-inventory.mjs` pulls the base through the Airtable API, writes
+`js/inventory.json`, and downloads every photo into `img/cars/` resized to
+1600px JPEG (Airtable's own attachment URLs expire after ~2 hours, so the
+site never links to them directly). The GitHub Action commits the result.
 
-**Required once:** the sheet must be shared **Anyone with the link → Viewer**
-(Share button → General access). Without this, Google blocks the site from
-reading it and visitors see the built-in sample cars.
+**One-time setup (needs the Airtable account owner):**
 
-**Family workflow:** edit the sheet → the site updates on the next page load.
+1. Create a personal access token at <https://airtable.com/create/tokens> —
+   scope `data.records:read`, access limited to this base only.
+2. Add it to the GitHub repo as an Actions secret named `AIRTABLE_TOKEN`
+   (repo → Settings → Secrets and variables → Actions).
 
-## 2. Connect the lead form (Formspree)
+Run locally (optional, for testing):
+
+```bash
+npm install --no-save sharp
+AIRTABLE_TOKEN=pat… node scripts/sync-inventory.mjs
+```
+
+## 3. Connect the lead form (Formspree)
 
 1. Create a free account at formspree.io with **valleauto@yahoo.com** as the destination email.
 2. Create a form, copy its ID (the code after `formspree.io/f/`).
@@ -62,24 +83,6 @@ reading it and visitors see the built-in sample cars.
 Until then, the form falls back to opening the visitor's email app addressed to valleauto@yahoo.com — it still works, just less smooth.
 
 The form deliberately has **no** SSN or bank-account fields, and shows a privacy note telling clients never to send those.
-
-## 3. Real photos
-
-- Hero/building photo: drop it in `img/` and we can wire it into the hero.
-- Per-car photos: the beginner-friendly workflow is:
-  1. Save the photo file into this repo at `img/cars/<inventory_id>-<n>.jpg`
-     (e.g. `img/cars/v-011-1.jpg`, `v-011-2.jpg`…) — on GitHub.com you can do
-     this with **Add file → Upload files** inside the `img/cars` folder.
-  2. In the sheet's **Photos** tab, put that same path (`img/cars/v-011-1.jpg`)
-     in `image_url`. Relative paths work — no photo host needed, and the
-     links never expire.
-- **Current state (July 2026):** the sample inventory (v-001 – v-010 photos
-  and data) was cleared and the Google Sheet disconnected (`SHEET_ID = ""`),
-  in preparation for the move to the Airtable base
-  "Inventario Valle Auto Sales" (`app9Rj2rqXxh1QSTy`). The site shows the
-  empty-inventory message until the Airtable → `js/inventory.json` sync
-  lands. The Sheet instructions above are kept for reference until the
-  migration is complete.
 
 ## Run locally
 
@@ -97,3 +100,9 @@ Then open `http://localhost:8000/#/inventario`.
 - Keep `CHANGELOG.md` updated with visible site changes, inventory/data-flow changes, and setup decisions.
 - When Codex makes a change, the changelog entry and git commit should say `Codex` so the source of the work is traceable.
 - Commit related changes together after they have been previewed locally.
+
+## History
+
+- Until July 2026 the inventory came from a Google Sheet read live by the
+  browser (see CHANGELOG). It was replaced by the Airtable + sync setup
+  above so photos could be managed by drag-and-drop without expiring URLs.

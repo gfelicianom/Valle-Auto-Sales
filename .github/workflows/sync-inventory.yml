@@ -1,0 +1,43 @@
+name: Sync inventory from Airtable
+
+on:
+  schedule:
+    - cron: "17 */2 * * *"   # every 2 hours
+  workflow_dispatch:          # "Run workflow" button in the Actions tab
+
+concurrency:
+  group: sync-inventory
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install sharp (image resizing)
+        run: npm install --no-save --no-audit --no-fund sharp
+
+      - name: Pull inventory and photos from Airtable
+        env:
+          AIRTABLE_TOKEN: ${{ secrets.AIRTABLE_TOKEN }}
+        run: node scripts/sync-inventory.mjs
+
+      - name: Commit changes (if any)
+        run: |
+          git add js/inventory.json img/cars
+          if git diff --cached --quiet; then
+            echo "Inventory unchanged — nothing to commit."
+          else
+            git config user.name "valle-inventory-sync"
+            git config user.email "actions@users.noreply.github.com"
+            git commit -m "Sync inventory from Airtable"
+            git push
+          fi

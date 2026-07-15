@@ -4,6 +4,10 @@ Development history for the Valle Auto Sales website.
 
 ## 2026-07-15
 
+### Added
+
+- Claude built the Airtable → website sync: `scripts/sync-inventory.mjs` (pulls the base, writes `js/inventory.json`, downloads `Fotos` attachments to `img/cars/<ID>-<n>.jpg` resized to 1600px JPEG, prunes removed cars' photos) and `.github/workflows/sync-inventory.yml` (every 2 hours + manual run; needs the `AIRTABLE_TOKEN` repo secret, scope `data.records:read`). `js/data.js` now loads `js/inventory.json` instead of the Google Sheet; the gviz loader was removed. Display order is automatic: available → featured → newest, sold last.
+
 ### Changed
 
 - Claude cleared the sample inventory for the Airtable migration: deleted `img/cars/v-001-1.jpg` – `v-010-1.jpg`, emptied `SAMPLE_CARS`, and disconnected the Google Sheet (`SHEET_ID = ""`) in `js/data.js`. The site shows the empty-inventory message until the Airtable ("Inventario Valle Auto Sales", base `app9Rj2rqXxh1QSTy`) → `js/inventory.json` sync is built.
