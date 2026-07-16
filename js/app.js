@@ -393,6 +393,8 @@ function renderFinancing(params) {
           <label for="fMsg">${t("fin_message")}</label>
           <textarea id="fMsg" name="message"></textarea>
         </div>
+        <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+
 
         <p class="privacy-note">${t("fin_privacy")}</p>
 
@@ -418,8 +420,10 @@ async function onLeadSubmit(e) {
     return;
   }
 
-  if (!FORMSPREE_ID) {
-    /* Formspree not configured yet — fall back to the visitor's email app */
+  const subject = "Interés de compra — Valle Auto Sales" + (data.car ? " — " + data.car : "");
+
+  /* Last resort: open the visitor's email app pre-addressed to the dealer */
+  const mailtoFallback = () => {
     const body = [
       t("fin_name") + ": " + data.name,
       t("fin_phone") + ": " + data.phone,
@@ -429,28 +433,32 @@ async function onLeadSubmit(e) {
       t("fin_message") + ": " + (data.message || "—")
     ].join("\n");
     location.href = "mailto:valleauto@yahoo.com?subject=" +
-      encodeURIComponent("Interés de compra — Valle Auto Sales") +
-      "&body=" + encodeURIComponent(body);
+      encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
     status.className = "form-status ok";
     status.textContent = t("fin_success");
-    return;
-  }
+  };
+
+  if (!FORM_ENDPOINT) { mailtoFallback(); return; }
 
   btn.disabled = true;
   btn.textContent = t("fin_sending");
   try {
-    const res = await fetch("https://formspree.io/f/" + FORMSPREE_ID, {
+    const res = await fetch(FORM_ENDPOINT, {
       method: "POST",
       headers: { "Accept": "application/json", "Content-Type": "application/json" },
-      body: JSON.stringify({ ...data, _subject: "Interés de compra — Valle Auto Sales" })
+      body: JSON.stringify({
+        ...data,
+        _subject: subject,
+        _template: "table"   /* readable field/value layout in the email */
+      })
     });
     if (!res.ok) throw new Error("HTTP " + res.status);
     status.className = "form-status ok";
     status.textContent = t("fin_success");
     form.reset();
   } catch (err) {
-    status.className = "form-status err";
-    status.textContent = t("fin_error");
+    /* Service down or over quota — don't lose the lead */
+    mailtoFallback();
   } finally {
     btn.disabled = false;
     btn.textContent = t("fin_submit");

@@ -76,13 +76,17 @@ npm install --no-save sharp
 AIRTABLE_TOKEN=pat… node scripts/sync-inventory.mjs
 ```
 
-## 3. Connect the lead form (Formspree)
+## 3. The lead form (FormSubmit.co)
 
-1. Create a free account at formspree.io with **valleauto@yahoo.com** as the destination email.
-2. Create a form, copy its ID (the code after `formspree.io/f/`).
-3. Paste it into `FORMSPREE_ID` at the top of `js/data.js`.
+The financing form sends leads to **valleauto@yahoo.com** through
+FormSubmit.co — free, no account, no monthly cap. (`FORM_ENDPOINT` in
+`js/data.js`.) One-time setup: the first submission triggers an
+activation email to the Yahoo inbox — click the link in it once, and
+every submission after that arrives as a normal email.
 
-Until then, the form falls back to opening the visitor's email app addressed to valleauto@yahoo.com — it still works, just less smooth.
+If FormSubmit is ever down, the form automatically falls back to opening
+the visitor's own email app pre-addressed to the dealer, so no lead is
+lost. A hidden honeypot field filters basic spam bots.
 
 The form deliberately has **no** SSN or bank-account fields, and shows a privacy note telling clients never to send those.
 

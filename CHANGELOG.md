@@ -4,6 +4,10 @@ Development history for the Valle Auto Sales website.
 
 ## 2026-07-15
 
+### Added (lead form delivery)
+
+- Claude wired the financing form to FormSubmit.co (free, no account; Web3Forms rejected the Yahoo address): submissions email valleauto@yahoo.com with the car in the subject line, a honeypot field filters bots, and any send failure falls back to the visitor's email app so leads aren't lost. Needs one-time activation from the Yahoo inbox after the first submission.
+
 ### Changed (family content requests)
 
 - Claude simplified the financing page per the family: no specific banks (Banco Popular) or cooperativas mentioned — one card now says financing is available at the dealer and we work with you and your bank. The lead form's "Banco preferido" dropdown became "Forma de pago" (Al contado/Financiamiento).

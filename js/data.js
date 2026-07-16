@@ -12,10 +12,12 @@
    them. See README for the family workflow.
    ============================================================ */
 
-/* Formspree form ID for the financing lead form (see README).
-   While empty, the form falls back to opening the visitor's
-   email app addressed to valleauto@yahoo.com. */
-const FORMSPREE_ID = "";      // ← paste Formspree form ID here
+/* Lead-form delivery via FormSubmit.co (free, no account) — sends
+   submissions to valleauto@yahoo.com. One-time activation: the first
+   submission triggers a confirmation email that must be clicked from
+   the Yahoo inbox. While empty (or if sending fails), the form falls
+   back to opening the visitor's email app instead. */
+const FORM_ENDPOINT = "https://formsubmit.co/ajax/valleauto@yahoo.com";
 
 const COLOR_SWATCHES = {
   blanco: "#f5f5f2", negro: "#1c1c1e", gris: "#8e8e93", plata: "#c7c9cc",
