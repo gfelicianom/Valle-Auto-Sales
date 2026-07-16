@@ -349,7 +349,6 @@ function renderCarDetail(id) {
 
 function renderFinancing(params) {
   const prefill = params.get("car") || "";
-  const banks = ["Banco Popular", "FirstBank", "Oriental", "PenFed", "Cooperativa de Rincón"];
 
   app.innerHTML = `
   <section class="section">
@@ -359,8 +358,7 @@ function renderFinancing(params) {
 
       <div class="fin-cards">
         <div class="fin-card"><div class="fin-icon">💵</div><h3>${t("fin_cash_title")}</h3><p>${t("fin_cash_text")}</p></div>
-        <div class="fin-card"><div class="fin-icon">🏦</div><h3>${t("fin_bank_title")}</h3><p>${t("fin_bank_text")}</p></div>
-        <div class="fin-card"><div class="fin-icon">🤝</div><h3>${t("fin_coop_title")}</h3><p>${t("fin_coop_text")}</p></div>
+        <div class="fin-card"><div class="fin-icon">🤝</div><h3>${t("fin_financing_title")}</h3><p>${t("fin_financing_text")}</p></div>
       </div>
 
       <form class="lead-form" id="leadForm" novalidate>
@@ -384,11 +382,11 @@ function renderFinancing(params) {
           <input id="fCar" name="car" type="text" value="${esc(prefill)}" placeholder="${t("fin_car_ph")}">
         </div>
         <div class="form-field">
-          <label for="fBank">${t("fin_bank")}</label>
-          <select id="fBank" name="bank">
-            <option value="">${t("fin_bank_select")}</option>
-            ${banks.map(b => `<option value="${b}">${b}</option>`).join("")}
-            <option value="Otro">${t("fin_bank_other")}</option>
+          <label for="fPay">${t("fin_payment")}</label>
+          <select id="fPay" name="payment">
+            <option value="">${t("fin_payment_select")}</option>
+            <option value="Cash">${t("fin_pay_cash")}</option>
+            <option value="Financiamiento">${t("fin_pay_financing")}</option>
           </select>
         </div>
         <div class="form-field">
@@ -427,7 +425,7 @@ async function onLeadSubmit(e) {
       t("fin_phone") + ": " + data.phone,
       t("fin_email") + ": " + (data.email || "—"),
       t("fin_car") + ": " + (data.car || "—"),
-      t("fin_bank") + ": " + (data.bank || "—"),
+      t("fin_payment") + ": " + (data.payment || "—"),
       t("fin_message") + ": " + (data.message || "—")
     ].join("\n");
     location.href = "mailto:valleauto@yahoo.com?subject=" +
@@ -491,8 +489,8 @@ function renderContact() {
       <div class="contact-grid">
         <div class="contact-card">
           <h3>${t("contact_phones")}</h3>
-          <a href="tel:+17872334800">(787) 233-4800</a>
-          <a href="tel:+17878684840">(787) 868-4840</a>
+          <a href="https://wa.me/17872334800" target="_blank" rel="noopener">💬 WhatsApp: (787) 233-4800</a>
+          <a href="tel:+17878684840">📞 ${t("contact_office")}: (787) 868-4840</a>
           <h3>${t("contact_email")}</h3>
           <a href="mailto:valleauto@yahoo.com">valleauto@yahoo.com</a>
           <h3>${t("contact_address")}</h3>

@@ -4,6 +4,13 @@ Development history for the Valle Auto Sales website.
 
 ## 2026-07-15
 
+### Changed (family content requests)
+
+- Claude simplified the financing page per the family: no specific banks (Banco Popular) or cooperativas mentioned — one card now says financing is available at the dealer and we work with you and your bank. The lead form's "Banco preferido" dropdown became "Forma de pago" (Al contado/Financiamiento).
+- Claude set the official founding date (July 1992) across the site: hero, footer tagline, story page, meta descriptions, and JSON-LD `foundingDate`.
+- Claude updated hours to Mon–Sat 8:30 AM–5:30 PM everywhere (contact page + JSON-LD).
+- Claude labeled the phone numbers — 💬 WhatsApp (787) 233-4800 now opens a chat via wa.me; 📞 Oficina (787) 868-4840 stays a tel: link — in the contact page and footer. The form-error message now points to the office number.
+
 ### Changed (later that day)
 
 - Claude removed sold cars from the site per the family's preference: the sync now publishes only `Estado = Activo` records, so `Vendido` takes a car (and its photos) off the website while the Airtable record remains as sales history. The VENDIDO-tag display is no longer reachable.
