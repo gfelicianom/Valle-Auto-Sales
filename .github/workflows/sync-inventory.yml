@@ -2,7 +2,12 @@ name: Sync inventory from Airtable
 
 on:
   schedule:
-    - cron: "17 */2 * * *"   # every 2 hours
+    # Hourly during the inventory-upload phase, but only while the
+    # family is awake: 6am–11pm Puerto Rico (AST = UTC-4, no DST).
+    # UTC hours 0-3 = 8pm-11pm AST; 10-23 = 6am-7pm AST.
+    # After the upload phase, drop back to every 2 hours, e.g.:
+    #   "17 1-3/2,11-23/2 * * *"
+    - cron: "17 0-3,10-23 * * *"
   workflow_dispatch:          # "Run workflow" button in the Actions tab
 
 concurrency:
