@@ -11,8 +11,8 @@
    Airtable attachment URLs expire (~2h), which is why photos
    must be downloaded here rather than hotlinked by the site.
 
-   Cars appear on the site only when Estado is "Activo" or
-   "Vendido". Empty Estado or "Borrador" = hidden.
+   Cars appear on the site only while Estado is "Activo".
+   "Vendido", "Borrador", or empty = off the site.
 
    Usage:  AIRTABLE_TOKEN=pat… node scripts/sync-inventory.mjs
    Needs:  Node 20+, `npm install --no-save sharp`
@@ -71,13 +71,15 @@ async function fetchRecords() {
 function toCar(rec) {
   const f = rec.fields;
   const estado = key(f["Estado"]);
-  if (estado !== "activo" && estado !== "vendido") return null; // Borrador/empty = hidden
+  /* Family decision 2026-07-15: sold cars come OFF the site entirely,
+     so only Activo is published. Vendido/Borrador/empty = hidden. */
+  if (estado !== "activo") return null;
   const id = String(f["ID"] || "").trim();
   if (!id) return null;
   const trim = String(f["Trim"] || "").trim();
   return {
     id,
-    status: estado === "vendido" ? "sold" : "active",
+    status: "active",
     make: String(f["Marca"] || "").trim(),
     model: (String(f["Modelo"] || "").trim() + (trim ? " " + trim : "")).trim(),
     year: Number(f["Año"]) || 0,
@@ -90,7 +92,7 @@ function toCar(rec) {
     condition_tags: [],
     notes: String(f["Notas"] || "").trim(),
     featured: !!f["Destacado"],
-    sold: estado === "vendido",
+    sold: false,
     _created: rec.createdTime,
     _fotos: Array.isArray(f["Fotos"]) ? f["Fotos"] : []
   };
@@ -101,9 +103,8 @@ async function main() {
 
   const cars = (await fetchRecords()).map(toCar).filter(Boolean);
 
-  /* Site order: available before sold, featured first, then newest. */
+  /* Site order: featured first, then newest arrivals. */
   cars.sort((a, b) => {
-    if (a.sold !== b.sold) return a.sold - b.sold;
     if (a.featured !== b.featured) return b.featured - a.featured;
     return b._created.localeCompare(a._created);
   });

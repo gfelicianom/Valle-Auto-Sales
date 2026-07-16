@@ -4,6 +4,10 @@ Development history for the Valle Auto Sales website.
 
 ## 2026-07-15
 
+### Changed (later that day)
+
+- Claude removed sold cars from the site per the family's preference: the sync now publishes only `Estado = Activo` records, so `Vendido` takes a car (and its photos) off the website while the Airtable record remains as sales history. The VENDIDO-tag display is no longer reachable.
+
 ### Added
 
 - Claude built the Airtable → website sync: `scripts/sync-inventory.mjs` (pulls the base, writes `js/inventory.json`, downloads `Fotos` attachments to `img/cars/<ID>-<n>.jpg` resized to 1600px JPEG, prunes removed cars' photos) and `.github/workflows/sync-inventory.yml` (every 2 hours + manual run; needs the `AIRTABLE_TOKEN` repo secret, scope `data.records:read`). `js/data.js` now loads `js/inventory.json` instead of the Google Sheet; the gviz loader was removed. Display order is automatic: available → featured → newest, sold last.

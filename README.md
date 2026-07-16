@@ -31,8 +31,10 @@ from the website side it is the single source of truth.
 3. Drag the photos into `Fotos`, best exterior shot first (it becomes the
    cover). Suggested order: front ¾ exterior → rest of exterior → interior →
    odometer/engine.
-4. Set `Estado` to `Activo` when the listing is ready. Cars with `Estado`
-   empty or `Borrador` stay hidden, `Vendido` shows the red VENDIDO tag.
+4. Set `Estado` to `Activo` when the listing is ready. Only `Activo` cars
+   appear on the site — `Vendido`, `Borrador`, or empty stay off it, so
+   marking a car `Vendido` removes it from the website (the record stays
+   in Airtable as the sales history).
 5. Wait for the next sync (up to ~2 hours) — or trigger it immediately from
    GitHub → Actions → "Sync inventory from Airtable" → Run workflow.
 
@@ -41,7 +43,7 @@ Field notes:
 | field | what it does |
 |---|---|
 | `ID` | unique id (`v-001`) — photo files are named after it |
-| `Estado` | `Activo` = shown, `Vendido` = shown with VENDIDO tag, `Borrador`/empty = hidden |
+| `Estado` | `Activo` = on the site; `Vendido`/`Borrador`/empty = not on the site |
 | `Destacado` | checked = shows in "Autos Destacados" on the home page |
 | `Año` `Marca` `Modelo` `Trim` | shown on cards and the detail page |
 | `Tipo` | drives the body-type filter |
@@ -50,8 +52,8 @@ Field notes:
 | `Notas` | free text on the detail page, shown as-is in both languages |
 | `Fotos` | the gallery; attachment order = display order |
 
-**Display order** is automatic: available cars before sold ones, featured
-first, then newest first. There is nothing to renumber.
+**Display order** is automatic: featured cars first, then newest first.
+There is nothing to renumber.
 
 ## 2. The sync (Airtable → website)
 
