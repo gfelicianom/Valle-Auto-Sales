@@ -14,15 +14,17 @@ Pure static site — no build step. Host it free on Netlify, Vercel, or GitHub P
 - `js/inventory.json` — generated inventory data (**never edit by hand**)
 - `img/cars/` — generated car photos (**never edit by hand**)
 - `scripts/sync-inventory.mjs` — Airtable → website sync script
-- `.github/workflows/sync-inventory.yml` — runs the sync every 2 hours
+- `.github/workflows/sync-inventory.yml` — runs the sync hourly from
+  6:37 AM to 11:37 PM Puerto Rico time
 - `CHANGELOG.md` — site-development history and who made each change
 
 ## 1. The Airtable (inventory)
 
 The inventory lives in the Airtable base **"Inventario Valle Auto Sales"**
 (`app9Rj2rqXxh1QSTy`), table **Vehículos**. A GitHub Action syncs it to the
-site every 2 hours (see section 2). The family only ever edits Airtable —
-from the website side it is the single source of truth.
+site hourly from 6:37 AM to 11:37 PM Puerto Rico time (see section 2). The
+family only ever edits Airtable — from the website side it is the single
+source of truth.
 
 **Family workflow (all in the Airtable app, phone or computer):**
 
@@ -35,8 +37,9 @@ from the website side it is the single source of truth.
    appear on the site — `Vendido`, `Borrador`, or empty stay off it, so
    marking a car `Vendido` removes it from the website (the record stays
    in Airtable as the sales history).
-5. Wait for the next sync (up to ~2 hours) — or trigger it immediately from
-   GitHub → Actions → "Sync inventory from Airtable" → Run workflow.
+5. Wait for the next sync (normally within ~1 hour during the scheduled
+   window) — or trigger it immediately from GitHub → Actions →
+   "Sync inventory from Airtable" → Run workflow.
 
 Field notes:
 
