@@ -4,6 +4,18 @@ Development history for the Valle Auto Sales website.
 
 ## 2026-07-16
 
+### Fixed (Origen field)
+
+- Claude fixed the sync dropping the `Origen` field: it always wrote an empty value, so the Local/Importado badge, filter, and detail-page note never appeared even when the family set it in Airtable. The sync now maps `Local`/`Importado` to the site's internal keys, and the website shows it in Spanish by default with the existing English translation.
+
+### Changed (documentation)
+
+- Claude documented the `Origen` field in the README field table, and made the changelog-attribution rule cover Claude, Codex, and people (it previously only named Codex).
+
+### Changed (housekeeping)
+
+- Giomarell stopped git from tracking macOS `.DS_Store` metadata files (added to `.gitignore`), ending the noise commits that appeared when switching between computers.
+
 ### Changed (inventory scheduler)
 
 - Codex changed the Airtable sync to a timezone-aware hourly schedule from 6:37 AM through 11:37 PM Puerto Rico time, forcing GitHub to register a fresh schedule after the previous cron ran only twice daily.

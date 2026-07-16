@@ -51,6 +51,7 @@ Field notes:
 | `Año` `Marca` `Modelo` `Trim` | shown on cards and the detail page |
 | `Tipo` | drives the body-type filter |
 | `Color` | enables the color swatch + filter (bilingual automatically) |
+| `Origen` | `Local` or `Importado` — shows a badge on the card, an origin filter, and a bilingual explanation on the detail page; empty = nothing shows |
 | `Millaje` / `Precio` | numbers; empty/0 price shows "Consulte precio" |
 | `Notas` | free text on the detail page, shown as-is in both languages |
 | `Fotos` | the gallery; attachment order = display order |
@@ -107,7 +108,7 @@ Then open `http://localhost:8000/#/inventario`.
 
 - Keep the README focused on how the site works and how to operate it.
 - Keep `CHANGELOG.md` updated with visible site changes, inventory/data-flow changes, and setup decisions.
-- When Codex makes a change, the changelog entry and git commit should say `Codex` so the source of the work is traceable.
+- When Claude, Codex, or a person makes a change, the changelog entry and git commit should say who, so the source of the work is traceable.
 - Commit related changes together after they have been previewed locally.
 
 ## History

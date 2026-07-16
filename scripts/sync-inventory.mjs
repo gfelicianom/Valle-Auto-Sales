@@ -87,7 +87,9 @@ function toCar(rec) {
     mileage: Number(f["Millaje"]) || 0,
     price: Number(f["Precio"]) || 0,
     body_type: BODY_MAP[key(f["Tipo"])] || (f["Tipo"] ? "other" : "other"),
-    origin: "",
+    /* Airtable "Origen" stays Spanish (Local/Importado); the site code uses
+       internal keys "local"/"imported" and i18n.js shows the right language. */
+    origin: f["Origen"] ? (key(f["Origen"]) === "importado" ? "imported" : "local") : "",
     registration_fee: "",
     condition_tags: [],
     notes: String(f["Notas"] || "").trim(),
