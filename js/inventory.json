@@ -1,6 +1,30 @@
 {
   "cars": [
     {
+      "id": "v-003",
+      "status": "active",
+      "make": "Ford",
+      "model": "F-150 STX",
+      "year": 2020,
+      "color": "azul",
+      "mileage": 129962,
+      "price": 25995,
+      "body_type": "pickup",
+      "origin": "",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Tracción trasera, motor de 2.7 L y 6 cilindros\nRear-wheel drive, 2.7L engine with 6 cylinders",
+      "featured": true,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-003-1.jpg",
+        "img/cars/v-003-2.jpg",
+        "img/cars/v-003-3.jpg",
+        "img/cars/v-003-4.jpg",
+        "img/cars/v-003-5.jpg"
+      ]
+    },
+    {
       "id": "v-001",
       "status": "active",
       "make": "Toyota",
@@ -23,31 +47,6 @@
         "img/cars/v-001-4.jpg",
         "img/cars/v-001-5.jpg",
         "img/cars/v-001-6.jpg"
-      ]
-    },
-    {
-      "id": "v-002",
-      "status": "active",
-      "make": "Hyundai",
-      "model": "Elantra",
-      "year": 2025,
-      "color": "plata",
-      "mileage": 8095,
-      "price": 18995,
-      "body_type": "sedan",
-      "origin": "",
-      "registration_fee": "",
-      "condition_tags": [],
-      "notes": "",
-      "featured": false,
-      "sold": false,
-      "photo_urls": [
-        "img/cars/v-002-1.jpg",
-        "img/cars/v-002-2.jpg",
-        "img/cars/v-002-3.jpg",
-        "img/cars/v-002-4.jpg",
-        "img/cars/v-002-5.jpg",
-        "img/cars/v-002-6.jpg"
       ]
     }
   ]
