@@ -2,6 +2,13 @@
 
 Development history for the Valle Auto Sales website.
 
+## 2026-07-16
+
+### Changed (inventory scheduler)
+
+- Codex changed the Airtable sync to a timezone-aware hourly schedule from 6:37 AM through 11:37 PM Puerto Rico time, forcing GitHub to register a fresh schedule after the previous cron ran only twice daily.
+- Codex upgraded `actions/checkout` and `actions/setup-node` from v4 to v5 so the workflow actions use the supported Node.js 24 runtime without deprecation warnings.
+
 ## 2026-07-15
 
 ### Added (lead form delivery)
