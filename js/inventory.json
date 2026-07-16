@@ -1,6 +1,31 @@
 {
   "cars": [
     {
+      "id": "v-004",
+      "status": "active",
+      "make": "Toyota",
+      "model": "Highlander XSE",
+      "year": 2022,
+      "color": "",
+      "mileage": 43550,
+      "price": 38995,
+      "body_type": "suv",
+      "origin": "",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Asientos en cuero y techo solar\nLeather seats and sunroof",
+      "featured": true,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-004-1.jpg",
+        "img/cars/v-004-2.jpg",
+        "img/cars/v-004-3.jpg",
+        "img/cars/v-004-4.jpg",
+        "img/cars/v-004-5.jpg",
+        "img/cars/v-004-6.jpg"
+      ]
+    },
+    {
       "id": "v-003",
       "status": "active",
       "make": "Ford",
@@ -47,6 +72,31 @@
         "img/cars/v-001-4.jpg",
         "img/cars/v-001-5.jpg",
         "img/cars/v-001-6.jpg"
+      ]
+    },
+    {
+      "id": "v-002",
+      "status": "active",
+      "make": "Hyundai",
+      "model": "Elantra",
+      "year": 2025,
+      "color": "plata",
+      "mileage": 8095,
+      "price": 18995,
+      "body_type": "sedan",
+      "origin": "",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "",
+      "featured": false,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-002-1.jpg",
+        "img/cars/v-002-2.jpg",
+        "img/cars/v-002-3.jpg",
+        "img/cars/v-002-4.jpg",
+        "img/cars/v-002-5.jpg",
+        "img/cars/v-002-6.jpg"
       ]
     }
   ]
