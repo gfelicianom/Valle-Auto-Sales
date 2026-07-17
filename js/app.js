@@ -366,19 +366,6 @@ function renderCarDetail(id) {
             ${c.origin ? `<tr><td>${t("f_origin")}</td><td><span class="badge ${c.origin === "imported" ? "badge-imported" : "badge-local"}">${t(c.origin === "imported" ? "origin_imported" : "origin_local")}</span></td></tr>` : ""}
           </table>
 
-          ${c.origin ? `
-          <div class="info-card">
-            <h3>${t("d_origin_title")}</h3>
-            <p>${t(c.origin === "imported" ? "d_origin_imported" : "d_origin_local")}</p>
-          </div>` : ""}
-
-          ${c.origin === "imported" ? `
-          <div class="info-card">
-            <h3>${t("d_reg_title")}</h3>
-            <p>${t("d_reg_text")}</p>
-            <p class="reg-fee">${c.registration_fee ? t("d_reg_fee") + " " + esc(c.registration_fee) : t("d_reg_fee_ask")}</p>
-          </div>` : ""}
-
           ${c.condition_tags.length ? `
           <div class="info-card">
             <h3>${t("d_condition_title")}</h3>
