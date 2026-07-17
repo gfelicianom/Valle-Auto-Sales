@@ -221,6 +221,17 @@ button { font-family: inherit; cursor: pointer; }
 }
 .badge-local { background: rgba(199, 203, 209, 0.12); color: var(--silver); border: 1px solid var(--line); }
 .badge-imported { background: rgba(224, 31, 38, 0.14); color: #ff5a60; border: 1px solid rgba(224, 31, 38, 0.4); }
+.badge-4x4 {
+  background: linear-gradient(180deg, #d8dce2, #aab0b8); color: var(--black);
+  border: 1px solid rgba(255, 255, 255, 0.35); font-weight: 800;
+}
+.tag-4x4 {
+  position: absolute; bottom: .6rem; left: .6rem; z-index: 2;
+  background: linear-gradient(180deg, #d8dce2, #aab0b8); color: var(--black);
+  font-weight: 800; font-size: .74rem; letter-spacing: 1px;
+  padding: .18rem .55rem; border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
 
 /* ---------- Inventory controls ---------- */
 

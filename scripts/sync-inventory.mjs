@@ -54,20 +54,34 @@ const BODY_MAP = {
 };
 
 /* Keep the Airtable labels friendly for the family while publishing stable,
-   language-neutral keys for the bilingual website. */
-const DRIVETRAIN_MAP = {
-  fwd: "fwd", delantera: "fwd", "traccion delantera": "fwd",
-  rwd: "rwd", trasera: "rwd", "traccion trasera": "rwd",
-  awd: "awd", integral: "awd", "traccion integral": "awd",
-  "4wd": "4wd", "4x4": "4wd", "cuatro por cuatro": "4wd"
+   language-neutral keys for the bilingual website. Matched by keyword, not
+   exact label, so renaming an option in Airtable (e.g. "FWD / delantera")
+   doesn't silently blank the field. */
+const DRIVETRAIN_PATTERNS = [
+  ["4wd", /4wd|4x4|cuatro/],
+  ["awd", /awd|integral/],
+  ["rwd", /rwd|trasera/],
+  ["fwd", /fwd|delantera/]
+];
+const mapDrivetrain = (s) => {
+  const k = key(s);
+  if (!k) return "";
+  const hit = DRIVETRAIN_PATTERNS.find(([, re]) => re.test(k));
+  return hit ? hit[0] : "";
 };
 
-const FUEL_MAP = {
-  gasolina: "gasoline", gas: "gasoline", gasoline: "gasoline",
-  diesel: "diesel",
-  hibrido: "hybrid", hybrid: "hybrid",
-  "hibrido enchufable": "plug_in_hybrid", "plug-in hybrid": "plug_in_hybrid",
-  electrico: "electric", electric: "electric"
+const FUEL_PATTERNS = [
+  ["plug_in_hybrid", /enchufable|plug/],
+  ["hybrid", /hibrido|hybrid/],
+  ["electric", /electric/],
+  ["diesel", /diesel/],
+  ["gasoline", /gas/]
+];
+const mapFuel = (s) => {
+  const k = key(s);
+  if (!k) return "";
+  const hit = FUEL_PATTERNS.find(([, re]) => re.test(k));
+  return hit ? hit[0] : "";
 };
 
 async function fetchRecords() {
@@ -106,8 +120,8 @@ function toCar(rec) {
     body_type: BODY_MAP[key(f["Tipo"])] || (f["Tipo"] ? "other" : "other"),
     engine_liters: Number(f["Motor (L)"]) || 0,
     cylinders: Number(f["Cilindros"]) || 0,
-    drivetrain: DRIVETRAIN_MAP[key(f["Tracción"])] || "",
-    fuel_type: FUEL_MAP[key(f["Combustible"])] || "",
+    drivetrain: mapDrivetrain(f["Tracción"]),
+    fuel_type: mapFuel(f["Combustible"]),
     /* Airtable "Origen" stays Spanish (Local/Importado); the site code uses
        internal keys "local"/"imported" and i18n.js shows the right language. */
     origin: f["Origen"] ? (key(f["Origen"]) === "importado" ? "imported" : "local") : "",

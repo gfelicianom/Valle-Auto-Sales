@@ -51,6 +51,7 @@ function carCard(c) {
     <div class="car-photo">
       ${c.sold ? `<span class="sold-tag">${t("badge_sold")}</span>` : ""}
       ${c.featured && !c.sold ? `<span class="featured-star">★ ${t("badge_featured")}</span>` : ""}
+      ${c.drivetrain === "4wd" ? `<span class="tag-4x4">4×4</span>` : ""}
       ${photo}
     </div>
     <div class="car-body">
@@ -360,7 +361,7 @@ function renderCarDetail(id) {
             <tr><td>${t("d_body")}</td><td>${bodyLabel(c)}</td></tr>
             ${Number(c.engine_liters) > 0 ? `<tr><td>${t("d_engine")}</td><td>${Number(c.engine_liters).toLocaleString("en-US", { maximumFractionDigits: 2 })} L</td></tr>` : ""}
             ${Number(c.cylinders) > 0 ? `<tr><td>${t("d_cylinders")}</td><td>${t("cylinders_long", { n: Number(c.cylinders) })}</td></tr>` : ""}
-            ${c.drivetrain ? `<tr><td>${t("d_drivetrain")}</td><td>${drivetrainLabel(c)}</td></tr>` : ""}
+            ${c.drivetrain ? `<tr><td>${t("d_drivetrain")}</td><td>${c.drivetrain === "4wd" ? `<span class="badge badge-4x4">${drivetrainLabel(c)}</span>` : drivetrainLabel(c)}</td></tr>` : ""}
             ${c.fuel_type ? `<tr><td>${t("d_fuel")}</td><td>${fuelLabel(c)}</td></tr>` : ""}
             ${c.origin ? `<tr><td>${t("f_origin")}</td><td><span class="badge ${c.origin === "imported" ? "badge-imported" : "badge-local"}">${t(c.origin === "imported" ? "origin_imported" : "origin_local")}</span></td></tr>` : ""}
           </table>
