@@ -53,11 +53,21 @@ Field notes:
 | `Color` | enables the color swatch + filter (bilingual automatically) |
 | `Origen` | `Local` or `Importado` — shows a badge on the card, an origin filter, and a bilingual explanation on the detail page; empty = nothing shows |
 | `Millaje` / `Precio` | numbers; empty/0 price shows "Consulte precio" |
+| `Motor (L)` | number, normally one decimal (`2.7`, `3.5`, `5.0`); enables engine-size display and filter; empty = nothing shows |
+| `Cilindros` | whole number (`4`, `6`, `8`); enables cylinder display and filter; empty = nothing shows |
+| `Tracción` | single select: `FWD`, `RWD`, `AWD`, or `4WD`; enables drivetrain display and filter; empty = nothing shows |
+| `Combustible` | single select: `Gasolina`, `Diésel`, `Híbrido`, `Híbrido enchufable`, or `Eléctrico`; enables fuel display and filter; empty = nothing shows |
 | `Notas` | free text on the detail page, shown as-is in both languages |
 | `Fotos` | the gallery; attachment order = display order |
 
 **Display order** is automatic: featured cars first, then newest first.
 There is nothing to renumber.
+
+Powertrain fields are optional. Add the four columns above to Airtable with
+the exact field names shown; the sync, search, cards, filters, and detail page
+will pick them up automatically. `AWD` and `4WD` intentionally remain separate:
+AWD is the always-managed all-wheel system common on crossovers, while 4WD/4x4
+is the truck-style selectable four-wheel-drive system.
 
 ## 2. The sync (Airtable → website)
 

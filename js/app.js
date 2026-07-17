@@ -8,6 +8,7 @@ const app = document.getElementById("app");
 /* Filter state persists while browsing the inventory */
 const FILTERS_DEFAULT = () => ({
   q: "", body: "", make: "", model: "", color: "", origin: "",
+  engine: "", cylinders: "", drivetrain: "", fuel: "",
   yearMin: "", yearMax: "", priceMin: "", priceMax: "",
   mileMin: "", mileMax: "", showSold: false, sort: "price_asc", panelOpen: false
 });
@@ -21,6 +22,17 @@ const fmtMiles = m => Number(m).toLocaleString("en-US");
 const carName = c => `${c.make} ${c.model} ${c.year}`;
 const colorLabel = c => t("c_" + c.color) === "c_" + c.color ? (c.color.charAt(0).toUpperCase() + c.color.slice(1)) : t("c_" + c.color);
 const bodyLabel = c => t("bt_" + c.body_type) === "bt_" + c.body_type ? t("bt_other") : t("bt_" + c.body_type);
+const drivetrainLabel = c => t("drive_" + c.drivetrain) === "drive_" + c.drivetrain ? c.drivetrain.toUpperCase() : t("drive_" + c.drivetrain);
+const fuelLabel = c => t("fuel_" + c.fuel_type) === "fuel_" + c.fuel_type ? c.fuel_type : t("fuel_" + c.fuel_type);
+
+function powertrainParts(c) {
+  return [
+    Number(c.engine_liters) > 0 ? `${Number(c.engine_liters).toLocaleString("en-US", { maximumFractionDigits: 2 })} L` : "",
+    Number(c.cylinders) > 0 ? t("cylinders_short", { n: Number(c.cylinders) }) : "",
+    c.drivetrain ? drivetrainLabel(c) : "",
+    c.fuel_type ? fuelLabel(c) : ""
+  ].filter(Boolean);
+}
 
 function colorDot(c) {
   const hex = COLOR_SWATCHES[c.color] || "#aaa";
@@ -44,6 +56,7 @@ function carCard(c) {
     <div class="car-body">
       <div class="car-title">${esc(carName(c))}</div>
       <div class="car-price">${fmtPrice(c.price)}</div>
+      ${powertrainParts(c).length ? `<div class="car-powertrain">${powertrainParts(c).map(esc).join(" · ")}</div>` : ""}
       <div class="car-meta">
         <span>${fmtMiles(c.mileage)} ${t("miles")}</span>
         ${c.color ? `<span>${colorDot(c)}${colorLabel(c)}</span>` : ""}
@@ -115,13 +128,22 @@ function applyFilters() {
   if (!f.showSold) list = list.filter(c => !c.sold);
   if (f.q) {
     const q = f.q.toLowerCase();
-    list = list.filter(c => (c.make + " " + c.model + " " + c.year).toLowerCase().includes(q));
+    list = list.filter(c => [
+      c.make, c.model, c.year, c.engine_liters, c.cylinders, c.drivetrain,
+      c.fuel_type, c.drivetrain ? drivetrainLabel(c) : "",
+      c.fuel_type ? fuelLabel(c) : "",
+      Number(c.cylinders) > 0 ? t("cylinders_long", { n: Number(c.cylinders) }) : ""
+    ].join(" ").toLowerCase().includes(q));
   }
   if (f.body) list = list.filter(c => c.body_type === f.body || (f.body === "suv" && c.body_type.startsWith("suv")));
   if (f.make) list = list.filter(c => c.make === f.make);
   if (f.model) list = list.filter(c => c.model === f.model);
   if (f.color) list = list.filter(c => c.color === f.color);
   if (f.origin) list = list.filter(c => c.origin === f.origin);
+  if (f.engine) list = list.filter(c => Number(c.engine_liters) === +f.engine);
+  if (f.cylinders) list = list.filter(c => Number(c.cylinders) === +f.cylinders);
+  if (f.drivetrain) list = list.filter(c => c.drivetrain === f.drivetrain);
+  if (f.fuel) list = list.filter(c => c.fuel_type === f.fuel);
   if (f.yearMin) list = list.filter(c => c.year >= +f.yearMin);
   if (f.yearMax) list = list.filter(c => c.year <= +f.yearMax);
   if (f.priceMin) list = list.filter(c => c.price >= +f.priceMin);
@@ -152,6 +174,12 @@ function renderInventory() {
   if (bodies.some(b => b.startsWith("suv_"))) bodyOpts.unshift({ value: "suv", label: "SUV — " + t("f_all") });
   const hasColors = colors.some(Boolean);
   const hasOrigins = CARS.some(c => c.origin);
+  const engines = [...new Set(CARS.map(c => Number(c.engine_liters)).filter(n => n > 0))].sort((a, b) => a - b);
+  const cylinders = [...new Set(CARS.map(c => Number(c.cylinders)).filter(n => n > 0))].sort((a, b) => a - b);
+  const drivetrainValues = new Set(CARS.map(c => c.drivetrain).filter(Boolean));
+  const fuelValues = new Set(CARS.map(c => c.fuel_type).filter(Boolean));
+  const drivetrains = ["fwd", "rwd", "awd", "4wd"].filter(value => drivetrainValues.has(value));
+  const fuels = ["gasoline", "diesel", "hybrid", "plug_in_hybrid", "electric"].filter(value => fuelValues.has(value));
 
   const list = applyFilters();
 
@@ -196,6 +224,26 @@ function renderInventory() {
             { value: "local", label: t("origin_local") },
             { value: "imported", label: t("origin_imported") }
           ], f.origin, t("f_all"))}</select>
+        </div>` : ""}
+        ${engines.length ? `
+        <div class="filter-group">
+          <label>${t("f_engine")}</label>
+          <select class="filter-select" data-f="engine">${filterOptions(engines.map(n => ({ value: String(n), label: `${n} L` })), f.engine, t("f_all"))}</select>
+        </div>` : ""}
+        ${cylinders.length ? `
+        <div class="filter-group">
+          <label>${t("f_cylinders")}</label>
+          <select class="filter-select" data-f="cylinders">${filterOptions(cylinders.map(n => ({ value: String(n), label: t("cylinders_long", { n }) })), f.cylinders, t("f_all"))}</select>
+        </div>` : ""}
+        ${drivetrains.length ? `
+        <div class="filter-group">
+          <label>${t("f_drivetrain")}</label>
+          <select class="filter-select" data-f="drivetrain">${filterOptions(drivetrains.map(d => ({ value: d, label: t("drive_" + d) })), f.drivetrain, t("f_all"))}</select>
+        </div>` : ""}
+        ${fuels.length ? `
+        <div class="filter-group">
+          <label>${t("f_fuel")}</label>
+          <select class="filter-select" data-f="fuel">${filterOptions(fuels.map(fuel => ({ value: fuel, label: t("fuel_" + fuel) })), f.fuel, t("f_all"))}</select>
         </div>` : ""}
         <div class="filter-group">
           <label>${t("f_year")}</label>
@@ -305,6 +353,10 @@ function renderCarDetail(id) {
             ${c.color ? `<tr><td>${t("d_color")}</td><td>${colorDot(c)} ${colorLabel(c)}</td></tr>` : ""}
             <tr><td>${t("d_mileage")}</td><td>${fmtMiles(c.mileage)} ${t("miles")}</td></tr>
             <tr><td>${t("d_body")}</td><td>${bodyLabel(c)}</td></tr>
+            ${Number(c.engine_liters) > 0 ? `<tr><td>${t("d_engine")}</td><td>${Number(c.engine_liters).toLocaleString("en-US", { maximumFractionDigits: 2 })} L</td></tr>` : ""}
+            ${Number(c.cylinders) > 0 ? `<tr><td>${t("d_cylinders")}</td><td>${t("cylinders_long", { n: Number(c.cylinders) })}</td></tr>` : ""}
+            ${c.drivetrain ? `<tr><td>${t("d_drivetrain")}</td><td>${drivetrainLabel(c)}</td></tr>` : ""}
+            ${c.fuel_type ? `<tr><td>${t("d_fuel")}</td><td>${fuelLabel(c)}</td></tr>` : ""}
             ${c.origin ? `<tr><td>${t("f_origin")}</td><td><span class="badge ${c.origin === "imported" ? "badge-imported" : "badge-local"}">${t(c.origin === "imported" ? "origin_imported" : "origin_local")}</span></td></tr>` : ""}
           </table>
 

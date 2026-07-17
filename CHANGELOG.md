@@ -4,6 +4,10 @@ Development history for the Valle Auto Sales website.
 
 ## 2026-07-16
 
+### Added (searchable vehicle specifications)
+
+- Codex added optional Airtable fields for `Motor (L)`, `Cilindros`, `Tracción`, and `Combustible`. The sync publishes them as structured data, the inventory provides conditional filters and search, cards show a compact powertrain summary, and detail pages show only the specifications filled in for that vehicle. Spanish and English labels are included, with AWD kept distinct from truck-style 4WD/4x4.
+
 ### Fixed (Origen field)
 
 - Claude fixed the sync dropping the `Origen` field: it always wrote an empty value, so the Local/Importado badge, filter, and detail-page note never appeared even when the family set it in Airtable. The sync now maps `Local`/`Importado` to the site's internal keys, and the website shows it in Spanish by default with the existing English translation.

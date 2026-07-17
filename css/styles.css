@@ -209,6 +209,7 @@ button { font-family: inherit; cursor: pointer; }
 .car-body { padding: .9rem 1rem 1rem; display: flex; flex-direction: column; gap: .35rem; flex: 1; }
 .car-title { font-weight: 700; font-size: 1.05rem; color: var(--white); }
 .car-price { color: var(--white); font-weight: 800; font-size: 1.2rem; }
+.car-powertrain { color: var(--silver); font-size: .82rem; font-weight: 650; line-height: 1.35; }
 .car-meta { display: flex; flex-wrap: wrap; gap: .4rem .8rem; font-size: .84rem; color: var(--gray-soft); align-items: center; }
 .color-dot {
   width: .8rem; height: .8rem; border-radius: 50%; display: inline-block;

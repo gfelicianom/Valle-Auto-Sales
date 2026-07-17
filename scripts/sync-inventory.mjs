@@ -53,6 +53,23 @@ const BODY_MAP = {
   hatchback: "hatchback", van: "van", coupe: "coupe"
 };
 
+/* Keep the Airtable labels friendly for the family while publishing stable,
+   language-neutral keys for the bilingual website. */
+const DRIVETRAIN_MAP = {
+  fwd: "fwd", delantera: "fwd", "traccion delantera": "fwd",
+  rwd: "rwd", trasera: "rwd", "traccion trasera": "rwd",
+  awd: "awd", integral: "awd", "traccion integral": "awd",
+  "4wd": "4wd", "4x4": "4wd", "cuatro por cuatro": "4wd"
+};
+
+const FUEL_MAP = {
+  gasolina: "gasoline", gas: "gasoline", gasoline: "gasoline",
+  diesel: "diesel",
+  hibrido: "hybrid", hybrid: "hybrid",
+  "hibrido enchufable": "plug_in_hybrid", "plug-in hybrid": "plug_in_hybrid",
+  electrico: "electric", electric: "electric"
+};
+
 async function fetchRecords() {
   const records = [];
   let offset;
@@ -87,6 +104,10 @@ function toCar(rec) {
     mileage: Number(f["Millaje"]) || 0,
     price: Number(f["Precio"]) || 0,
     body_type: BODY_MAP[key(f["Tipo"])] || (f["Tipo"] ? "other" : "other"),
+    engine_liters: Number(f["Motor (L)"]) || 0,
+    cylinders: Number(f["Cilindros"]) || 0,
+    drivetrain: DRIVETRAIN_MAP[key(f["Tracción"])] || "",
+    fuel_type: FUEL_MAP[key(f["Combustible"])] || "",
     /* Airtable "Origen" stays Spanish (Local/Importado); the site code uses
        internal keys "local"/"imported" and i18n.js shows the right language. */
     origin: f["Origen"] ? (key(f["Origen"]) === "importado" ? "imported" : "local") : "",

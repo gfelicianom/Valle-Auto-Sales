@@ -39,7 +39,8 @@ async function loadInventory() {
       .filter(c => c && c.id && (c.make || c.title))
       .map(c => ({
         title: "", make: "", model: "", year: 0, color: "", mileage: 0,
-        price: 0, body_type: "other", origin: "", registration_fee: "",
+        price: 0, body_type: "other", engine_liters: 0, cylinders: 0,
+        drivetrain: "", fuel_type: "", origin: "", registration_fee: "",
         condition_tags: [], photo_urls: [], featured: false, sold: false,
         notes: "", ...c
       }));
