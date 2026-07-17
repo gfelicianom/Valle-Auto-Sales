@@ -2,6 +2,12 @@
 
 Development history for the Valle Auto Sales website.
 
+## 2026-07-17
+
+### Fixed (custom-domain link previews)
+
+- Codex added a dedicated 1200×630 social-sharing image using the Valle Auto Sales logo and black/red brand palette, replaced the plain green-heavy dealership photo in Open Graph and structured metadata, and added explicit image dimensions, type, alt text, Twitter metadata, and theme color so messaging and social crawlers can build a complete preview for `valleautosales.com`.
+
 ## 2026-07-16
 
 ### Added (searchable vehicle specifications)

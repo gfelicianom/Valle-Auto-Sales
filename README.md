@@ -7,6 +7,7 @@ Pure static site — no build step. Host it free on Netlify, Vercel, or GitHub P
 
 - `index.html` — the single page (all sections render into it)
 - `img/brand/valle-auto-sales-logo.svg` — primary logo used in the header and footer
+- `img/brand/valle-auto-sales-social-preview.jpg` — branded 1200×630 link-preview image
 - `css/styles.css` — brand styles (black / red / chrome, matching the business card)
 - `js/i18n.js` — every text string in Spanish and English
 - `js/data.js` — inventory loader + **the config values you need to set**
@@ -88,6 +89,14 @@ Run locally (optional, for testing):
 ```bash
 npm install --no-save sharp
 AIRTABLE_TOKEN=pat… node scripts/sync-inventory.mjs
+```
+
+Regenerate the branded social sharing image after changing the logo or
+dealership photo:
+
+```bash
+npm install --no-save sharp
+node scripts/build-social-preview.mjs
 ```
 
 ## 3. The lead form (FormSubmit.co)
