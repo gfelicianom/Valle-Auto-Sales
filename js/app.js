@@ -323,8 +323,13 @@ function renderCarDetail(id) {
 
   const photos = c.photo_urls;
   const galleryPlaceholder = `<span class="ph-icon" style="font-size:4rem">🚗</span><p>${t("photo_placeholder")}</p>`;
+  const galleryNav = photos.length > 1
+    ? `<button class="gallery-nav prev" aria-label="${t("gal_prev")}">‹</button>
+       <button class="gallery-nav next" aria-label="${t("gal_next")}">›</button>
+       <div class="gallery-count" id="galleryCount">1 / ${photos.length}</div>`
+    : "";
   const mainPhoto = photos.length
-    ? galleryPlaceholder + `<img id="galleryMain" src="${esc(photos[0])}" alt="${esc(carName(c))}" onerror="this.remove()">`
+    ? galleryPlaceholder + `<img id="galleryMain" src="${esc(photos[0])}" alt="${esc(carName(c))}" onerror="this.remove()">` + galleryNav
     : galleryPlaceholder;
   const thumbs = photos.length > 1
     ? `<div class="gallery-thumbs">${photos.map((p, i) =>
@@ -385,22 +390,47 @@ function renderCarDetail(id) {
           ${c.notes ? `<div class="info-card"><h3>${t("d_notes")}</h3><p>${esc(c.notes)}</p></div>` : ""}
 
           ${!c.sold ? `<a href="${interestHref}" class="btn btn-red interest-btn">${t("d_interested")}</a>` : ""}
+
+          <div class="contact-btns">
+            <a href="https://wa.me/17872334800?text=${encodeURIComponent(t("d_wa_msg", { car: carName(c) }))}" target="_blank" rel="noopener" class="btn btn-silver">💬 ${t("d_whatsapp")}</a>
+            <a href="tel:+17878684840" class="btn btn-silver">📞 ${t("d_call_office")}</a>
+          </div>
         </div>
       </div>
     </div>
   </section>`;
 
-  app.querySelectorAll(".gallery-thumbs button").forEach(btn => {
-    btn.addEventListener("click", () => {
-      document.getElementById("galleryMain").src = photos[+btn.dataset.idx];
-      app.querySelectorAll(".gallery-thumbs button").forEach(b => b.classList.remove("active"));
-      btn.classList.add("active");
-    });
-  });
+  if (photos.length > 1) {
+    let idx = 0;
+    const mainImg = document.getElementById("galleryMain");
+    const countEl = document.getElementById("galleryCount");
+    const thumbBtns = [...app.querySelectorAll(".gallery-thumbs button")];
+    const show = i => {
+      idx = (i + photos.length) % photos.length;
+      if (mainImg) mainImg.src = photos[idx];
+      countEl.textContent = `${idx + 1} / ${photos.length}`;
+      thumbBtns.forEach(b => b.classList.toggle("active", +b.dataset.idx === idx));
+    };
+
+    thumbBtns.forEach(btn => btn.addEventListener("click", () => show(+btn.dataset.idx)));
+    app.querySelector(".gallery-nav.prev").addEventListener("click", () => show(idx - 1));
+    app.querySelector(".gallery-nav.next").addEventListener("click", () => show(idx + 1));
+
+    const gallery = app.querySelector(".gallery-main");
+    let touchX = null;
+    gallery.addEventListener("touchstart", e => { touchX = e.touches[0].clientX; }, { passive: true });
+    gallery.addEventListener("touchend", e => {
+      if (touchX === null) return;
+      const dx = e.changedTouches[0].clientX - touchX;
+      touchX = null;
+      if (Math.abs(dx) > 40) show(idx + (dx < 0 ? 1 : -1));
+    }, { passive: true });
+  }
 }
 
 function renderFinancing(params) {
   const prefill = params.get("car") || "";
+  const waMsg = prefill ? t("fin_wa_msg_car", { car: prefill }) : t("fin_wa_msg");
 
   app.innerHTML = `
   <section class="section">
@@ -411,6 +441,15 @@ function renderFinancing(params) {
       <div class="fin-cards">
         <div class="fin-card"><div class="fin-icon">💵</div><h3>${t("fin_cash_title")}</h3><p>${t("fin_cash_text")}</p></div>
         <div class="fin-card"><div class="fin-icon">🤝</div><h3>${t("fin_financing_title")}</h3><p>${t("fin_financing_text")}</p></div>
+      </div>
+
+      <div class="talk-direct">
+        <h3>${t("fin_talk_title")}</h3>
+        <p>${t("fin_talk_text")}</p>
+        <div class="contact-btns">
+          <a href="https://wa.me/17872334800?text=${encodeURIComponent(waMsg)}" target="_blank" rel="noopener" class="btn btn-silver">💬 ${t("d_whatsapp")}</a>
+          <a href="tel:+17878684840" class="btn btn-silver">📞 ${t("d_call_office")}</a>
+        </div>
       </div>
 
       <form class="lead-form" id="leadForm" novalidate>
