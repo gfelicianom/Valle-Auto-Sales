@@ -1,6 +1,30 @@
 {
   "cars": [
     {
+      "id": "v-006",
+      "status": "active",
+      "make": "Hyundai",
+      "model": "Palisade SE",
+      "year": 2023,
+      "color": "blanco",
+      "mileage": 26814,
+      "price": 29995,
+      "body_type": "suv",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "",
+      "featured": true,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-006-1.jpg",
+        "img/cars/v-006-2.jpg",
+        "img/cars/v-006-3.jpg",
+        "img/cars/v-006-4.jpg",
+        "img/cars/v-006-5.jpg"
+      ]
+    },
+    {
       "id": "v-004",
       "status": "active",
       "make": "Toyota",
