@@ -29,6 +29,34 @@
       ]
     },
     {
+      "id": "v-005",
+      "status": "active",
+      "make": "RAM",
+      "model": "2500",
+      "year": 2019,
+      "color": "gris",
+      "mileage": 45567,
+      "price": 42995,
+      "body_type": "pickup",
+      "engine_liters": 6.7,
+      "cylinders": 8,
+      "drivetrain": "4wd",
+      "fuel_type": "diesel",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "",
+      "featured": true,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-005-1.jpg",
+        "img/cars/v-005-2.jpg",
+        "img/cars/v-005-3.jpg",
+        "img/cars/v-005-4.jpg",
+        "img/cars/v-005-5.jpg"
+      ]
+    },
+    {
       "id": "v-003",
       "status": "active",
       "make": "Ford",
@@ -228,34 +256,6 @@
         "img/cars/v-007-4.jpg",
         "img/cars/v-007-5.jpg",
         "img/cars/v-007-6.jpg"
-      ]
-    },
-    {
-      "id": "v-005",
-      "status": "active",
-      "make": "RAM",
-      "model": "2500",
-      "year": 2019,
-      "color": "gris",
-      "mileage": 45567,
-      "price": 42995,
-      "body_type": "pickup",
-      "engine_liters": 6.7,
-      "cylinders": 8,
-      "drivetrain": "4wd",
-      "fuel_type": "diesel",
-      "origin": "local",
-      "registration_fee": "",
-      "condition_tags": [],
-      "notes": "",
-      "featured": false,
-      "sold": false,
-      "photo_urls": [
-        "img/cars/v-005-1.jpg",
-        "img/cars/v-005-2.jpg",
-        "img/cars/v-005-3.jpg",
-        "img/cars/v-005-4.jpg",
-        "img/cars/v-005-5.jpg"
       ]
     },
     {
