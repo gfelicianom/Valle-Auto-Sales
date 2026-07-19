@@ -21,6 +21,7 @@
 
 import { readFile, writeFile, readdir, unlink, mkdir } from "node:fs/promises";
 import path from "node:path";
+import { mapDrivetrain } from "./drivetrain.mjs";
 
 const BASE_ID = "app9Rj2rqXxh1QSTy";
 const TABLE_ID = "tblt7l3jOV8Rvk91K"; // Vehículos
@@ -51,23 +52,6 @@ const key = (s) =>
 const BODY_MAP = {
   sedan: "sedan", suv: "suv", pickup: "pickup",
   hatchback: "hatchback", van: "van", coupe: "coupe"
-};
-
-/* Keep the Airtable labels friendly for the family while publishing stable,
-   language-neutral keys for the bilingual website. Matched by keyword, not
-   exact label, so renaming an option in Airtable (e.g. "FWD / delantera")
-   doesn't silently blank the field. */
-const DRIVETRAIN_PATTERNS = [
-  ["4wd", /4wd|4x4|cuatro/],
-  ["awd", /awd|integral/],
-  ["rwd", /rwd|trasera/],
-  ["fwd", /fwd|delantera/]
-];
-const mapDrivetrain = (s) => {
-  const k = key(s);
-  if (!k) return "";
-  const hit = DRIVETRAIN_PATTERNS.find(([, re]) => re.test(k));
-  return hit ? hit[0] : "";
 };
 
 const FUEL_PATTERNS = [

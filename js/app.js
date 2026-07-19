@@ -24,6 +24,7 @@ const colorLabel = c => t("c_" + c.color) === "c_" + c.color ? (c.color.charAt(0
 const bodyLabel = c => t("bt_" + c.body_type) === "bt_" + c.body_type ? t("bt_other") : t("bt_" + c.body_type);
 const drivetrainLabel = c => t("drive_" + c.drivetrain) === "drive_" + c.drivetrain ? c.drivetrain.toUpperCase() : t("drive_" + c.drivetrain);
 const fuelLabel = c => t("fuel_" + c.fuel_type) === "fuel_" + c.fuel_type ? c.fuel_type : t("fuel_" + c.fuel_type);
+const isFourByFour = c => c.drivetrain === "4x4";
 
 function powertrainParts(c) {
   return [
@@ -51,7 +52,7 @@ function carCard(c) {
     <div class="car-photo">
       ${c.sold ? `<span class="sold-tag">${t("badge_sold")}</span>` : ""}
       ${c.featured && !c.sold ? `<span class="featured-star">★ ${t("badge_featured")}</span>` : ""}
-      ${c.drivetrain === "4wd" ? `<span class="tag-4x4">4×4</span>` : ""}
+      ${isFourByFour(c) ? `<span class="tag-4x4">4×4</span>` : ""}
       ${photo}
     </div>
     <div class="car-body">
@@ -179,7 +180,8 @@ function renderInventory() {
   const cylinders = [...new Set(CARS.map(c => Number(c.cylinders)).filter(n => n > 0))].sort((a, b) => a - b);
   const drivetrainValues = new Set(CARS.map(c => c.drivetrain).filter(Boolean));
   const fuelValues = new Set(CARS.map(c => c.fuel_type).filter(Boolean));
-  const drivetrains = ["fwd", "rwd", "awd", "4wd"].filter(value => drivetrainValues.has(value));
+  const drivetrains = ["fwd", "rwd", "awd", "4wd", "4x4", "4x2", "differential_lock"]
+    .filter(value => drivetrainValues.has(value));
   const fuels = ["gasoline", "diesel", "hybrid", "plug_in_hybrid", "electric"].filter(value => fuelValues.has(value));
 
   const list = applyFilters();
@@ -361,7 +363,7 @@ function renderCarDetail(id) {
             <tr><td>${t("d_body")}</td><td>${bodyLabel(c)}</td></tr>
             ${Number(c.engine_liters) > 0 ? `<tr><td>${t("d_engine")}</td><td>${Number(c.engine_liters).toLocaleString("en-US", { maximumFractionDigits: 2 })} L</td></tr>` : ""}
             ${Number(c.cylinders) > 0 ? `<tr><td>${t("d_cylinders")}</td><td>${t("cylinders_long", { n: Number(c.cylinders) })}</td></tr>` : ""}
-            ${c.drivetrain ? `<tr><td>${t("d_drivetrain")}</td><td>${c.drivetrain === "4wd" ? `<span class="badge badge-4x4">${drivetrainLabel(c)}</span>` : drivetrainLabel(c)}</td></tr>` : ""}
+            ${c.drivetrain ? `<tr><td>${t("d_drivetrain")}</td><td>${isFourByFour(c) ? `<span class="badge badge-4x4">${drivetrainLabel(c)}</span>` : drivetrainLabel(c)}</td></tr>` : ""}
             ${c.fuel_type ? `<tr><td>${t("d_fuel")}</td><td>${fuelLabel(c)}</td></tr>` : ""}
             ${c.origin ? `<tr><td>${t("f_origin")}</td><td><span class="badge ${c.origin === "imported" ? "badge-imported" : "badge-local"}">${t(c.origin === "imported" ? "origin_imported" : "origin_local")}</span></td></tr>` : ""}
           </table>

@@ -56,7 +56,7 @@ Field notes:
 | `Millaje` / `Precio` | numbers; empty/0 price shows "Consulte precio" |
 | `Motor (L)` | number, normally one decimal (`2.7`, `3.5`, `5.0`); enables engine-size display and filter; empty = nothing shows |
 | `Cilindros` | whole number (`4`, `6`, `8`); enables cylinder display and filter; empty = nothing shows |
-| `Tracción` | single select: `FWD`, `RWD`, `AWD`, or `4WD`; enables drivetrain display and filter; empty = nothing shows |
+| `Tracción` | single select: `FWD / delantera`, `RWD`, `AWD`, `4WD`, `4x4`, `4x2`, or `Differential lock`; enables drivetrain display and filter; empty = nothing shows |
 | `Combustible` | single select: `Gasolina`, `Diésel`, `Híbrido`, `Híbrido enchufable`, or `Eléctrico`; enables fuel display and filter; empty = nothing shows |
 | `Notas` | free text on the detail page, shown as-is in both languages |
 | `Fotos` | the gallery; attachment order = display order |
@@ -66,9 +66,10 @@ There is nothing to renumber.
 
 Powertrain fields are optional. Add the four columns above to Airtable with
 the exact field names shown; the sync, search, cards, filters, and detail page
-will pick them up automatically. `AWD` and `4WD` intentionally remain separate:
-AWD is the always-managed all-wheel system common on crossovers, while 4WD/4x4
-is the truck-style selectable four-wheel-drive system.
+will pick them up automatically. Every `Tracción` choice remains distinct in
+the website filter. `AWD` is the always-managed all-wheel system common on
+crossovers; only the exact `4x4` category receives the compact 4×4 visual badge;
+`4WD`, `4x2`, and `Differential lock` display as their own unbadged options.
 
 ## 2. The sync (Airtable → website)
 

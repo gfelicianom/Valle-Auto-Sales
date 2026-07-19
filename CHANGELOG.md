@@ -2,6 +2,12 @@
 
 Development history for the Valle Auto Sales website.
 
+## 2026-07-18
+
+### Changed (Tracción categories)
+
+- Codex integrated all seven live Airtable `Tracción` options. The sync now preserves `4WD`, `4x4`, `4x2`, and `Differential lock` as distinct website values instead of collapsing or dropping them; the inventory filter, cards, detail view, search, and Spanish/English labels support the expanded set. Only the exact `4x4` category receives the visual 4×4 badge. Mapper tests cover every live option and common aliases.
+
 ## 2026-07-17
 
 ### Fixed (custom-domain link previews)
