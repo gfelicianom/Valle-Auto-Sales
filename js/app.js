@@ -383,7 +383,7 @@ function renderCarDetail(id) {
 
           <div class="contact-btns">
             <a href="https://wa.me/17872334800?text=${encodeURIComponent(t("d_wa_msg", { car: carName(c) }))}" target="_blank" rel="noopener" class="btn btn-silver">💬 ${t("d_whatsapp")}</a>
-            <a href="tel:+17878684840" class="btn btn-silver">📞 ${t("d_call_office")}</a>
+            <a href="tel:+17872334800" class="btn btn-silver">📞 ${t("d_call")}</a>
           </div>
         </div>
       </div>
@@ -438,7 +438,7 @@ function renderFinancing(params) {
         <p>${t("fin_talk_text")}</p>
         <div class="contact-btns">
           <a href="https://wa.me/17872334800?text=${encodeURIComponent(waMsg)}" target="_blank" rel="noopener" class="btn btn-silver">💬 ${t("d_whatsapp")}</a>
-          <a href="tel:+17878684840" class="btn btn-silver">📞 ${t("d_call_office")}</a>
+          <a href="tel:+17872334800" class="btn btn-silver">📞 ${t("d_call")}</a>
         </div>
       </div>
 
