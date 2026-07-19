@@ -17,7 +17,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "",
+      "notes": "Transmisión automática",
       "featured": true,
       "sold": false,
       "photo_urls": [
@@ -45,7 +45,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "",
+      "notes": "Transmisión automática",
       "featured": true,
       "sold": false,
       "photo_urls": [
@@ -73,7 +73,7 @@
       "origin": "imported",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Tracción trasera, motor de 2.7 L y 6 cilindros\nRear-wheel drive, 2.7L engine with 6 cylinders",
+      "notes": "Transmisión automática, Tracción trasera, motor de 2.7 L y 6 cilindros\nRear-wheel drive, 2.7L engine with 6 cylinders",
       "featured": true,
       "sold": false,
       "photo_urls": [
@@ -101,7 +101,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Techo solar y asientos de cuero.\nSunroof and leather seats.",
+      "notes": "Transmisión automática, Techo solar y asientos de cuero.\nSunroof and leather seats.",
       "featured": true,
       "sold": false,
       "photo_urls": [
@@ -130,7 +130,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "",
+      "notes": "Transmisión automática",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -159,7 +159,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "",
+      "notes": "Transmisión automática",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -189,7 +189,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "",
+      "notes": "Transmisión automática",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -218,7 +218,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "",
+      "notes": "Transmisión automática",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -246,7 +246,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "",
+      "notes": "Transmisión automática",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -255,8 +255,7 @@
         "img/cars/v-010-3.jpg",
         "img/cars/v-010-4.jpg",
         "img/cars/v-010-5.jpg",
-        "img/cars/v-010-6.jpg",
-        "img/cars/v-010-7.jpg"
+        "img/cars/v-010-6.jpg"
       ]
     },
     {
@@ -276,7 +275,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "",
+      "notes": "Transmisión automática",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -300,12 +299,12 @@
       "body_type": "pickup",
       "engine_liters": 3.5,
       "cylinders": 6,
-      "drivetrain": "4wd",
+      "drivetrain": "4x4",
       "fuel_type": "gasoline",
       "origin": "imported",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "4x4",
+      "notes": "Transmisión automática",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -334,7 +333,7 @@
       "origin": "imported",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "",
+      "notes": "Transmisión automática",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -363,7 +362,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "",
+      "notes": "Transmisión automática",
       "featured": false,
       "sold": false,
       "photo_urls": [
