@@ -487,6 +487,34 @@
       ]
     },
     {
+      "id": "v-012",
+      "status": "active",
+      "make": "Nissan",
+      "model": "Versa",
+      "year": 2024,
+      "color": "plata",
+      "mileage": 4601,
+      "price": 14995,
+      "body_type": "sedan",
+      "engine_liters": 0,
+      "cylinders": 4,
+      "drivetrain": "fwd",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Transmisión Automático",
+      "featured": false,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-012-1.jpg",
+        "img/cars/v-012-2.jpg",
+        "img/cars/v-012-3.jpg",
+        "img/cars/v-012-4.jpg",
+        "img/cars/v-012-5.jpg"
+      ]
+    },
+    {
       "id": "v-011",
       "status": "active",
       "make": "Mitsubishi",
