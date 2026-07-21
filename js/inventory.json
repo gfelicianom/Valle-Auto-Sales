@@ -114,6 +114,35 @@
       ]
     },
     {
+      "id": "v-038",
+      "status": "active",
+      "make": "Honda",
+      "model": "Civic",
+      "year": 2017,
+      "color": "azul",
+      "mileage": 91926,
+      "price": 13995,
+      "body_type": "sedan",
+      "engine_liters": 0,
+      "cylinders": 4,
+      "drivetrain": "fwd",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Transmisión Automática",
+      "featured": false,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-038-1.jpg",
+        "img/cars/v-038-2.jpg",
+        "img/cars/v-038-3.jpg",
+        "img/cars/v-038-4.jpg",
+        "img/cars/v-038-5.jpg",
+        "img/cars/v-038-6.jpg"
+      ]
+    },
+    {
       "id": "v-036",
       "status": "active",
       "make": "Hyundai",
