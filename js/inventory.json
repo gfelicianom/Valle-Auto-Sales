@@ -170,6 +170,34 @@
       ]
     },
     {
+      "id": "v-037",
+      "status": "active",
+      "make": "Toyota",
+      "model": "Corolla LE",
+      "year": 2025,
+      "color": "blanco",
+      "mileage": 2785,
+      "price": 22995,
+      "body_type": "sedan",
+      "engine_liters": 0,
+      "cylinders": 4,
+      "drivetrain": "fwd",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Transmisión Automática",
+      "featured": false,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-037-1.jpg",
+        "img/cars/v-037-2.jpg",
+        "img/cars/v-037-3.jpg",
+        "img/cars/v-037-4.jpg",
+        "img/cars/v-037-5.jpg"
+      ]
+    },
+    {
       "id": "v-036",
       "status": "active",
       "make": "Hyundai",
@@ -339,6 +367,34 @@
       ]
     },
     {
+      "id": "v-030",
+      "status": "active",
+      "make": "Toyota",
+      "model": "Corolla LE",
+      "year": 2024,
+      "color": "gris",
+      "mileage": 19447,
+      "price": 23995,
+      "body_type": "sedan",
+      "engine_liters": 0,
+      "cylinders": 4,
+      "drivetrain": "fwd",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Transmisión Automática",
+      "featured": false,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-030-1.jpg",
+        "img/cars/v-030-2.jpg",
+        "img/cars/v-030-3.jpg",
+        "img/cars/v-030-4.jpg",
+        "img/cars/v-030-5.jpg"
+      ]
+    },
+    {
       "id": "v-029",
       "status": "active",
       "make": "Hyundai",
@@ -365,6 +421,37 @@
         "img/cars/v-029-4.jpg",
         "img/cars/v-029-5.jpg",
         "img/cars/v-029-6.jpg"
+      ]
+    },
+    {
+      "id": "v-028",
+      "status": "active",
+      "make": "Toyota",
+      "model": "Yaris",
+      "year": 2019,
+      "color": "gris",
+      "mileage": 36310,
+      "price": 12995,
+      "body_type": "sedan",
+      "engine_liters": 0,
+      "cylinders": 4,
+      "drivetrain": "fwd",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Transmisión Automática",
+      "featured": false,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-028-1.jpg",
+        "img/cars/v-028-2.jpg",
+        "img/cars/v-028-3.jpg",
+        "img/cars/v-028-4.jpg",
+        "img/cars/v-028-5.jpg",
+        "img/cars/v-028-6.jpg",
+        "img/cars/v-028-7.jpg",
+        "img/cars/v-028-8.jpg"
       ]
     },
     {
