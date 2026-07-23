@@ -397,6 +397,35 @@
       ]
     },
     {
+      "id": "v-026",
+      "status": "active",
+      "make": "Nissan",
+      "model": "Kicks",
+      "year": 2022,
+      "color": "gris",
+      "mileage": 55922,
+      "price": 14000,
+      "body_type": "suv",
+      "engine_liters": 0,
+      "cylinders": 4,
+      "drivetrain": "fwd",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Transmisión automática",
+      "featured": false,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-026-1.jpg",
+        "img/cars/v-026-2.jpg",
+        "img/cars/v-026-3.jpg",
+        "img/cars/v-026-4.jpg",
+        "img/cars/v-026-5.jpg",
+        "img/cars/v-026-6.jpg"
+      ]
+    },
+    {
       "id": "v-025",
       "status": "active",
       "make": "Kia",
