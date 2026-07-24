@@ -1,6 +1,35 @@
 {
   "cars": [
     {
+      "id": "v-046",
+      "status": "active",
+      "make": "Ford",
+      "model": "F-150 STX",
+      "year": 2018,
+      "color": "azul",
+      "mileage": 140606,
+      "price": 24995,
+      "body_type": "pickup",
+      "engine_liters": 2.7,
+      "cylinders": 6,
+      "drivetrain": "4x4",
+      "fuel_type": "gasoline",
+      "origin": "imported",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Transmisión Automática",
+      "featured": true,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-046-1.jpg",
+        "img/cars/v-046-2.jpg",
+        "img/cars/v-046-3.jpg",
+        "img/cars/v-046-4.jpg",
+        "img/cars/v-046-5.jpg",
+        "img/cars/v-046-6.jpg"
+      ]
+    },
+    {
       "id": "v-045",
       "status": "active",
       "make": "Toyota",
