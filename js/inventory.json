@@ -1,6 +1,38 @@
 {
   "cars": [
     {
+      "id": "v-045",
+      "status": "active",
+      "make": "Toyota",
+      "model": "Corolla SE",
+      "year": 2025,
+      "color": "blanco",
+      "mileage": 5143,
+      "price": 26995,
+      "body_type": "sedan",
+      "engine_liters": 0,
+      "cylinders": 4,
+      "drivetrain": "fwd",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Transmisión Automática, Sunroof",
+      "featured": true,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-045-1.jpg",
+        "img/cars/v-045-2.jpg",
+        "img/cars/v-045-3.jpg",
+        "img/cars/v-045-4.jpg",
+        "img/cars/v-045-5.jpg",
+        "img/cars/v-045-6.jpg",
+        "img/cars/v-045-7.jpg",
+        "img/cars/v-045-8.jpg",
+        "img/cars/v-045-9.jpg"
+      ]
+    },
+    {
       "id": "v-023",
       "status": "active",
       "make": "Toyota",
