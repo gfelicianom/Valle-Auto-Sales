@@ -202,6 +202,35 @@
       ]
     },
     {
+      "id": "v-047",
+      "status": "active",
+      "make": "Toyota",
+      "model": "C-HR Nightshade",
+      "year": 2022,
+      "color": "negro",
+      "mileage": 53867,
+      "price": 21995,
+      "body_type": "suv",
+      "engine_liters": 0,
+      "cylinders": 4,
+      "drivetrain": "fwd",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Transmisión Automática",
+      "featured": false,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-047-1.jpg",
+        "img/cars/v-047-2.jpg",
+        "img/cars/v-047-3.jpg",
+        "img/cars/v-047-4.jpg",
+        "img/cars/v-047-5.jpg",
+        "img/cars/v-047-6.jpg"
+      ]
+    },
+    {
       "id": "v-044",
       "status": "active",
       "make": "Infiniti",
