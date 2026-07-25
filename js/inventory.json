@@ -202,6 +202,36 @@
       ]
     },
     {
+      "id": "v-048",
+      "status": "active",
+      "make": "Mitsubishi",
+      "model": "Outlander Sport",
+      "year": 2023,
+      "color": "rojo",
+      "mileage": 25498,
+      "price": 19995,
+      "body_type": "suv",
+      "engine_liters": 0,
+      "cylinders": 4,
+      "drivetrain": "4wd",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Transmisión Automática",
+      "featured": false,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-048-1.jpg",
+        "img/cars/v-048-2.jpg",
+        "img/cars/v-048-3.jpg",
+        "img/cars/v-048-4.jpg",
+        "img/cars/v-048-5.jpg",
+        "img/cars/v-048-6.jpg",
+        "img/cars/v-048-7.jpg"
+      ]
+    },
+    {
       "id": "v-047",
       "status": "active",
       "make": "Toyota",
