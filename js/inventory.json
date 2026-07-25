@@ -202,6 +202,35 @@
       ]
     },
     {
+      "id": "v-049",
+      "status": "active",
+      "make": "Mercedes Benz",
+      "model": "A 220",
+      "year": 2021,
+      "color": "azul",
+      "mileage": 32500,
+      "price": 23995,
+      "body_type": "sedan",
+      "engine_liters": 0,
+      "cylinders": 4,
+      "drivetrain": "fwd",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Transmisión  Automática, panorámico, asientos en leather",
+      "featured": false,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-049-1.jpg",
+        "img/cars/v-049-2.jpg",
+        "img/cars/v-049-3.jpg",
+        "img/cars/v-049-4.jpg",
+        "img/cars/v-049-5.jpg",
+        "img/cars/v-049-6.jpg"
+      ]
+    },
+    {
       "id": "v-048",
       "status": "active",
       "make": "Mitsubishi",
