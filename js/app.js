@@ -639,7 +639,7 @@ function applyStaticText() {
   document.querySelectorAll("[data-i18n]").forEach(el => { el.textContent = t(el.dataset.i18n); });
   document.querySelectorAll(".lang-toggle").forEach(b => { b.textContent = t("lang_button"); });
   document.title = LANG === "es"
-    ? "Valle Auto Sales — Usados e Importados — Aguada, Puerto Rico"
+    ? "Dealer de Autos Usados en Aguada, PR | Valle Auto Sales"
     : "Valle Auto Sales — Used & Imported Cars — Aguada, Puerto Rico";
 }
 

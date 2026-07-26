@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-PR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Valle Auto Sales — Usados e Importados — Aguada, Puerto Rico</title>
-<meta name="description" content="Valle Auto Sales — autos usados e importados en Aguada, Puerto Rico. Familia sirviendo a Aguada desde 1992. Used & imported cars in Aguada, PR.">
+<title>Dealer de Autos Usados en Aguada, PR | Valle Auto Sales</title>
+<meta name="description" content="Autos usados e importados en Aguada, Puerto Rico. Vea el inventario de Valle Auto Sales, dealer familiar en el Bo. Naranjo desde 1992.">
+<meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="canonical" href="https://valleautosales.com/">
 
 <!-- Social sharing (Open Graph / Twitter). og:image must be an absolute URL. -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Valle Auto Sales">
-<meta property="og:title" content="Valle Auto Sales — Usados e Importados — Aguada, Puerto Rico">
-<meta property="og:description" content="Autos usados e importados en Aguada, Puerto Rico. Familia sirviendo a Aguada desde 1992.">
+<meta property="og:title" content="Dealer de Autos Usados en Aguada, PR | Valle Auto Sales">
+<meta property="og:description" content="Vea nuestro inventario de autos usados e importados. Familia sirviendo a Aguada desde 1992.">
 <meta property="og:url" content="https://valleautosales.com/">
 <meta property="og:image" content="https://valleautosales.com/img/brand/valle-auto-sales-social-preview.jpg">
 <meta property="og:image:secure_url" content="https://valleautosales.com/img/brand/valle-auto-sales-social-preview.jpg">
@@ -30,35 +31,49 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "AutoDealer",
-  "name": "Valle Auto Sales",
-  "url": "https://valleautosales.com/",
-  "image": "https://valleautosales.com/img/brand/valle-auto-sales-social-preview.jpg",
-  "description": "Autos usados e importados en Aguada, Puerto Rico. Un negocio de familia sirviendo a Aguada desde 1992.",
-  "foundingDate": "1992-07",
-  "telephone": "+1-787-868-4840",
-  "email": "valleauto@yahoo.com",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Carr. #2 Km. 135.8, Bo. Naranjo",
-    "addressLocality": "Aguada",
-    "addressRegion": "PR",
-    "postalCode": "00602",
-    "addressCountry": "US"
-  },
-  "openingHoursSpecification": [
+  "@graph": [
     {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      "opens": "08:30",
-      "closes": "17:30"
+      "@type": "WebSite",
+      "@id": "https://valleautosales.com/#website",
+      "url": "https://valleautosales.com/",
+      "name": "Valle Auto Sales",
+      "inLanguage": ["es-PR", "en-US"],
+      "publisher": { "@id": "https://valleautosales.com/#dealer" }
+    },
+    {
+      "@type": "AutoDealer",
+      "@id": "https://valleautosales.com/#dealer",
+      "name": "Valle Auto Sales",
+      "url": "https://valleautosales.com/",
+      "logo": "https://valleautosales.com/img/brand/valle-auto-sales-logo.svg",
+      "image": "https://valleautosales.com/img/brand/valle-auto-sales-social-preview.jpg",
+      "description": "Dealer de autos usados e importados en Aguada, Puerto Rico. Negocio familiar sirviendo al oeste desde 1992.",
+      "foundingDate": "1992-07",
+      "telephone": "+1-787-868-4840",
+      "email": "valleauto@yahoo.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Carr. #2 Km. 135.8, Bo. Naranjo",
+        "addressLocality": "Aguada",
+        "addressRegion": "PR",
+        "postalCode": "00602",
+        "addressCountry": "US"
+      },
+      "openingHoursSpecification": [{
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "08:30",
+        "closes": "17:30"
+      }],
+      "areaServed": ["Aguada", "Aguadilla", "Añasco", "Mayagüez", "Rincón", "Moca"],
+      "hasMap": "https://maps.app.goo.gl/Y89TvFvftSZ9DvCD8",
+      "sameAs": [
+        "https://www.facebook.com/valleautosales",
+        "https://maps.app.goo.gl/Y89TvFvftSZ9DvCD8"
+      ],
+      "priceRange": "$$"
     }
-  ],
-  "sameAs": [
-    "https://www.facebook.com/valleautosales",
-    "https://maps.app.goo.gl/Y89TvFvftSZ9DvCD8"
-  ],
-  "priceRange": "$$"
+  ]
 }
 </script>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%230E0E0E'/><text x='50' y='70' font-size='56' font-weight='bold' text-anchor='middle' fill='%23E01F26' font-family='Arial'>V</text></svg>">
@@ -89,7 +104,26 @@
   </div>
 </header>
 
-<main id="app" tabindex="-1"></main>
+<main id="app" tabindex="-1">
+  <!-- Search-engine-readable first render. The app replaces this after loading. -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <h1>Dealer de autos usados e importados en Aguada, Puerto Rico</h1>
+        <p>Valle Auto Sales es un negocio de familia en el Barrio Naranjo, sirviendo a Aguada y al oeste de Puerto Rico desde 1992.</p>
+        <div class="hero-ctas">
+          <a href="/inventario/" class="btn btn-red">Ver autos disponibles</a>
+          <a href="/contacto/" class="btn btn-outline">Dirección y horario</a>
+        </div>
+      </div>
+      <div class="hero-photo"><img src="img/dealership.jpg" alt="Dealer Valle Auto Sales en Aguada, Puerto Rico" width="1600" height="1200"></div>
+    </div>
+  </section>
+  <section class="section"><div class="section-inner">
+    <h2>Autos usados en Aguada</h2>
+    <p>Explore nuestro <a href="/inventario/">inventario actualizado</a>, conozca las opciones de <a href="/financiamiento/">financiamiento</a> o vea <a href="/contacto/">cómo llegar a Valle Auto Sales</a>.</p>
+  </div></section>
+</main>
 
 <footer class="site-footer">
   <div class="footer-inner">
@@ -107,6 +141,7 @@
     </div>
     <div class="footer-lang">
       <button id="langToggleFooter" class="lang-toggle"></button>
+      <p><a href="/inventario/">Inventario</a> · <a href="/financiamiento/">Financiamiento</a><br><a href="/historia/">Nuestra Historia</a> · <a href="/contacto/">Contacto</a></p>
     </div>
   </div>
   <div class="footer-bottom">© <span id="year"></span> Valle Auto Sales · Aguada, Puerto Rico</div>

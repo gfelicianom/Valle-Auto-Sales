@@ -2,6 +2,18 @@
 
 Development history for the Valle Auto Sales website.
 
+## 2026-07-22
+
+### Added (search visibility)
+
+- Codex added crawlable pages for inventory, financing, history, contact, and every active vehicle, with unique titles, descriptions, canonical URLs, social metadata, and Vehicle/Product structured data.
+- Codex added automatic sitemap generation to the Airtable workflow so newly added and removed vehicles are reflected in search-engine discovery after every sync.
+- Codex added a search-readable homepage first render and direct internal links to the new pages while preserving the interactive bilingual website.
+
+### Changed (local SEO)
+
+- Codex strengthened the homepage dealership metadata with WebSite and AutoDealer entities, the existing Google Maps listing, business area, logo, address, telephone, and opening hours.
+
 ## 2026-07-18
 
 ### Changed (vehicle contact buttons)

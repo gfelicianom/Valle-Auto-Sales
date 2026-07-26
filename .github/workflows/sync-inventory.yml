@@ -34,9 +34,15 @@ jobs:
           AIRTABLE_TOKEN: ${{ secrets.AIRTABLE_TOKEN }}
         run: node scripts/sync-inventory.mjs
 
+      - name: Build crawlable inventory and vehicle pages
+        run: node scripts/build-seo-pages.mjs
+
+      - name: Validate generated SEO pages
+        run: node scripts/seo.test.mjs
+
       - name: Commit changes (if any)
         run: |
-          git add js/inventory.json img/cars
+          git add js/inventory.json img/cars autos inventario financiamiento historia contacto sitemap.xml
           if git diff --cached --quiet; then
             echo "Inventory unchanged — nothing to commit."
           else

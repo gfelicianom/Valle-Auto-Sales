@@ -15,6 +15,8 @@ Pure static site — no build step. Host it free on Netlify, Vercel, or GitHub P
 - `js/inventory.json` — generated inventory data (**never edit by hand**)
 - `img/cars/` — generated car photos (**never edit by hand**)
 - `scripts/sync-inventory.mjs` — Airtable → website sync script
+- `scripts/build-seo-pages.mjs` — generates crawlable inventory, vehicle, contact, history, financing, and sitemap pages
+- `scripts/seo.test.mjs` — validates canonical URLs, structured data, and sitemap coverage
 - `.github/workflows/sync-inventory.yml` — runs the sync hourly from
   6:37 AM to 11:37 PM Puerto Rico time
 - `CHANGELOG.md` — site-development history and who made each change
@@ -77,6 +79,11 @@ crossovers; only the exact `4x4` category receives the compact 4×4 visual badge
 `js/inventory.json`, and downloads every photo into `img/cars/` resized to
 1600px JPEG (Airtable's own attachment URLs expire after ~2 hours, so the
 site never links to them directly). The GitHub Action commits the result.
+After each inventory sync, `scripts/build-seo-pages.mjs` also creates one
+indexable page per active vehicle under `/autos/<ID>/`, refreshes the static
+inventory and business-information pages, and rebuilds `sitemap.xml`. This
+lets search engines discover the inventory without relying on JavaScript hash
+routes. Generated pages should not be edited by hand.
 
 **One-time setup (needs the Airtable account owner):**
 
