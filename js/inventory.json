@@ -145,6 +145,37 @@
       ]
     },
     {
+      "id": "v-051",
+      "status": "active",
+      "make": "Toyota",
+      "model": "Tacoma",
+      "year": 2006,
+      "color": "gris",
+      "mileage": 223000,
+      "price": 11995,
+      "body_type": "pickup",
+      "engine_liters": 0,
+      "cylinders": 6,
+      "drivetrain": "fwd",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Transmisión Automática, Excelente Condición",
+      "featured": false,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-051-1.jpg",
+        "img/cars/v-051-2.jpg",
+        "img/cars/v-051-3.jpg",
+        "img/cars/v-051-4.jpg",
+        "img/cars/v-051-5.jpg",
+        "img/cars/v-051-6.jpg",
+        "img/cars/v-051-7.jpg",
+        "img/cars/v-051-8.jpg"
+      ]
+    },
+    {
       "id": "v-050",
       "status": "active",
       "make": "Honda",
