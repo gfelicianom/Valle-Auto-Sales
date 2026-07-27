@@ -145,6 +145,37 @@
       ]
     },
     {
+      "id": "v-050",
+      "status": "active",
+      "make": "Honda",
+      "model": "Civic Si",
+      "year": 2015,
+      "color": "rojo",
+      "mileage": 114518,
+      "price": 18495,
+      "body_type": "sedan",
+      "engine_liters": 2.4,
+      "cylinders": 0,
+      "drivetrain": "fwd",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Transmisión Manual, sunroof",
+      "featured": false,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-050-1.jpg",
+        "img/cars/v-050-2.jpg",
+        "img/cars/v-050-3.jpg",
+        "img/cars/v-050-4.jpg",
+        "img/cars/v-050-5.jpg",
+        "img/cars/v-050-6.jpg",
+        "img/cars/v-050-7.jpg",
+        "img/cars/v-050-8.jpg"
+      ]
+    },
+    {
       "id": "v-049",
       "status": "active",
       "make": "Mercedes Benz",
@@ -892,13 +923,13 @@
     {
       "id": "v-021",
       "status": "active",
-      "make": "Mercedes",
-      "model": "A20",
-      "year": 2021,
-      "color": "azul",
-      "mileage": 32500,
-      "price": 24995,
-      "body_type": "sedan",
+      "make": "Toyota",
+      "model": "Highlander",
+      "year": 2016,
+      "color": "blanco",
+      "mileage": 98224,
+      "price": 18995,
+      "body_type": "suv",
       "engine_liters": 0,
       "cylinders": 4,
       "drivetrain": "fwd",
@@ -906,7 +937,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Transmisión Automática, Panorámico",
+      "notes": "Transmisión Automática, Tres fila de asientos",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -915,7 +946,8 @@
         "img/cars/v-021-3.jpg",
         "img/cars/v-021-4.jpg",
         "img/cars/v-021-5.jpg",
-        "img/cars/v-021-6.jpg"
+        "img/cars/v-021-6.jpg",
+        "img/cars/v-021-7.jpg"
       ]
     },
     {
