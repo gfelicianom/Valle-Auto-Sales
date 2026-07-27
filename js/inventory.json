@@ -116,34 +116,6 @@
       ]
     },
     {
-      "id": "v-003",
-      "status": "active",
-      "make": "Ford",
-      "model": "F-150 STX",
-      "year": 2020,
-      "color": "azul",
-      "mileage": 129962,
-      "price": 25995,
-      "body_type": "pickup",
-      "engine_liters": 2.7,
-      "cylinders": 6,
-      "drivetrain": "",
-      "fuel_type": "gasoline",
-      "origin": "imported",
-      "registration_fee": "",
-      "condition_tags": [],
-      "notes": "Transmisión automática, Tracción trasera, motor de 2.7 L y 6 cilindros\nRear-wheel drive, 2.7L engine with 6 cylinders",
-      "featured": true,
-      "sold": false,
-      "photo_urls": [
-        "img/cars/v-003-1.jpg",
-        "img/cars/v-003-2.jpg",
-        "img/cars/v-003-3.jpg",
-        "img/cars/v-003-4.jpg",
-        "img/cars/v-003-5.jpg"
-      ]
-    },
-    {
       "id": "v-001",
       "status": "active",
       "make": "Toyota",
