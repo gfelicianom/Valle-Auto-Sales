@@ -336,7 +336,7 @@ function renderCarDetail(id) {
     : galleryPlaceholder;
   const thumbs = photos.length > 1
     ? `<div class="gallery-thumbs">${photos.map((p, i) =>
-        `<button data-idx="${i}" class="${i === 0 ? "active" : ""}"><img src="${esc(p)}" alt="" onerror="this.closest('button').remove()"></button>`).join("")}</div>`
+        `<button data-idx="${i}" class="${i === 0 ? "active" : ""}"><img src="${esc(p)}" alt="${esc(carName(c))} — ${i + 1}" onerror="this.closest('button').remove()"></button>`).join("")}</div>`
     : "";
 
   const interestHref = `#/financiamiento?car=${encodeURIComponent(c.id + " — " + carName(c) + " (" + colorLabel(c) + ")")}`;

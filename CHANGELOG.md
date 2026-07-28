@@ -2,6 +2,12 @@
 
 Development history for the Valle Auto Sales website.
 
+## 2026-07-27
+
+### Fixed (image accessibility)
+
+- Codex added descriptive alternative text to the homepage logo and vehicle-gallery thumbnails, resolving the missing image-alt warning reported by Bing Site Scan.
+
 ## 2026-07-22
 
 ### Added (search visibility)
