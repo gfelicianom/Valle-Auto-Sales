@@ -722,34 +722,6 @@
       ]
     },
     {
-      "id": "v-030",
-      "status": "active",
-      "make": "Toyota",
-      "model": "Corolla LE",
-      "year": 2024,
-      "color": "gris",
-      "mileage": 19447,
-      "price": 23995,
-      "body_type": "sedan",
-      "engine_liters": 0,
-      "cylinders": 4,
-      "drivetrain": "fwd",
-      "fuel_type": "gasoline",
-      "origin": "local",
-      "registration_fee": "",
-      "condition_tags": [],
-      "notes": "Transmisión Automática",
-      "featured": false,
-      "sold": false,
-      "photo_urls": [
-        "img/cars/v-030-1.jpg",
-        "img/cars/v-030-2.jpg",
-        "img/cars/v-030-3.jpg",
-        "img/cars/v-030-4.jpg",
-        "img/cars/v-030-5.jpg"
-      ]
-    },
-    {
       "id": "v-029",
       "status": "active",
       "make": "Hyundai",
