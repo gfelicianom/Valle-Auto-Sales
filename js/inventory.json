@@ -145,6 +145,36 @@
       ]
     },
     {
+      "id": "v-052",
+      "status": "active",
+      "make": "Toyota",
+      "model": "Highlander LE",
+      "year": 2014,
+      "color": "gris",
+      "mileage": 110462,
+      "price": 14995,
+      "body_type": "suv",
+      "engine_liters": 0,
+      "cylinders": 6,
+      "drivetrain": "fwd",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Transmisión Automática, Excelente Condición",
+      "featured": false,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-052-1.jpg",
+        "img/cars/v-052-2.jpg",
+        "img/cars/v-052-3.jpg",
+        "img/cars/v-052-4.jpg",
+        "img/cars/v-052-5.jpg",
+        "img/cars/v-052-6.jpg",
+        "img/cars/v-052-7.jpg"
+      ]
+    },
+    {
       "id": "v-051",
       "status": "active",
       "make": "Toyota",
