@@ -145,6 +145,36 @@
       ]
     },
     {
+      "id": "v-053",
+      "status": "active",
+      "make": "Hyundai",
+      "model": "Venue",
+      "year": 2024,
+      "color": "rojo",
+      "mileage": 28105,
+      "price": 17995,
+      "body_type": "sedan",
+      "engine_liters": 0,
+      "cylinders": 4,
+      "drivetrain": "fwd",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Transmisión Automática",
+      "featured": false,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-053-1.jpg",
+        "img/cars/v-053-2.jpg",
+        "img/cars/v-053-3.jpg",
+        "img/cars/v-053-4.jpg",
+        "img/cars/v-053-5.jpg",
+        "img/cars/v-053-6.jpg",
+        "img/cars/v-053-7.jpg"
+      ]
+    },
+    {
       "id": "v-052",
       "status": "active",
       "make": "Toyota",
