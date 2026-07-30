@@ -158,7 +158,7 @@ const I18N = {
     fin_submit: "Enviar",
     fin_sending: "Enviando…",
     fin_success: "¡Gracias! Recibimos su información. Nos comunicaremos con usted pronto.",
-    fin_error: "Hubo un problema al enviar. Por favor llámenos al (787) 868-4840 o intente de nuevo.",
+    fin_error: "Hubo un problema al enviar. Por favor llámenos al (787) 233-4800 o intente de nuevo.",
     fin_required: "Por favor complete los campos requeridos.",
 
     // Story
@@ -182,7 +182,8 @@ const I18N = {
     hours_weekdays: "Lunes a Sábado: 8:30 AM – 5:30 PM",
     hours_sunday: "Domingo: Cerrado",
     contact_phones: "Teléfonos",
-    contact_office: "Oficina",
+    contact_primary: "Principal — llamadas",
+    contact_office: "Oficina — solo llamadas",
     contact_email: "Email",
     contact_address: "Dirección física",
     address_physical: "Carr. #2 Km. 135.8, Bo. Naranjo, Aguada, P.R. 00602",
@@ -342,7 +343,7 @@ const I18N = {
     fin_submit: "Send",
     fin_sending: "Sending…",
     fin_success: "Thank you! We received your information and will contact you soon.",
-    fin_error: "There was a problem sending. Please call us at (787) 868-4840 or try again.",
+    fin_error: "There was a problem sending. Please call us at (787) 233-4800 or try again.",
     fin_required: "Please complete the required fields.",
 
     story_title: "Our Story",
@@ -363,7 +364,8 @@ const I18N = {
     hours_weekdays: "Monday–Saturday: 8:30 AM – 5:30 PM",
     hours_sunday: "Sunday: Closed",
     contact_phones: "Phones",
-    contact_office: "Office",
+    contact_primary: "Primary — calls",
+    contact_office: "Office — calls only",
     contact_email: "Email",
     contact_address: "Physical address",
     address_physical: "Road #2 Km. 135.8, Bo. Naranjo, Aguada, P.R. 00602",

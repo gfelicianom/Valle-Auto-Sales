@@ -36,7 +36,18 @@ const dealerSchema = {
   url: `${SITE}/`,
   logo: `${SITE}/img/brand/valle-auto-sales-logo.svg`,
   image: `${SITE}/img/brand/valle-auto-sales-social-preview.jpg`,
-  telephone: "+1-787-868-4840",
+  telephone: "+1-787-233-4800",
+  contactPoint: [{
+    "@type": "ContactPoint",
+    telephone: "+1-787-233-4800",
+    contactType: "sales",
+    availableLanguage: ["es", "en"]
+  }, {
+    "@type": "ContactPoint",
+    telephone: "+1-787-868-4840",
+    contactType: "customer service",
+    availableLanguage: ["es", "en"]
+  }],
   email: "valleauto@yahoo.com",
   foundingDate: "1992-07",
   priceRange: "$$",
@@ -113,8 +124,9 @@ function shell({ headHtml, body, route = "" }) {
 <main>${body}</main>
 <footer class="site-footer"><div class="footer-inner"><div class="footer-contact">
   <strong>Valle Auto Sales</strong>
-  <a href="tel:${OFFICE}">Oficina: (787) 868-4840</a>
+  <a href="tel:${PHONE}">Principal — llamadas: (787) 233-4800</a>
   <a href="https://wa.me/${PHONE.slice(1)}">WhatsApp: (787) 233-4800</a>
+  <a href="tel:${OFFICE}">Oficina — solo llamadas: (787) 868-4840</a>
   <a href="${MAP}" target="_blank" rel="noopener">Carr. #2 Km. 135.8, Bo. Naranjo, Aguada, PR</a>
 </div></div><div class="seo-footer-links">${nav.map(([url, label]) => `<a href="${url}">${label}</a>`).join("")}</div>
 <div class="footer-bottom">© ${new Date().getFullYear()} Valle Auto Sales · Aguada, Puerto Rico</div></footer>
@@ -192,11 +204,11 @@ async function main() {
   await writePage("contacto", evergreenPage({
     dir: "contacto",
     title: "Contacto y dirección | Valle Auto Sales, Aguada, PR",
-    description: "Visite Valle Auto Sales en Carr. #2 Km. 135.8, Bo. Naranjo, Aguada. Horario lunes a sábado 8:30 a. m.–5:30 p. m. Tel. 787-868-4840.",
+    description: "Visite Valle Auto Sales en Carr. #2 Km. 135.8, Bo. Naranjo, Aguada. Horario lunes a sábado 8:30 a. m.–5:30 p. m. Llamadas y WhatsApp: 787-233-4800.",
     body: `<section class="section"><div class="section-inner"><h1 class="section-title">Contacto y cómo llegar</h1><div class="contact-grid"><div class="contact-card">
       <h2>Valle Auto Sales</h2><p>Carr. #2 Km. 135.8, Bo. Naranjo<br>Aguada, Puerto Rico 00602</p>
       <p><strong>Horario:</strong><br>Lunes a sábado: 8:30 a. m.–5:30 p. m.<br>Domingo: cerrado</p>
-      <p><a href="tel:${OFFICE}">Oficina: (787) 868-4840</a><br><a href="https://wa.me/${PHONE.slice(1)}">WhatsApp: (787) 233-4800</a><br><a href="mailto:valleauto@yahoo.com">valleauto@yahoo.com</a></p>
+      <p><a href="tel:${PHONE}">Principal — llamadas: (787) 233-4800</a><br><a href="https://wa.me/${PHONE.slice(1)}">WhatsApp: (787) 233-4800</a><br><a href="tel:${OFFICE}">Oficina — solo llamadas: (787) 868-4840</a><br><a href="mailto:valleauto@yahoo.com">valleauto@yahoo.com</a></p>
       <a class="btn btn-green" href="${MAP}" target="_blank" rel="noopener">Abrir en Google Maps</a>
     </div><div class="map-wrap"><iframe src="https://www.google.com/maps?q=9R3Q%2B93%20Aguada%2C%20Puerto%20Rico&output=embed" loading="lazy" allowfullscreen title="Valle Auto Sales en Google Maps"></iframe></div></div></div></section>`
   }));

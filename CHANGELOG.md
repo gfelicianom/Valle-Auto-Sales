@@ -2,6 +2,18 @@
 
 Development history for the Valle Auto Sales website.
 
+## 2026-07-29
+
+### Changed (contact numbers)
+
+- Codex made the mobile number (787) 233-4800 the primary number for calls and WhatsApp throughout the website, metadata, and dealership structured data.
+- Codex retained the original office landline (787) 868-4840 as a clearly labeled secondary number for calls only.
+
+### Added (IndexNow)
+
+- Added IndexNow verification and automated URL notifications after inventory changes.
+- Added a manual GitHub Actions option to submit the complete sitemap to IndexNow.
+
 ## 2026-07-27
 
 ### Fixed (image accessibility)
@@ -107,7 +119,3 @@ Development history for the Valle Auto Sales website.
 
 - Codex previewed the full-name logo integration at desktop and mobile widths, confirming the header has no horizontal overflow and the SVG loads in the header/footer.
 - Codex previewed the site at `http://localhost:8000/#/inventario` and confirmed all 10 inventory cards loaded photos from `img/cars/...`.
-## 2026-07-29
-
-- Added IndexNow verification and automated URL notifications after inventory changes.
-- Added a manual GitHub Actions option to submit the complete sitemap to IndexNow.

@@ -578,8 +578,9 @@ function renderContact() {
       <div class="contact-grid">
         <div class="contact-card">
           <h3>${t("contact_phones")}</h3>
+          <a href="tel:+17872334800">📞 ${t("contact_primary")}: (787) 233-4800</a>
           <a href="https://wa.me/17872334800" target="_blank" rel="noopener">💬 WhatsApp: (787) 233-4800</a>
-          <a href="tel:+17878684840">📞 ${t("contact_office")}: (787) 868-4840</a>
+          <a href="tel:+17878684840">☎️ ${t("contact_office")}: (787) 868-4840</a>
           <h3>${t("contact_email")}</h3>
           <a href="mailto:valleauto@yahoo.com">valleauto@yahoo.com</a>
           <h3>${t("contact_address")}</h3>
