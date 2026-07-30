@@ -40,9 +40,12 @@ const API = `https://api.airtable.com/v0/${BASE_ID}/${TABLE_ID}`;
 /* Airtable allows 5 req/sec per base; attachment ingestion is stricter
    still (attachmentUploadRateIsTooHigh). One car per second is plenty. */
 const PAUSE_BETWEEN_CARS_MS = 1000;
-/* Attachment ingestion is asynchronous, so read back more than once if needed. */
-const READ_BACK_ATTEMPTS = 6;
-const READ_BACK_INTERVAL_MS = 2000;
+/* Attachment ingestion is asynchronous: Airtable has to fetch each file from
+   valleautosales.com and generate its own derivatives before the attachment
+   reports a size. Six photos have been observed taking longer than 12s, so
+   allow a full minute before treating slowness as a failure. */
+const READ_BACK_ATTEMPTS = 20;
+const READ_BACK_INTERVAL_MS = 3000;
 const CAR_ID_PATTERN = /^v-\d{3}$/;
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -247,7 +250,7 @@ async function migrate(plan, authed) {
 
   /* Read the record back — the PATCH response reflects what we asked for,
      not necessarily what Airtable finished storing. */
-  let lastInspection = { ok: false, names: [] };
+  let lastInspection = { ok: false, names: [], orderMatches: false };
   for (let attempt = 1; attempt <= READ_BACK_ATTEMPTS; attempt++) {
     await sleep(READ_BACK_INTERVAL_MS);
     const check = await authed(`${API}/${record.id}`);
@@ -258,10 +261,26 @@ async function migrate(plan, authed) {
       console.log(`  ✓ stored and ready in order: ${lastInspection.names.join(", ")}`);
       return { carId, ok: true };
     }
+    if (attempt === 3) {
+      console.log(`  …still processing ${files.length} photo(s), waiting`);
+    }
+  }
+
+  const waitedSeconds = (READ_BACK_ATTEMPTS * READ_BACK_INTERVAL_MS) / 1000;
+
+  /* Right names in the right order but no size yet means the write landed and
+     Airtable is merely slow — a very different situation from a wrong gallery,
+     so say so rather than implying the photos are wrong. */
+  if (lastInspection.orderMatches) {
+    throw new Error(
+      `Airtable accepted all ${files.length} photo(s) in the correct order but had not ` +
+      `finished processing them after ${waitedSeconds}s. The gallery is most likely fine. ` +
+      "Re-run in preview mode to confirm before replacing anything else."
+    );
   }
 
   throw new Error(
-    "Airtable did not finish storing the expected gallery. " +
+    "Airtable stored a different gallery than the one sent. " +
     `Sent: ${files.join(", ")}; read back: ${lastInspection.names.join(", ") || "(empty)"}`
   );
 }
