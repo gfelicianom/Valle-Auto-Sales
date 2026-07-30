@@ -1,13 +1,12 @@
 name: Sync inventory from Airtable
 
 on:
-  # PAUSED 2026-07-30 for the Airtable attachment migration (replacing full-res
-  # photos with the resized copies the site already serves). The sync prunes
-  # img/cars to match Airtable, so it must not run while photos are in flux.
-  # Re-enable by uncommenting; GitHub re-registers the cron on the next push.
-  # schedule:
-  #   - cron: "37 6-23 * * *"
-  #     timezone: "America/Puerto_Rico"
+  schedule:
+    # Hourly during the inventory-upload phase while the family is awake.
+    # Keeping the schedule in Puerto Rico time avoids UTC range arithmetic
+    # and changing the cron definition forces GitHub to re-register it.
+    - cron: "37 6-23 * * *"
+      timezone: "America/Puerto_Rico"
   workflow_dispatch:
     inputs:
       submit_all_to_indexnow:

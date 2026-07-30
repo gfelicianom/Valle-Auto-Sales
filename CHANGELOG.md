@@ -9,6 +9,19 @@ Development history for the Valle Auto Sales website.
 - Chelsea manually replaced the `v-001` originals with the website-sized copies as the first storage-reduction trial.
 - Codex hardened Claude's one-off migration script so preview mode is the default, every selected gallery must match the last successful inventory sync, already-migrated records are skipped, the complete batch is checked before any write, and unexpected failures stop the batch.
 - Codex added focused safety tests and a manual GitHub Actions workflow so the migration can be previewed and deliberately applied from GitHub without handling the token in a terminal.
+- Claude changed already-migrated records from a fatal error to a skip, so a partially completed batch can be re-run with the same car list instead of aborting on the cars that already succeeded.
+- Claude raised the attachment read-back budget from 12s to 60s. Airtable needs well over 12s to finish ingesting a gallery, so successful writes were being reported as failures; the error message now distinguishes "accepted but still processing" from "stored the wrong gallery".
+
+### Changed (Airtable attachment storage)
+
+- All 50 active vehicles now hold the website-sized copies in Airtable instead of full-resolution phone originals. Verified: 293 photos, every photo unchanged in position and dimensions, largest file-size change -1.51% from re-encoding.
+- The sold vehicles `v-003`, `v-004`, `v-030`, and `v-047` were removed from the base entirely.
+- Attachment storage stays at 1GB until Airtable's revision history expires (about two weeks on the Free plan), after which the base should settle near 70MB.
+- Photos uploaded from now on should be resized before upload; the build already caps display width at 1600px, so full-resolution originals cost storage without improving the site.
+
+### Removed
+
+- The one-off migration script, its tests, and the manual migration workflow, now that every vehicle is migrated. Recoverable from git history if the base ever needs re-normalizing.
 
 ## 2026-07-29
 
