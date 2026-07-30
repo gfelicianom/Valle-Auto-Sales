@@ -7,7 +7,13 @@ on:
     # and changing the cron definition forces GitHub to re-register it.
     - cron: "37 6-23 * * *"
       timezone: "America/Puerto_Rico"
-  workflow_dispatch:          # "Run workflow" button in the Actions tab
+  workflow_dispatch:
+    inputs:
+      submit_all_to_indexnow:
+        description: "Notify IndexNow about every URL after the sync"
+        required: false
+        type: boolean
+        default: false
 
 concurrency:
   group: sync-inventory
@@ -41,13 +47,25 @@ jobs:
         run: node scripts/seo.test.mjs
 
       - name: Commit changes (if any)
+        id: inventory_commit
         run: |
           git add js/inventory.json img/cars autos inventario financiamiento historia contacto sitemap.xml
           if git diff --cached --quiet; then
             echo "Inventory unchanged — nothing to commit."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             git config user.name "valle-inventory-sync"
             git config user.email "actions@users.noreply.github.com"
             git commit -m "Sync inventory from Airtable"
             git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Notify IndexNow
+        if: steps.inventory_commit.outputs.changed == 'true' || inputs.submit_all_to_indexnow == true
+        run: |
+          if [[ "${{ inputs.submit_all_to_indexnow }}" == "true" ]]; then
+            node scripts/submit-indexnow.mjs --all
+          else
+            node scripts/submit-indexnow.mjs --changed
           fi
