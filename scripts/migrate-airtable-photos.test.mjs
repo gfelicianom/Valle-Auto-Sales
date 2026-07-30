@@ -45,13 +45,14 @@ test("preflight accepts the exact gallery downloaded by the last sync", () => {
     "v-002-1.jpg": "att-one",
     "v-002-2.jpg": "att-two"
   };
-  const current = assertSourceMatchesAirtable(
+  const { current, alreadyMigrated } = assertSourceMatchesAirtable(
     "v-002",
     recordWith(["att-one", "att-two"]),
     files,
     manifest
   );
   assert.equal(current.length, 2);
+  assert.equal(alreadyMigrated, false);
 });
 
 test("preflight stops if photo count changed after the last sync", () => {
@@ -86,7 +87,7 @@ test("preflight stops if an attachment changed or was reordered", () => {
   );
 });
 
-test("preflight stops if the record already has the resized filenames", () => {
+test("preflight skips a record that already has the resized filenames", () => {
   const files = ["v-001-1.jpg", "v-001-2.jpg"];
   const record = {
     fields: {
@@ -97,13 +98,32 @@ test("preflight stops if the record already has the resized filenames", () => {
     }
   };
 
+  /* The manifest still holds the pre-migration attachment IDs, which is exactly
+     the state after a batch replaced photos but before the next website sync.
+     That must read as "already done", not as tampering. */
+  const { alreadyMigrated } = assertSourceMatchesAirtable("v-001", record, files, {
+    "v-001-1.jpg": "stale-pre-migration-id",
+    "v-001-2.jpg": "another-stale-id"
+  });
+
+  assert.equal(alreadyMigrated, true);
+});
+
+test("an already-migrated car whose photo count changed still stops", () => {
+  const files = ["v-001-1.jpg", "v-001-2.jpg"];
+  const record = {
+    fields: {
+      Fotos: [
+        { id: "att-one", filename: files[0] },
+        { id: "att-two", filename: files[1] },
+        { id: "att-three", filename: "added-later.jpg" }
+      ]
+    }
+  };
+
   assert.throws(
-    () =>
-      assertSourceMatchesAirtable("v-001", record, files, {
-        "v-001-1.jpg": "att-one",
-        "v-001-2.jpg": "att-two"
-      }),
-    /v-001 already appears migrated/
+    () => assertSourceMatchesAirtable("v-001", record, files, {}),
+    /SAFETY STOP: Airtable has 3 photo/
   );
 });
 

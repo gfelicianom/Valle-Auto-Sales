@@ -127,6 +127,11 @@ async function localPhotos(carId) {
  * The local images and manifest must describe the exact Airtable gallery that
  * the last successful website sync downloaded. If a family member added,
  * removed, or reordered a photo after that sync, refuse to replace anything.
+ *
+ * Returns { current, alreadyMigrated }. A car that is already migrated is not
+ * an error — reporting it lets the caller skip that car, so re-running the
+ * same batch after a partial failure picks up where it left off instead of
+ * aborting on the cars that already succeeded.
  */
 export function assertSourceMatchesAirtable(carId, record, files, manifest) {
   const current = Array.isArray(record.fields["Fotos"]) ? record.fields["Fotos"] : [];
@@ -138,15 +143,13 @@ export function assertSourceMatchesAirtable(carId, record, files, manifest) {
     );
   }
 
+  /* Checked before the manifest comparison: once a car is migrated its
+     attachment IDs no longer match the pre-migration manifest, and that is
+     expected rather than a sign of tampering. */
   const alreadyMigrated = current.every(
     (attachment, i) => attachment.filename === files[i]
   );
-  if (alreadyMigrated) {
-    throw new Error(
-      `SAFETY STOP: ${carId} already appears migrated (${files.join(", ")}). ` +
-      "Leave it out of this batch."
-    );
-  }
+  if (alreadyMigrated) return { current, alreadyMigrated: true };
 
   const missingManifestFiles = files.filter((name) => !manifest[name]);
   if (missingManifestFiles.length) {
@@ -172,7 +175,7 @@ export function assertSourceMatchesAirtable(carId, record, files, manifest) {
     );
   }
 
-  return current;
+  return { current, alreadyMigrated: false };
 }
 
 /* Airtable can only ingest a URL it can actually reach. Checking first
@@ -196,7 +199,15 @@ async function prepareMigration(carId, byCarId, manifest) {
   const files = await localPhotos(carId);
   if (files.length === 0) throw new Error(`no local photos found for ${carId} in ${CARS_DIR}/`);
 
-  const current = assertSourceMatchesAirtable(carId, record, files, manifest);
+  const { current, alreadyMigrated } = assertSourceMatchesAirtable(
+    carId, record, files, manifest
+  );
+
+  if (alreadyMigrated) {
+    console.log(`\n${carId} — already migrated (${files.length} photo(s)); skipping`);
+    return { carId, skip: true };
+  }
+
   console.log(`\n${carId} — ${current.length} photo(s) in Airtable and website copy`);
   console.log(`  order: ${files.join(", ")}`);
 
@@ -283,27 +294,41 @@ async function main() {
     plans.push(await prepareMigration(carId, byCarId, manifest));
   }
 
+  const skipped = plans.filter((p) => p.skip);
+  const pending = plans.filter((p) => !p.skip);
+  const tally = skipped.length ? ` (${skipped.length} already migrated)` : "";
+
   if (!apply) {
-    console.log(`\nPREVIEW PASSED — ${plans.length} car(s) checked; nothing was changed.`);
-    console.log("Run the same command with --apply only when you are ready.");
+    console.log(`\nPREVIEW PASSED — ${pending.length} car(s) to replace${tally}; nothing was changed.`);
+    if (pending.length) {
+      console.log("Run the same command with --apply only when you are ready.");
+    }
+    return;
+  }
+
+  if (pending.length === 0) {
+    console.log(`\nNothing to do — every requested car is already migrated.`);
     return;
   }
 
   const results = [];
-  for (const plan of plans) {
+  for (const plan of pending) {
     try {
       results.push(await migrate(plan, authed));
     } catch (e) {
       console.error(`\n${plan.carId} — FAILED: ${e.message}`);
       results.push({ carId: plan.carId, ok: false });
-      console.error("Stopping this batch. Do not retry until the failed record is reviewed.");
+      console.error(
+        "Stopping this batch. Review the failed record, then re-run the same " +
+        "command — cars already replaced are skipped automatically."
+      );
       break;
     }
     await sleep(PAUSE_BETWEEN_CARS_MS);
   }
 
   const bad = results.filter((r) => !r.ok);
-  console.log(`\n${results.length - bad.length}/${plans.length} requested car(s) replaced`);
+  console.log(`\n${results.length - bad.length}/${pending.length} car(s) replaced${tally}`);
   if (bad.length) {
     console.log(`check by hand: ${bad.map((r) => r.carId).join(", ")}`);
     process.exitCode = 1;
