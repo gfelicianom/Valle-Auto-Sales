@@ -196,7 +196,8 @@ async function main() {
     body: `<section class="section"><div class="section-inner"><h1 class="section-title">Una familia sirviendo a Aguada desde 1992</h1>
       <figure class="story-photo"><img src="/img/family.jpg" alt="Eligio y Giovanni Feliciano de Valle Auto Sales" loading="lazy"><figcaption>Dos generaciones al frente de Valle Auto Sales.</figcaption></figure>
       <div class="story-body"><p>Valle Auto Sales nació del sueño de Eligio Feliciano Valle. En julio de 1992, Eligio y su hermano abrieron un pequeño dealer en un local alquilado del Barrio Naranjo de Aguada.</p>
-      <p>Hoy, Eligio continúa el negocio junto a su hijo Giovanni Feliciano Méndez y Maritza García Soto. Sigue siendo un dealer local atendido por la misma familia.</p>
+      <p>El tiempo siguió su marcha. El hijo mayor de Eligio, Giovanni Feliciano, crecía y se integraba al negocio. Con los años, y según el negocio se afianzaba, Eligio construyó en concreto sólido el primer hogar permanente de Valle Auto Sales, el nombre que el negocio llevaba desde aquel primer local alquilado.</p>
+      <p>Hasta el día de hoy, Valle Auto Sales es de Eligio Feliciano Valle. Y si se fija bien, su segundo apellido, Valle, es el mismo nombre que el dealer ha llevado desde el principio. Su hijo Giovanni Feliciano Méndez trabaja junto a él, en compañía de la esposa de Giovanni, Maritza García Soto. Sigue siendo, como siempre fue, un negocio de familia.</p>
       <p><a class="btn btn-red" href="/#/historia">Leer la historia completa</a></p></div>
     </div></section>`
   }));

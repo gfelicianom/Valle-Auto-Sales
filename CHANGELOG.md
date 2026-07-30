@@ -9,6 +9,10 @@ Development history for the Valle Auto Sales website.
 - Codex made the mobile number (787) 233-4800 the primary number for calls and WhatsApp throughout the website, metadata, and dealership structured data.
 - Codex retained the original office landline (787) 868-4840 as a clearly labeled secondary number for calls only.
 
+### Changed (family history)
+
+- Codex revised the final two family-history paragraphs in Spanish and English while preserving the existing story layout and imagery.
+
 ### Added (IndexNow)
 
 - Added IndexNow verification and automated URL notifications after inventory changes.
