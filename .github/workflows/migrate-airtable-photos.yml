@@ -1,0 +1,50 @@
+name: Migrate Airtable photos (manual)
+
+on:
+  workflow_dispatch:
+    inputs:
+      car_ids:
+        description: "Car IDs separated by spaces, for example: v-002 v-005"
+        required: true
+        type: string
+      apply:
+        description: "Replace the Airtable photos (leave unchecked for a safe preview)"
+        required: true
+        type: boolean
+        default: false
+
+concurrency:
+  group: migrate-airtable-photos
+  cancel-in-progress: false
+
+# This workflow reads repository files and calls Airtable. It never commits or
+# pushes website changes; the existing inventory-sync workflow remains separate.
+permissions:
+  contents: read
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+
+      - name: Test migration safety checks
+        run: node --test scripts/migrate-airtable-photos.test.mjs
+
+      - name: Preview or replace selected galleries
+        env:
+          AIRTABLE_TOKEN: ${{ secrets.AIRTABLE_MIGRATION_TOKEN }}
+          CAR_IDS_INPUT: ${{ inputs.car_ids }}
+          APPLY_CHANGES: ${{ inputs.apply }}
+        shell: bash
+        run: |
+          read -r -a car_ids <<< "$CAR_IDS_INPUT"
+          if [[ "$APPLY_CHANGES" == "true" ]]; then
+            node scripts/migrate-airtable-photos.mjs --apply "${car_ids[@]}"
+          else
+            node scripts/migrate-airtable-photos.mjs "${car_ids[@]}"
+          fi

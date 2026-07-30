@@ -2,6 +2,14 @@
 
 Development history for the Valle Auto Sales website.
 
+## 2026-07-30
+
+### Added (Airtable photo migration safety)
+
+- Chelsea manually replaced the `v-001` originals with the website-sized copies as the first storage-reduction trial.
+- Codex hardened Claude's one-off migration script so preview mode is the default, every selected gallery must match the last successful inventory sync, already-migrated records are skipped, the complete batch is checked before any write, and unexpected failures stop the batch.
+- Codex added focused safety tests and a manual GitHub Actions workflow so the migration can be previewed and deliberately applied from GitHub without handling the token in a terminal.
+
 ## 2026-07-29
 
 ### Changed (contact numbers)
