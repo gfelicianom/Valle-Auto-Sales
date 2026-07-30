@@ -163,8 +163,8 @@ const I18N = {
 
     // Story
     story_title: "Nuestra Historia",
-    story_p1: "Valle Auto Sales comenzó como un sueño. Eligio Feliciano Valle pasó años trabajando en la industria de la pesca de atún, y aun entonces siempre estaba imaginando el futuro — pensando cómo esta persona podría vender autos, cómo aquella otra podría lavarlos. Soñaba con tener su propio dealer.",
-    story_p2: "Ese sueño respiró por primera vez en julio de 1992, cuando Eligio y su hermano abrieron un pequeño dealer en un local alquilado en el Barrio Naranjo de Aguada. Según el negocio fue creciendo, los dos hermanos compraron un terreno grande y construyeron sobre él un dealer más amplio.",
+    story_p1: "Valle Auto Sales comenzó como un sueño. Eligio Feliciano Valle pasó años trabajando dentro de una atunera, en el área de producción, y con el tiempo llegó a ser ayudante del supervisor. Aun entonces siempre estaba imaginando el futuro: pensando cómo esta persona podría vender autos, cómo aquella otra podría lavarlos. Soñaba con tener su propio dealer.",
+    story_p2: "Ese sueño respiró por primera vez en julio de 1992, cuando Eligio abrió un pequeño dealer en un local alquilado en el Barrio Naranjo de Aguada. Según el negocio fue creciendo, compró un terreno grande y construyó sobre él un dealer más amplio.",
     story_p3: "El tiempo siguió su marcha. El hijo mayor de Eligio, Giovanni Feliciano, crecía y se integraba al negocio. Con los años, y según el negocio se afianzaba, Eligio construyó en concreto sólido el primer hogar permanente de Valle Auto Sales, el nombre que el negocio llevaba desde aquel primer local alquilado.",
     story_p4: "Hasta el día de hoy, Valle Auto Sales es de Eligio Feliciano Valle. Y si se fija bien, su segundo apellido, Valle, es el mismo nombre que el dealer ha llevado desde el principio. Su hijo Giovanni Feliciano Méndez trabaja junto a él, en compañía de la esposa de Giovanni, Maritza García Soto. Sigue siendo, como siempre fue, un negocio de familia.",
     story_visit: "Pase a visitarnos — aquí lo atiende la familia.",
@@ -347,10 +347,10 @@ const I18N = {
     fin_required: "Please complete the required fields.",
 
     story_title: "Our Story",
-    story_p1: "Valle Auto Sales began as a dream. Eligio Feliciano Valle spent years working in the tuna fishing industry, and even then he was always imagining the future — picturing how this person could sell cars, how that person could wash them. He dreamed of owning a dealership of his own.",
-    story_p2: "That dream took its first breath in July 1992, when Eligio and his brother opened a small dealership in a rented space in Barrio Naranjo, Aguada. As the business grew, the two brothers bought a large piece of land and built a bigger dealership on it.",
-    story_p3: "Time kept moving. Eligio’s oldest son, Giovanni Feliciano, was growing up and becoming part of the business. Over the years, as the business took hold, Eligio built the first permanent home of Valle Auto Sales in solid concrete, the same name the business had carried since that first rented space.",
-    story_p4: "To this day, Valle Auto Sales belongs to Eligio Feliciano Valle. And if you look closely, his second last name, Valle, is the very name the dealership has carried from the beginning. His son Giovanni Feliciano Méndez works alongside him, together with Giovanni’s wife, Maritza García Soto. It is still, as it always was, a family business.",
+    story_p1: "Valle Auto Sales began as a dream. Eligio Feliciano Valle spent years working inside a tuna cannery, on the production floor, and over time he became the supervisor's assistant. Even then he was always imagining the future: thinking about how this person could sell cars, how that other one could wash them. He dreamed of having his own dealership.",
+    story_p2: "That dream took its first breath in July of 1992, when Eligio opened a small dealership in a rented space in Barrio Naranjo, Aguada. As the business grew, he bought a large piece of land and built a bigger dealership on it.",
+    story_p3: "Time kept moving. Eligio's oldest son, Giovanni Feliciano, was growing up and becoming part of the business. Over the years, as the business took hold, Eligio built the first permanent home of Valle Auto Sales in solid concrete, the same name the business had carried since that first rented space.",
+    story_p4: "To this day, Valle Auto Sales belongs to Eligio Feliciano Valle. And if you look closely, his second last name, Valle, is the very name the dealership has carried from the beginning. His son Giovanni Feliciano Méndez works alongside him, together with Giovanni's wife, Maritza García Soto. It is still, as it always was, a family business.",
     story_visit: "Come visit us — you'll be welcomed by the family.",
     story_photo_caption: "Eligio and Giovanni — two generations leading Valle Auto Sales.",
 

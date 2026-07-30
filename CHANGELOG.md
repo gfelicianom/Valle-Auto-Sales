@@ -11,7 +11,7 @@ Development history for the Valle Auto Sales website.
 
 ### Changed (family history)
 
-- Codex revised the final two family-history paragraphs in Spanish and English while preserving the existing story layout and imagery.
+- Codex replaced the complete family history in Spanish and English with the owner-approved text while preserving the existing story layout and imagery.
 
 ### Added (IndexNow)
 
