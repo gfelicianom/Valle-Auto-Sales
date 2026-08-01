@@ -121,6 +121,37 @@
       ]
     },
     {
+      "id": "v-056",
+      "status": "active",
+      "make": "Ford",
+      "model": "F-150 XLT",
+      "year": 2020,
+      "color": "",
+      "mileage": 154560,
+      "price": 25995,
+      "body_type": "pickup",
+      "engine_liters": 5,
+      "cylinders": 8,
+      "drivetrain": "4x4",
+      "fuel_type": "gasoline",
+      "origin": "imported",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Transmisión automática",
+      "featured": false,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-056-1.jpg",
+        "img/cars/v-056-2.jpg",
+        "img/cars/v-056-3.jpg",
+        "img/cars/v-056-4.jpg",
+        "img/cars/v-056-5.jpg",
+        "img/cars/v-056-6.jpg",
+        "img/cars/v-056-7.jpg",
+        "img/cars/v-056-8.jpg"
+      ]
+    },
+    {
       "id": "v-055",
       "status": "active",
       "make": "Hyundai",
