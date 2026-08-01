@@ -116,14 +116,14 @@
       ]
     },
     {
-      "id": "v-001",
+      "id": "v-055",
       "status": "active",
-      "make": "Toyota",
-      "model": "RAV4 Premium",
-      "year": 2023,
-      "color": "verde",
-      "mileage": 43662,
-      "price": 31995,
+      "make": "Hyundai",
+      "model": "Venue",
+      "year": 2022,
+      "color": "gris",
+      "mileage": 42820,
+      "price": 15995,
       "body_type": "suv",
       "engine_liters": 0,
       "cylinders": 4,
@@ -132,16 +132,16 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Transmisión automática, Techo solar y asientos de cuero.\nSunroof and leather seats.",
-      "featured": true,
+      "notes": "Transmisión automática",
+      "featured": false,
       "sold": false,
       "photo_urls": [
-        "img/cars/v-001-1.jpg",
-        "img/cars/v-001-2.jpg",
-        "img/cars/v-001-3.jpg",
-        "img/cars/v-001-4.jpg",
-        "img/cars/v-001-5.jpg",
-        "img/cars/v-001-6.jpg"
+        "img/cars/v-055-1.jpg",
+        "img/cars/v-055-2.jpg",
+        "img/cars/v-055-3.jpg",
+        "img/cars/v-055-4.jpg",
+        "img/cars/v-055-5.jpg",
+        "img/cars/v-055-6.jpg"
       ]
     },
     {
