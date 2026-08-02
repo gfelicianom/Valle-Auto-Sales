@@ -60,6 +60,35 @@
       ]
     },
     {
+      "id": "v-010",
+      "status": "active",
+      "make": "Toyota",
+      "model": "C-HR",
+      "year": 2021,
+      "color": "blanco",
+      "mileage": 31275,
+      "price": 18995,
+      "body_type": "suv",
+      "engine_liters": 0,
+      "cylinders": 4,
+      "drivetrain": "fwd",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Transmisión automática",
+      "featured": true,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-010-1.jpg",
+        "img/cars/v-010-2.jpg",
+        "img/cars/v-010-3.jpg",
+        "img/cars/v-010-4.jpg",
+        "img/cars/v-010-5.jpg",
+        "img/cars/v-010-6.jpg"
+      ]
+    },
+    {
       "id": "v-006",
       "status": "active",
       "make": "Hyundai",
@@ -1336,35 +1365,6 @@
         "img/cars/v-011-3.jpg",
         "img/cars/v-011-4.jpg",
         "img/cars/v-011-5.jpg"
-      ]
-    },
-    {
-      "id": "v-010",
-      "status": "active",
-      "make": "Kia",
-      "model": "Soul N-Line",
-      "year": 2024,
-      "color": "azul",
-      "mileage": 11516,
-      "price": 18995,
-      "body_type": "suv",
-      "engine_liters": 0,
-      "cylinders": 4,
-      "drivetrain": "",
-      "fuel_type": "gasoline",
-      "origin": "local",
-      "registration_fee": "",
-      "condition_tags": [],
-      "notes": "Transmisión automática",
-      "featured": false,
-      "sold": false,
-      "photo_urls": [
-        "img/cars/v-010-1.jpg",
-        "img/cars/v-010-2.jpg",
-        "img/cars/v-010-3.jpg",
-        "img/cars/v-010-4.jpg",
-        "img/cars/v-010-5.jpg",
-        "img/cars/v-010-6.jpg"
       ]
     },
     {
