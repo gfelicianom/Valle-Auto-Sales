@@ -594,33 +594,6 @@
       ]
     },
     {
-      "id": "v-039",
-      "status": "active",
-      "make": "Toyota",
-      "model": "RAV4 XLE Premium",
-      "year": 2023,
-      "color": "plata",
-      "mileage": 31403,
-      "price": 30995,
-      "body_type": "suv",
-      "engine_liters": 0,
-      "cylinders": 4,
-      "drivetrain": "fwd",
-      "fuel_type": "gasoline",
-      "origin": "local",
-      "registration_fee": "",
-      "condition_tags": [],
-      "notes": "Transmisión Automática",
-      "featured": false,
-      "sold": false,
-      "photo_urls": [
-        "img/cars/v-039-1.jpg",
-        "img/cars/v-039-2.jpg",
-        "img/cars/v-039-3.jpg",
-        "img/cars/v-039-4.jpg"
-      ]
-    },
-    {
       "id": "v-038",
       "status": "active",
       "make": "Honda",
@@ -738,12 +711,12 @@
     {
       "id": "v-034",
       "status": "active",
-      "make": "Mitsubishi",
-      "model": "Outlander ASX",
-      "year": 2022,
-      "color": "rojo",
-      "mileage": 45976,
-      "price": 15995,
+      "make": "Toyota",
+      "model": "RAV4 XLE",
+      "year": 2020,
+      "color": "gris",
+      "mileage": 52514,
+      "price": 24995,
       "body_type": "suv",
       "engine_liters": 0,
       "cylinders": 4,
@@ -752,7 +725,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Transmisión Automática",
+      "notes": "Transmisión Automática, Sunroof",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -760,7 +733,9 @@
         "img/cars/v-034-2.jpg",
         "img/cars/v-034-3.jpg",
         "img/cars/v-034-4.jpg",
-        "img/cars/v-034-5.jpg"
+        "img/cars/v-034-5.jpg",
+        "img/cars/v-034-6.jpg",
+        "img/cars/v-034-7.jpg"
       ]
     },
     {
@@ -1164,65 +1139,6 @@
         "img/cars/v-018-4.jpg",
         "img/cars/v-018-5.jpg",
         "img/cars/v-018-6.jpg"
-      ]
-    },
-    {
-      "id": "v-017",
-      "status": "active",
-      "make": "Hyundai",
-      "model": "Venue",
-      "year": 2021,
-      "color": "rojo",
-      "mileage": 67505,
-      "price": 13995,
-      "body_type": "suv",
-      "engine_liters": 1.6,
-      "cylinders": 4,
-      "drivetrain": "fwd",
-      "fuel_type": "gasoline",
-      "origin": "local",
-      "registration_fee": "",
-      "condition_tags": [],
-      "notes": "Transmisión automática",
-      "featured": false,
-      "sold": false,
-      "photo_urls": [
-        "img/cars/v-017-1.jpg",
-        "img/cars/v-017-2.jpg",
-        "img/cars/v-017-3.jpg",
-        "img/cars/v-017-4.jpg",
-        "img/cars/v-017-5.jpg",
-        "img/cars/v-017-6.jpg"
-      ]
-    },
-    {
-      "id": "v-016",
-      "status": "active",
-      "make": "Mitsubishi",
-      "model": "Outlander Sport",
-      "year": 2023,
-      "color": "gris",
-      "mileage": 28423,
-      "price": 17995,
-      "body_type": "suv",
-      "engine_liters": 0,
-      "cylinders": 4,
-      "drivetrain": "4wd",
-      "fuel_type": "gasoline",
-      "origin": "local",
-      "registration_fee": "",
-      "condition_tags": [],
-      "notes": "Transmisión automática",
-      "featured": false,
-      "sold": false,
-      "photo_urls": [
-        "img/cars/v-016-1.jpg",
-        "img/cars/v-016-2.jpg",
-        "img/cars/v-016-3.jpg",
-        "img/cars/v-016-4.jpg",
-        "img/cars/v-016-5.jpg",
-        "img/cars/v-016-6.jpg",
-        "img/cars/v-016-7.jpg"
       ]
     },
     {
