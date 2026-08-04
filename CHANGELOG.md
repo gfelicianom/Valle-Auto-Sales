@@ -23,6 +23,14 @@ Development history for the Valle Auto Sales website.
 
 - The one-off migration script, its tests, and the manual migration workflow, now that every vehicle is migrated. Recoverable from git history if the base ever needs re-normalizing.
 
+## 2026-08-03
+
+### Added (Airtable → Facebook publishing)
+
+- Codex standardized the Airtable `Facebook caption` formula so vehicle posts are generated automatically from inventory data, with neutral Spanish promotional text, conditional specifications, thousands separators for prices and mileage, financing, and contact details.
+- Codex completed and verified the Make gallery flow: every `Fotos` attachment is aggregated into one Facebook Page post, then the Airtable record is marked `Posted` using its system record ID.
+- Codex tested the full flow with `v-057` (2023 Kia Río), verified the published multi-photo Facebook gallery and status safeguard, and activated the Make scenario on its hourly schedule. Only records explicitly set to `Ready to post` are eligible.
+
 ## 2026-07-29
 
 ### Changed (contact numbers)
