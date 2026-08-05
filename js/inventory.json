@@ -150,6 +150,34 @@
       ]
     },
     {
+      "id": "v-061",
+      "status": "active",
+      "make": "Toyota",
+      "model": "Tacoma Cabina 1/2",
+      "year": 2016,
+      "color": "gris",
+      "mileage": 67544,
+      "price": 17995,
+      "body_type": "pickup",
+      "engine_liters": 0,
+      "cylinders": 4,
+      "drivetrain": "4x2",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Transmisión Automática, Fuerte, confiable y lista para el trabajo o la aventura.",
+      "featured": false,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-061-1.jpg",
+        "img/cars/v-061-2.jpg",
+        "img/cars/v-061-3.jpg",
+        "img/cars/v-061-4.jpg",
+        "img/cars/v-061-5.jpg"
+      ]
+    },
+    {
       "id": "v-059",
       "status": "active",
       "make": "KIA",
@@ -745,7 +773,7 @@
       "year": 2024,
       "color": "azul",
       "mileage": 9773,
-      "price": 27995,
+      "price": 26995,
       "body_type": "pickup",
       "engine_liters": 0,
       "cylinders": 4,
