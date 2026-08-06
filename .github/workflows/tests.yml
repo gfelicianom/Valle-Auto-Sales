@@ -1,0 +1,47 @@
+name: Tests
+
+# Runs on code changes so a mistake is caught when it is pushed, instead of
+# waiting for the next hourly inventory sync to fail.
+#
+# This workflow never contacts Airtable and never commits anything. It builds
+# the search-engine pages from the inventory already in the repository purely
+# to check that the generator still runs and produces valid pages; the rebuilt
+# files are thrown away with the runner.
+on:
+  push:
+    branches: [main]
+    # The inventory sync commits only generated data. That run already tests
+    # itself, so there is nothing to re-check here.
+    paths-ignore:
+      - "js/inventory.json"
+      - "img/cars/**"
+      - "autos/**"
+      - "inventario/**"
+      - "financiamiento/**"
+      - "historia/**"
+      - "contacto/**"
+      - "sitemap.xml"
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+
+      - name: Test Airtable field mappers
+        run: node --test scripts/drivetrain.test.mjs scripts/transmission.test.mjs
+
+      - name: Build crawlable inventory and vehicle pages
+        run: node scripts/build-seo-pages.mjs
+
+      - name: Validate generated SEO pages
+        run: node scripts/seo.test.mjs
