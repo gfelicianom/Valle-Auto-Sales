@@ -28,6 +28,7 @@ const BODY_LABELS = { sedan: "Sedán", suv: "SUV", pickup: "Pickup", hatchback: 
 const FUEL_LABELS = { gasoline: "Gasolina", diesel: "Diésel", hybrid: "Híbrido", plug_in_hybrid: "Híbrido enchufable", electric: "Eléctrico" };
 const DRIVE_LABELS = { fwd: "FWD — delantera", rwd: "RWD — trasera", awd: "AWD — integral", "4wd": "4WD", "4x4": "4x4", "4x2": "4x2", differential_lock: "Bloqueo de diferencial" };
 const COLOR_LABELS = { blanco: "Blanco", negro: "Negro", gris: "Gris", plata: "Plata", rojo: "Rojo", azul: "Azul", verde: "Verde", marron: "Marrón", dorado: "Dorado", amarillo: "Amarillo", anaranjado: "Anaranjado", vino: "Vino" };
+const TRANSMISSION_LABELS = { automatic: "Automática", manual: "Manual" };
 
 const dealerSchema = {
   "@type": "AutoDealer",
@@ -230,6 +231,7 @@ async function main() {
       color: COLOR_LABELS[car.color] || car.color || undefined,
       fuelType: FUEL_LABELS[car.fuel_type] || car.fuel_type || undefined,
       vehicleConfiguration: DRIVE_LABELS[car.drivetrain] || car.drivetrain || undefined,
+      vehicleTransmission: TRANSMISSION_LABELS[car.transmission] || car.transmission || undefined,
       offers: Number(car.price) > 0 ? {
         "@type": "Offer", priceCurrency: "USD", price: Number(car.price),
         availability: "https://schema.org/InStock", url: canonical,
@@ -241,7 +243,8 @@ async function main() {
       ["Año", car.year], ["Marca", car.make], ["Modelo", car.model],
       ["Millaje", miles(car.mileage)], ["Precio", money(car.price)],
       ["Tipo", BODY_LABELS[car.body_type] || car.body_type], ["Color", COLOR_LABELS[car.color] || car.color],
-      ["Combustible", FUEL_LABELS[car.fuel_type] || car.fuel_type], ["Tracción", DRIVE_LABELS[car.drivetrain] || car.drivetrain]
+      ["Combustible", FUEL_LABELS[car.fuel_type] || car.fuel_type], ["Tracción", DRIVE_LABELS[car.drivetrain] || car.drivetrain],
+      ["Transmisión", TRANSMISSION_LABELS[car.transmission] || car.transmission]
     ].filter(([, value]) => value !== "" && value != null);
     const body = `<section class="section"><div class="section-inner"><p><a class="back-link" href="/inventario/">← Volver al inventario</a></p>
       <div class="detail-grid"><div>${images[0] ? `<div class="gallery-main"><img src="${esc(images[0])}" alt="${esc(name)} usado en venta en Aguada"></div>` : ""}

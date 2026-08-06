@@ -2,6 +2,29 @@
 
 Development history for the Valle Auto Sales website.
 
+## 2026-08-06
+
+### Added (Transmisión field)
+
+- Claude added the Airtable `Transmisión` single select (`Automática` / `Manual`) to the sync as a new `transmission` key, mapped through `scripts/transmission.mjs` the same way `Tracción` is, so an Airtable wording change cannot silently drop the value.
+- Claude added the Transmisión row to both car detail pages — the in-site page (`js/app.js`) and the generated search-engine page (`scripts/build-seo-pages.mjs`) — directly after Tracción. A car with no transmission set omits the row entirely instead of showing a blank one, and the generated page also publishes `vehicleTransmission` in its structured data.
+- Claude added a Transmisión filter to the inventory page. It stays hidden while every car in stock shares one transmission (today 56 automatic, 1 manual, 1 unset) and appears on its own once the lot holds more than one kind. Cars with no transmission set stay listed until a visitor actively picks a value.
+- Claude added `scripts/transmission.test.mjs`, covering the live Airtable options, common aliases, empty/unknown input, and the presence of Spanish and English labels.
+
+### Fixed (inventory search returned nothing for color words)
+
+- Claude fixed the inventory search box returning 0 results for terms like `white` even though the Color filter for White worked. The search had only ever matched make, model, year and powertrain fields, so any color, body-type or origin word matched nothing and filtered the list to empty.
+- Claude rebuilt the search to index each car's full displayed attribute set — make, model, trim, year, type, color, fuel, drivetrain, origin and transmission — in **both languages simultaneously**, so `white` and `blanco` return the same cars whichever language the site is showing. Matching is accent- and case-insensitive (`automatica` finds `Automática`), and each word is matched independently so `toyota rav4` works in any order.
+- Claude added `tIn(lang, key)` to `js/i18n.js` so the search can read labels in a specific language; `t()` now calls it with the current language.
+- Claude updated the search placeholder, which still promised only "marca, modelo, motor o tracción".
+
+### Verified
+
+- Claude confirmed against the live Airtable base that `Transmisión` (fldLa6HUAJKaLYNnt) offers exactly `Automática` and `Manual`, that v-050 (2015 Honda Civic Si) is the only Manual car, and that v-045 (2025 Toyota Corolla SE) is Automática.
+- Claude previewed the site and confirmed: the Transmisión row renders after Tracción for v-050 (Manual) and v-045 (Automática) in Spanish and English; a car with no transmission omits the row with no blank cell and still appears in the unfiltered list; the filter lists only Automática/Manual, hides itself when the lot is all-automatic or all-unset, and excludes unset cars only once a value is picked.
+- Claude confirmed the search fix returns 11 white cars for both `white` and `blanco` — matching the Color filter exactly, where it previously returned 0 — and that `manual` finds only v-050, `automatica` (unaccented) finds the automatics, `pickup` finds the F-150s, Tacomas, Santa Cruz and RAM, and `toyota rav4` finds the three RAV4s, identically in both languages.
+- Node is not installed on this Mac, so `scripts/build-seo-pages.mjs` and the `.mjs` tests were not run locally; the hourly GitHub Action runs both. The generated-page spec logic was verified by evaluating the same expression against real inventory data.
+
 ## 2026-08-05
 
 ### Changed (future maintenance documentation)

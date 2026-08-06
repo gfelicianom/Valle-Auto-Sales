@@ -30,7 +30,7 @@ const I18N = {
 
     // Inventory
     inv_title: "Inventario",
-    inv_search: "Buscar por marca, modelo, motor o tracción…",
+    inv_search: "Buscar por marca, modelo, color, tipo, transmisión…",
     inv_filters: "Filtros",
     inv_clear: "Limpiar filtros",
     inv_results_one: "1 auto",
@@ -47,6 +47,7 @@ const I18N = {
     f_engine: "Motor (litros)",
     f_cylinders: "Cilindros",
     f_drivetrain: "Tracción",
+    f_transmission: "Transmisión",
     f_fuel: "Combustible",
     f_availability: "Disponibilidad",
     f_all: "Todos",
@@ -76,6 +77,8 @@ const I18N = {
     drive_4x4: "4x4",
     drive_4x2: "4x2",
     drive_differential_lock: "Bloqueo de diferencial",
+    trans_automatic: "Automática",
+    trans_manual: "Manual",
     fuel_gasoline: "Gasolina",
     fuel_diesel: "Diésel",
     fuel_hybrid: "Híbrido",
@@ -103,7 +106,8 @@ const I18N = {
     d_back: "← Volver al inventario",
     d_specs: "Detalles",
     d_year: "Año", d_color: "Color", d_mileage: "Millaje", d_body: "Tipo", d_price: "Precio",
-    d_engine: "Motor", d_cylinders: "Cilindros", d_drivetrain: "Tracción", d_fuel: "Combustible",
+    d_engine: "Motor", d_cylinders: "Cilindros", d_drivetrain: "Tracción",
+    d_transmission: "Transmisión", d_fuel: "Combustible",
     d_origin_title: "Origen del vehículo",
     d_origin_local: "Vehículo local — comprado y reacondicionado en Puerto Rico.",
     d_origin_imported: "Vehículo importado de Estados Unidos.",
@@ -221,7 +225,7 @@ const I18N = {
     visit_cta: "Get Directions",
 
     inv_title: "Inventory",
-    inv_search: "Search by make, model, engine, or drivetrain…",
+    inv_search: "Search by make, model, color, type, transmission…",
     inv_filters: "Filters",
     inv_clear: "Clear filters",
     inv_results_one: "1 car",
@@ -238,6 +242,7 @@ const I18N = {
     f_engine: "Engine (liters)",
     f_cylinders: "Cylinders",
     f_drivetrain: "Drivetrain",
+    f_transmission: "Transmission",
     f_fuel: "Fuel",
     f_availability: "Availability",
     f_all: "All",
@@ -266,6 +271,8 @@ const I18N = {
     drive_4x4: "4x4",
     drive_4x2: "4x2",
     drive_differential_lock: "Differential lock",
+    trans_automatic: "Automatic",
+    trans_manual: "Manual",
     fuel_gasoline: "Gasoline",
     fuel_diesel: "Diesel",
     fuel_hybrid: "Hybrid",
@@ -290,7 +297,8 @@ const I18N = {
     d_back: "← Back to inventory",
     d_specs: "Details",
     d_year: "Year", d_color: "Color", d_mileage: "Mileage", d_body: "Type", d_price: "Price",
-    d_engine: "Engine", d_cylinders: "Cylinders", d_drivetrain: "Drivetrain", d_fuel: "Fuel",
+    d_engine: "Engine", d_cylinders: "Cylinders", d_drivetrain: "Drivetrain",
+    d_transmission: "Transmission", d_fuel: "Fuel",
     d_origin_title: "Vehicle origin",
     d_origin_local: "Local vehicle — purchased and reconditioned in Puerto Rico.",
     d_origin_imported: "Vehicle imported from the United States.",
@@ -381,10 +389,17 @@ const I18N = {
 
 let LANG = localStorage.getItem("valle_lang") || "es";
 
-function t(key, vars) {
-  let s = (I18N[LANG] && I18N[LANG][key]) || I18N.es[key] || key;
+/* Look up a key in a specific language. The inventory search uses this to
+   index every car in both languages, so a visitor typing "white" finds the
+   same cars as one typing "blanco", whichever language the site is showing. */
+function tIn(lang, key, vars) {
+  let s = (I18N[lang] && I18N[lang][key]) || I18N.es[key] || key;
   if (vars) for (const k in vars) s = s.replace("{" + k + "}", vars[k]);
   return s;
+}
+
+function t(key, vars) {
+  return tIn(LANG, key, vars);
 }
 
 function setLang(lang) {

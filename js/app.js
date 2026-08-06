@@ -8,7 +8,7 @@ const app = document.getElementById("app");
 /* Filter state persists while browsing the inventory */
 const FILTERS_DEFAULT = () => ({
   q: "", body: "", make: "", model: "", color: "", origin: "",
-  engine: "", cylinders: "", drivetrain: "", fuel: "",
+  engine: "", cylinders: "", drivetrain: "", transmission: "", fuel: "",
   yearMin: "", yearMax: "", priceMin: "", priceMax: "",
   mileMin: "", mileMax: "", showSold: false, sort: "price_asc", panelOpen: false
 });
@@ -24,7 +24,42 @@ const colorLabel = c => t("c_" + c.color) === "c_" + c.color ? (c.color.charAt(0
 const bodyLabel = c => t("bt_" + c.body_type) === "bt_" + c.body_type ? t("bt_other") : t("bt_" + c.body_type);
 const drivetrainLabel = c => t("drive_" + c.drivetrain) === "drive_" + c.drivetrain ? c.drivetrain.toUpperCase() : t("drive_" + c.drivetrain);
 const fuelLabel = c => t("fuel_" + c.fuel_type) === "fuel_" + c.fuel_type ? c.fuel_type : t("fuel_" + c.fuel_type);
+const transmissionLabel = c => t("trans_" + c.transmission) === "trans_" + c.transmission ? c.transmission : t("trans_" + c.transmission);
 const isFourByFour = c => c.drivetrain === "4x4";
+
+/* Lowercase + strip accents, so "automatica" typed on a phone keyboard
+   without accents still matches "Automática". */
+const normalizeSearch = s => String(s).toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
+/* Everything a visitor might reasonably type for a car, indexed in BOTH
+   languages plus the raw internal keys — so "white"/"blanco", "gas"/"gasolina"
+   and "automatic"/"automática" all find the same cars no matter which language
+   the site is currently showing. Cached per car; the text is language-agnostic
+   so it survives the language toggle. */
+const SEARCH_TEXT = new WeakMap();
+function searchText(c) {
+  const cached = SEARCH_TEXT.get(c);
+  if (cached !== undefined) return cached;
+
+  const parts = [c.id, c.make, c.model, c.year];
+  if (Number(c.engine_liters) > 0) parts.push(c.engine_liters + " L");
+  if (Number(c.cylinders) > 0) parts.push(c.cylinders);
+  parts.push(c.body_type, c.color, c.fuel_type, c.drivetrain, c.transmission, c.origin);
+
+  for (const lang of ["es", "en"]) {
+    if (c.body_type) parts.push(tIn(lang, "bt_" + c.body_type));
+    if (c.color) parts.push(tIn(lang, "c_" + c.color));
+    if (c.fuel_type) parts.push(tIn(lang, "fuel_" + c.fuel_type));
+    if (c.drivetrain) parts.push(tIn(lang, "drive_" + c.drivetrain));
+    if (c.transmission) parts.push(tIn(lang, "trans_" + c.transmission));
+    if (c.origin) parts.push(tIn(lang, c.origin === "imported" ? "origin_imported" : "origin_local"));
+    if (Number(c.cylinders) > 0) parts.push(tIn(lang, "cylinders_long", { n: Number(c.cylinders) }));
+  }
+
+  const text = normalizeSearch(parts.filter(Boolean).join(" "));
+  SEARCH_TEXT.set(c, text);
+  return text;
+}
 
 function powertrainParts(c) {
   return [
@@ -129,13 +164,14 @@ function applyFilters() {
   const f = FILTERS;
   if (!f.showSold) list = list.filter(c => !c.sold);
   if (f.q) {
-    const q = f.q.toLowerCase();
-    list = list.filter(c => [
-      c.make, c.model, c.year, c.engine_liters, c.cylinders, c.drivetrain,
-      c.fuel_type, c.drivetrain ? drivetrainLabel(c) : "",
-      c.fuel_type ? fuelLabel(c) : "",
-      Number(c.cylinders) > 0 ? t("cylinders_long", { n: Number(c.cylinders) }) : ""
-    ].join(" ").toLowerCase().includes(q));
+    /* every word must match somewhere, so "toyota rav4" works in any order */
+    const terms = normalizeSearch(f.q).split(/\s+/).filter(Boolean);
+    if (terms.length) {
+      list = list.filter(c => {
+        const text = searchText(c);
+        return terms.every(term => text.includes(term));
+      });
+    }
   }
   if (f.body) list = list.filter(c => c.body_type === f.body || (f.body === "suv" && c.body_type.startsWith("suv")));
   if (f.make) list = list.filter(c => c.make === f.make);
@@ -145,6 +181,8 @@ function applyFilters() {
   if (f.engine) list = list.filter(c => Number(c.engine_liters) === +f.engine);
   if (f.cylinders) list = list.filter(c => Number(c.cylinders) === +f.cylinders);
   if (f.drivetrain) list = list.filter(c => c.drivetrain === f.drivetrain);
+  /* cars with no transmission set stay visible until a value is picked */
+  if (f.transmission) list = list.filter(c => c.transmission === f.transmission);
   if (f.fuel) list = list.filter(c => c.fuel_type === f.fuel);
   if (f.yearMin) list = list.filter(c => c.year >= +f.yearMin);
   if (f.yearMax) list = list.filter(c => c.year <= +f.yearMax);
@@ -182,6 +220,12 @@ function renderInventory() {
   const fuelValues = new Set(CARS.map(c => c.fuel_type).filter(Boolean));
   const drivetrains = ["fwd", "rwd", "awd", "4wd", "4x4", "4x2", "differential_lock"]
     .filter(value => drivetrainValues.has(value));
+  /* Nearly every car is automatic, so the filter would be noise. It appears
+     on its own once the lot actually holds more than one kind. */
+  const transmissionValues = new Set(CARS.map(c => c.transmission).filter(Boolean));
+  const transmissions = transmissionValues.size > 1
+    ? ["automatic", "manual"].filter(value => transmissionValues.has(value))
+    : [];
   const fuels = ["gasoline", "diesel", "hybrid", "plug_in_hybrid", "electric"].filter(value => fuelValues.has(value));
 
   const list = applyFilters();
@@ -242,6 +286,11 @@ function renderInventory() {
         <div class="filter-group">
           <label>${t("f_drivetrain")}</label>
           <select class="filter-select" data-f="drivetrain">${filterOptions(drivetrains.map(d => ({ value: d, label: t("drive_" + d) })), f.drivetrain, t("f_all"))}</select>
+        </div>` : ""}
+        ${transmissions.length ? `
+        <div class="filter-group">
+          <label>${t("f_transmission")}</label>
+          <select class="filter-select" data-f="transmission">${filterOptions(transmissions.map(tr => ({ value: tr, label: t("trans_" + tr) })), f.transmission, t("f_all"))}</select>
         </div>` : ""}
         ${fuels.length ? `
         <div class="filter-group">
@@ -364,6 +413,7 @@ function renderCarDetail(id) {
             ${Number(c.engine_liters) > 0 ? `<tr><td>${t("d_engine")}</td><td>${Number(c.engine_liters).toLocaleString("en-US", { maximumFractionDigits: 2 })} L</td></tr>` : ""}
             ${Number(c.cylinders) > 0 ? `<tr><td>${t("d_cylinders")}</td><td>${t("cylinders_long", { n: Number(c.cylinders) })}</td></tr>` : ""}
             ${c.drivetrain ? `<tr><td>${t("d_drivetrain")}</td><td>${isFourByFour(c) ? `<span class="badge badge-4x4">${drivetrainLabel(c)}</span>` : drivetrainLabel(c)}</td></tr>` : ""}
+            ${c.transmission ? `<tr><td>${t("d_transmission")}</td><td>${esc(transmissionLabel(c))}</td></tr>` : ""}
             ${c.fuel_type ? `<tr><td>${t("d_fuel")}</td><td>${fuelLabel(c)}</td></tr>` : ""}
             ${c.origin ? `<tr><td>${t("f_origin")}</td><td><span class="badge ${c.origin === "imported" ? "badge-imported" : "badge-local"}">${t(c.origin === "imported" ? "origin_imported" : "origin_local")}</span></td></tr>` : ""}
           </table>

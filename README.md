@@ -96,11 +96,18 @@ Field notes:
 | `Cilindros` | whole number (`4`, `6`, `8`); enables cylinder display and filter; empty = nothing shows |
 | `Tracción` | single select: `FWD / delantera`, `RWD`, `AWD`, `4WD`, `4x4`, `4x2`, or `Differential lock`; enables drivetrain display and filter; empty = nothing shows |
 | `Combustible` | single select: `Gasolina`, `Diésel`, `Híbrido`, `Híbrido enchufable`, or `Eléctrico`; enables fuel display and filter; empty = nothing shows |
+| `Transmisión` | single select: `Automática` or `Manual`; shows on the detail page; empty = the row is omitted. The transmission filter only appears once the lot holds more than one kind |
 | `Notas` | free text on the detail page, shown as-is in both languages |
 | `Fotos` | the gallery; attachment order = display order |
 
 **Display order** is automatic: featured cars first, then newest first.
 There is nothing to renumber.
+
+The inventory search box matches a car's whole displayed attribute set — make,
+model, trim, year, type, color, fuel, drivetrain, origin and transmission — in
+**both languages at once** and ignoring accents, so `white` and `blanco` return
+the same cars, and `automatica` finds the `Automática` ones. Multi-word searches
+like `toyota rav4` match in any order.
 
 Powertrain fields are optional. Add the four columns above to Airtable with
 the exact field names shown; the sync, search, cards, filters, and detail page

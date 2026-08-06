@@ -22,6 +22,7 @@
 import { readFile, writeFile, readdir, unlink, mkdir } from "node:fs/promises";
 import path from "node:path";
 import { mapDrivetrain } from "./drivetrain.mjs";
+import { mapTransmission } from "./transmission.mjs";
 
 const BASE_ID = "app9Rj2rqXxh1QSTy";
 const TABLE_ID = "tblt7l3jOV8Rvk91K"; // Vehículos
@@ -105,6 +106,8 @@ function toCar(rec) {
     engine_liters: Number(f["Motor (L)"]) || 0,
     cylinders: Number(f["Cilindros"]) || 0,
     drivetrain: mapDrivetrain(f["Tracción"]),
+    /* "" when the family has not set it yet — the site omits the row */
+    transmission: mapTransmission(f["Transmisión"]),
     fuel_type: mapFuel(f["Combustible"]),
     /* Airtable "Origen" stays Spanish (Local/Importado); the site code uses
        internal keys "local"/"imported" and i18n.js shows the right language. */

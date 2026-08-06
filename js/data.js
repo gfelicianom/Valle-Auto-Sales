@@ -40,7 +40,7 @@ async function loadInventory() {
       .map(c => ({
         title: "", make: "", model: "", year: 0, color: "", mileage: 0,
         price: 0, body_type: "other", engine_liters: 0, cylinders: 0,
-        drivetrain: "", fuel_type: "", origin: "", registration_fee: "",
+        drivetrain: "", transmission: "", fuel_type: "", origin: "", registration_fee: "",
         condition_tags: [], photo_urls: [], featured: false, sold: false,
         notes: "", ...c
       }));
