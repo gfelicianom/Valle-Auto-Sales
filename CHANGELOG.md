@@ -2,6 +2,12 @@
 
 Development history for the Valle Auto Sales website.
 
+## 2026-08-05
+
+### Changed (future maintenance documentation)
+
+- Codex expanded the README into a beginner-friendly operating guide covering safe website edits, generated files, bilingual content, GitHub publishing, Airtable inventory and photo practices, Facebook publishing, Google/Bing follow-up, and common troubleshooting.
+
 ## 2026-07-30
 
 ### Added (Airtable photo migration safety)
