@@ -18,7 +18,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Transmisión Automática, Sunroof",
+      "notes": "Sunroof",
       "featured": true,
       "sold": false,
       "photo_urls": [
@@ -51,7 +51,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Transmisión Automática, Sunroof",
+      "notes": "Sunroof",
       "featured": true,
       "sold": false,
       "photo_urls": [
@@ -79,7 +79,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Transmisión automática",
+      "notes": "",
       "featured": true,
       "sold": false,
       "photo_urls": [
@@ -109,7 +109,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Transmisión automática",
+      "notes": "",
       "featured": true,
       "sold": false,
       "photo_urls": [
@@ -138,7 +138,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Transmisión automática",
+      "notes": "",
       "featured": true,
       "sold": false,
       "photo_urls": [
@@ -172,7 +172,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Transmisión Automática, Fuerte, confiable y lista para el trabajo o la aventura.",
+      "notes": "Fuerte, confiable y lista para el trabajo o la aventura.",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -186,7 +186,7 @@
     {
       "id": "v-059",
       "status": "active",
-      "make": "KIA",
+      "make": "Kia",
       "model": "Rio",
       "year": 2022,
       "color": "azul",
@@ -201,7 +201,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Transmisión Automática",
+      "notes": "",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -231,7 +231,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Transmisión Automática",
+      "notes": "",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -247,7 +247,7 @@
       "id": "v-057",
       "status": "active",
       "make": "Kia",
-      "model": "Río",
+      "model": "Rio",
       "year": 2023,
       "color": "rojo",
       "mileage": 69251,
@@ -261,7 +261,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Transmisión Automática",
+      "notes": "",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -291,7 +291,7 @@
       "origin": "imported",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Transmisión automática",
+      "notes": "",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -323,7 +323,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Transmisión automática",
+      "notes": "",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -353,7 +353,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Transmisión Automática",
+      "notes": "",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -383,7 +383,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Transmisión Automática",
+      "notes": "",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -414,7 +414,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Transmisión Automática, Excelente Condición",
+      "notes": "Excelente condición",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -445,7 +445,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Transmisión Automática, Excelente Condición , detalle de pintura",
+      "notes": "Excelente condición, con detalle de pintura",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -477,7 +477,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Transmisión Manual, sunroof",
+      "notes": "Sunroof",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -509,7 +509,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Transmisión  Automática, panorámico, asientos en leather",
+      "notes": "Techo panorámico y asientos en leather",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -539,7 +539,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Transmisión Automática",
+      "notes": "",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -570,7 +570,7 @@
       "origin": "imported",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Transmisión Automática",
+      "notes": "",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -600,7 +600,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Transmisión automática, panorámico, asientos en leather",
+      "notes": "Techo panorámico y asientos en leather",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -629,7 +629,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Transmisión Automática",
+      "notes": "",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -643,7 +643,7 @@
       "id": "v-042",
       "status": "active",
       "make": "Toyota",
-      "model": "RAV4  XLE Premium",
+      "model": "RAV4 XLE Premium",
       "year": 2020,
       "color": "azul",
       "mileage": 102914,
@@ -657,7 +657,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Transmisión Automática \nSunroof, asientos en leather",
+      "notes": "Sunroof y asientos en leather",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -686,7 +686,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Transmisión Automática",
+      "notes": "",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -718,7 +718,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Transmisión Automática",
+      "notes": "",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -750,7 +750,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Transmisión Automática",
+      "notes": "",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -780,7 +780,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Transmisión Automática",
+      "notes": "",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -809,7 +809,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Transmisión Automática",
+      "notes": "",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -840,7 +840,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Transmisión Automática",
+      "notes": "",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -869,7 +869,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Transmisión Automática, Sunroof",
+      "notes": "Sunroof",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -900,7 +900,7 @@
       "origin": "imported",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Transmisión Automática",
+      "notes": "",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -928,7 +928,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Transmisión Automática",
+      "notes": "",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -956,7 +956,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Transmisión Automática",
+      "notes": "",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -986,7 +986,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Transmisión Automática",
+      "notes": "",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -1016,7 +1016,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Transmisión Automática",
+      "notes": "",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -1048,7 +1048,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Transmisión Automática",
+      "notes": "",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -1078,7 +1078,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Transmisión automática",
+      "notes": "",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -1108,7 +1108,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Transmisión Automática",
+      "notes": "",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -1123,7 +1123,7 @@
     {
       "id": "v-024",
       "status": "active",
-      "make": "KIA",
+      "make": "Kia",
       "model": "Forte",
       "year": 2023,
       "color": "anaranjado",
@@ -1138,7 +1138,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Transmisión Automática, sunroof",
+      "notes": "Sunroof",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -1167,7 +1167,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Transmisión Automática",
+      "notes": "",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -1195,7 +1195,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Transmisión Automática, Tres fila de asientos",
+      "notes": "Tres filas de asientos",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -1226,7 +1226,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Transmisión Automática",
+      "notes": "",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -1258,7 +1258,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Transmisión Automática",
+      "notes": "",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -1287,7 +1287,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Transmisión Automático",
+      "notes": "",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -1317,7 +1317,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Transmisión automática",
+      "notes": "",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -1347,7 +1347,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Transmisión Automática",
+      "notes": "",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -1377,7 +1377,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Transmisión Automático",
+      "notes": "",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -1406,7 +1406,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Transmisión Automático",
+      "notes": "",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -1435,7 +1435,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Transmisión automática",
+      "notes": "",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -1464,7 +1464,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Transmisión automática",
+      "notes": "",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -1494,7 +1494,7 @@
       "origin": "imported",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Transmisión automática",
+      "notes": "",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -1524,7 +1524,7 @@
       "origin": "imported",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Transmisión automática",
+      "notes": "",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -1554,7 +1554,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Transmisión automática",
+      "notes": "",
       "featured": false,
       "sold": false,
       "photo_urls": [
