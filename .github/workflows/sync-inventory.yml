@@ -32,6 +32,13 @@ jobs:
         with:
           node-version: 24
 
+      # Pure unit tests for the Airtable → website field mappers. They run
+      # before the sync on purpose: a broken mapper would otherwise write bad
+      # values into inventory.json and commit them. Listed explicitly so the
+      # generated-page test below is not pulled in before the pages exist.
+      - name: Test Airtable field mappers
+        run: node --test scripts/drivetrain.test.mjs scripts/transmission.test.mjs
+
       - name: Install sharp (image resizing)
         run: npm install --no-save --no-audit --no-fund sharp
 

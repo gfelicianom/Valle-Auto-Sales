@@ -10,6 +10,7 @@ Development history for the Valle Auto Sales website.
 - Claude added the Transmisión row to both car detail pages — the in-site page (`js/app.js`) and the generated search-engine page (`scripts/build-seo-pages.mjs`) — directly after Tracción. A car with no transmission set omits the row entirely instead of showing a blank one, and the generated page also publishes `vehicleTransmission` in its structured data.
 - Claude added a Transmisión filter to the inventory page. It stays hidden while every car in stock shares one transmission (today 56 automatic, 1 manual, 1 unset) and appears on its own once the lot holds more than one kind. Cars with no transmission set stay listed until a visitor actively picks a value.
 - Claude added `scripts/transmission.test.mjs`, covering the live Airtable options, common aliases, empty/unknown input, and the presence of Spanish and English labels.
+- Claude added the mapper tests to the sync workflow. `scripts/drivetrain.test.mjs` had never run in CI, so both it and the new transmission test now execute on every sync, *before* the Airtable pull — a broken field mapper stops the run instead of writing bad values into `js/inventory.json` and committing them. The generated-page test still runs after the build, since it reads the pages the build produces.
 
 ### Fixed (inventory search returned nothing for color words)
 
