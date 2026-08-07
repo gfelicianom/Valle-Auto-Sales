@@ -155,6 +155,37 @@
       ]
     },
     {
+      "id": "v-060",
+      "status": "active",
+      "make": "Ford",
+      "model": "F-150 XLT",
+      "year": 2018,
+      "color": "blanco",
+      "mileage": 124402,
+      "price": 23995,
+      "body_type": "pickup",
+      "engine_liters": 2.7,
+      "cylinders": 6,
+      "drivetrain": "fwd",
+      "transmission": "",
+      "fuel_type": "gasoline",
+      "origin": "imported",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Potencia, resistencia y el rendimiento que solo una Ford F-150 puede ofrecer. Lista para trabajar o disfrutar en familia.",
+      "featured": false,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-060-1.jpg",
+        "img/cars/v-060-2.jpg",
+        "img/cars/v-060-3.jpg",
+        "img/cars/v-060-4.jpg",
+        "img/cars/v-060-5.jpg",
+        "img/cars/v-060-6.jpg",
+        "img/cars/v-060-7.jpg"
+      ]
+    },
+    {
       "id": "v-059",
       "status": "active",
       "make": "Kia",
