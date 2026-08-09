@@ -79,7 +79,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "",
+      "notes": "La Toyota C-HR con diseño deportivo y moderno. Excelente para el diario por su \ncalidad y confiabilidad.",
       "featured": true,
       "sold": false,
       "photo_urls": [
@@ -109,7 +109,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "",
+      "notes": "La combinación perfecta de lujo, espacio, comodidad y seguridad para toda la familia. \nDiseño espectacular con 3 filas de asientos.",
       "featured": true,
       "sold": false,
       "photo_urls": [
@@ -138,7 +138,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "",
+      "notes": "Pickup fuerte, resistente y lista para el trabajo.\nIdeal para carga, remolque y uso diario.\nLa combinación perfecta de fuerza y comodidad.",
       "featured": true,
       "sold": false,
       "photo_urls": [
@@ -1500,7 +1500,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "",
+      "notes": "SUV con presencia, comodidad y espacio.",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -1530,7 +1530,7 @@
       "origin": "imported",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "",
+      "notes": "Pickup con fuerza, estilo y capacidad. Excelente para trabajo, viajes o uso diario. Esta F-150 está lista para ti.",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -1560,7 +1560,7 @@
       "origin": "imported",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "",
+      "notes": "Pickup con fuerza, estilo y capacidad. Excelente para trabajo, viajes o uso diario. Esta F-150 está lista para ti.",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -1570,36 +1570,6 @@
         "img/cars/v-007-4.jpg",
         "img/cars/v-007-5.jpg",
         "img/cars/v-007-6.jpg"
-      ]
-    },
-    {
-      "id": "v-002",
-      "status": "active",
-      "make": "Hyundai",
-      "model": "Elantra",
-      "year": 2025,
-      "color": "plata",
-      "mileage": 8095,
-      "price": 18995,
-      "body_type": "sedan",
-      "engine_liters": 0,
-      "cylinders": 4,
-      "drivetrain": "fwd",
-      "transmission": "automatic",
-      "fuel_type": "gasoline",
-      "origin": "local",
-      "registration_fee": "",
-      "condition_tags": [],
-      "notes": "",
-      "featured": false,
-      "sold": false,
-      "photo_urls": [
-        "img/cars/v-002-1.jpg",
-        "img/cars/v-002-2.jpg",
-        "img/cars/v-002-3.jpg",
-        "img/cars/v-002-4.jpg",
-        "img/cars/v-002-5.jpg",
-        "img/cars/v-002-6.jpg"
       ]
     }
   ]
