@@ -964,7 +964,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "",
+      "notes": "Elegancia, economía con diseño moderno y estilo sofisticado. Una alternativa  para quienes buscan comodidad, eficiencia y confiabilidad.",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -972,36 +972,6 @@
         "img/cars/v-032-2.jpg",
         "img/cars/v-032-3.jpg",
         "img/cars/v-032-4.jpg"
-      ]
-    },
-    {
-      "id": "v-031",
-      "status": "active",
-      "make": "Mitsubishi",
-      "model": "Outlander ASX",
-      "year": 2021,
-      "color": "marron",
-      "mileage": 20738,
-      "price": 14995,
-      "body_type": "suv",
-      "engine_liters": 0,
-      "cylinders": 4,
-      "drivetrain": "fwd",
-      "transmission": "automatic",
-      "fuel_type": "gasoline",
-      "origin": "local",
-      "registration_fee": "",
-      "condition_tags": [],
-      "notes": "",
-      "featured": false,
-      "sold": false,
-      "photo_urls": [
-        "img/cars/v-031-1.jpg",
-        "img/cars/v-031-2.jpg",
-        "img/cars/v-031-3.jpg",
-        "img/cars/v-031-4.jpg",
-        "img/cars/v-031-5.jpg",
-        "img/cars/v-031-6.jpg"
       ]
     },
     {
@@ -1022,7 +992,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "",
+      "notes": "Disfruta de su diseño moderno, excelente rendimiento y tecnología. Una opción para quienes buscan calidad, economía y elegancia en un solo vehículo.",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -1052,7 +1022,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "",
+      "notes": "Elegancia, economía y confiabilidad en un solo vehículo. Un compacto práctico y moderno, con excelente rendimiento y el respaldo de una marca reconocida por su durabilidad.",
       "featured": false,
       "sold": false,
       "photo_urls": [
