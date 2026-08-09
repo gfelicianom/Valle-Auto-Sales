@@ -1186,34 +1186,6 @@
       ]
     },
     {
-      "id": "v-022",
-      "status": "active",
-      "make": "Hyundai",
-      "model": "Tucson",
-      "year": 2016,
-      "color": "marron",
-      "mileage": 68500,
-      "price": 12995,
-      "body_type": "suv",
-      "engine_liters": 0,
-      "cylinders": 4,
-      "drivetrain": "fwd",
-      "transmission": "automatic",
-      "fuel_type": "gasoline",
-      "origin": "local",
-      "registration_fee": "",
-      "condition_tags": [],
-      "notes": "",
-      "featured": false,
-      "sold": false,
-      "photo_urls": [
-        "img/cars/v-022-1.jpg",
-        "img/cars/v-022-2.jpg",
-        "img/cars/v-022-3.jpg",
-        "img/cars/v-022-4.jpg"
-      ]
-    },
-    {
       "id": "v-021",
       "status": "active",
       "make": "Toyota",
@@ -1231,7 +1203,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Tres filas de asientos",
+      "notes": "Una SUV diseñada para quienes buscan comodidad, amplitud y un manejo excepcional. Su elegante diseño y sus tres filas de asientos la convierten en una excelente opción para toda la familia.",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -1262,7 +1234,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "",
+      "notes": "Una SUV que combina elegancia, comodidad y tecnología. Su diseño moderno y su amplio interior la convierten en una excelente opción para quienes buscan estilo.",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -1294,7 +1266,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "",
+      "notes": "Diseño moderno, comodidad y la reconocida calidad Toyota en un vehículo que combina estilo, eficiencia y confiabilidad. \nUna excelente oportunidad para estrenar tu próximo vehículo.",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -1323,7 +1295,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "",
+      "notes": "Un sedán moderno y sofisticado, ideal para quienes buscan economía, comodidad, calidad y estilo.",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -1353,7 +1325,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "",
+      "notes": "Disfruta el balance perfecto entre estilo, comodidad y eficiencia. Un sedán moderno, práctico y listo para acompañarte en cada aventura.",
       "featured": false,
       "sold": false,
       "photo_urls": [
