@@ -155,6 +155,38 @@
       ]
     },
     {
+      "id": "v-064",
+      "status": "active",
+      "make": "Chevrolet",
+      "model": "Camaro RS",
+      "year": 2022,
+      "color": "anaranjado",
+      "mileage": 59591,
+      "price": 29995,
+      "body_type": "sedan",
+      "engine_liters": 0,
+      "cylinders": 4,
+      "drivetrain": "rwd",
+      "transmission": "",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Deportivo, elegante y con el carácter que distingue a un Camaro. Cuenta con motor 2.0L Turbo de 4 cilindros, 275 caballos de fuerza y tracción trasera, combinando excelente desempeño con un estilo espectacular.",
+      "featured": false,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-064-1.jpg",
+        "img/cars/v-064-2.jpg",
+        "img/cars/v-064-3.jpg",
+        "img/cars/v-064-4.jpg",
+        "img/cars/v-064-5.jpg",
+        "img/cars/v-064-6.jpg",
+        "img/cars/v-064-7.jpg",
+        "img/cars/v-064-8.jpg"
+      ]
+    },
+    {
       "id": "v-063",
       "status": "active",
       "make": "Honda",
