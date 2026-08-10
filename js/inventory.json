@@ -155,6 +155,37 @@
       ]
     },
     {
+      "id": "v-063",
+      "status": "active",
+      "make": "Honda",
+      "model": "Passport EX-L",
+      "year": 2022,
+      "color": "blanco",
+      "mileage": 45045,
+      "price": 31995,
+      "body_type": "suv",
+      "engine_liters": 3.5,
+      "cylinders": 6,
+      "drivetrain": "fwd",
+      "transmission": "",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Potencia, elegancia y aventura en una sola SUV. Ofrece un excelente desempeño, mientras su amplio interior brinda comodidad y versatilidad. Equipada con tecnología, seguridad y un diseño moderno.",
+      "featured": false,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-063-1.jpg",
+        "img/cars/v-063-2.jpg",
+        "img/cars/v-063-3.jpg",
+        "img/cars/v-063-4.jpg",
+        "img/cars/v-063-5.jpg",
+        "img/cars/v-063-6.jpg",
+        "img/cars/v-063-7.jpg"
+      ]
+    },
+    {
       "id": "v-062",
       "status": "active",
       "make": "Toyota",
