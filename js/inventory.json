@@ -155,6 +155,36 @@
       ]
     },
     {
+      "id": "v-065",
+      "status": "active",
+      "make": "Mitsubishi",
+      "model": "Outlander Sport",
+      "year": 2022,
+      "color": "rojo",
+      "mileage": 46146,
+      "price": 15995,
+      "body_type": "suv",
+      "engine_liters": 0,
+      "cylinders": 4,
+      "drivetrain": "fwd",
+      "transmission": "",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Compacta, moderna y lista para acompañarte en cada aventura. Diseño deportivo con comodidad, tecnología y excelente manejo.",
+      "featured": false,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-065-1.jpg",
+        "img/cars/v-065-2.jpg",
+        "img/cars/v-065-3.jpg",
+        "img/cars/v-065-4.jpg",
+        "img/cars/v-065-5.jpg",
+        "img/cars/v-065-6.jpg"
+      ]
+    },
+    {
       "id": "v-064",
       "status": "active",
       "make": "Chevrolet",
