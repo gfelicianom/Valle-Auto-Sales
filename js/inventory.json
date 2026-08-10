@@ -18,7 +18,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Sunroof",
+      "notes": "Deportivo, elegante y moderno, combina estilo, eficiencia y tecnología para ofrecerte una experiencia de manejo excepcional.",
       "featured": true,
       "sold": false,
       "photo_urls": [
@@ -606,7 +606,7 @@
       "origin": "imported",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "",
+      "notes": "Su diseño deportivo y potencia, combinado con la versatilidad de la tracción 4x4, hacen de esta F-150 una excelente opción para el trabajo y la aventura.",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -636,7 +636,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Techo panorámico y asientos en leather",
+      "notes": "Elegancia, estilo y sofisticación en una SUV. Su diseño moderno, excelente comodidad y manejo hacen de la QX20 una opción ideal.",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -665,7 +665,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "",
+      "notes": "Deportivo, moderno y con un estilo que se destaca. Su diseño compacto, excelente manejo y versatilidad lo convierten en la combinación perfecta de elegancia.",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -693,7 +693,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Sunroof y asientos en leather",
+      "notes": "Elegancia, confiabilidad y versatilidad en una SUV diseñada para acompañarte en cada aventura. Su moderno diseño, amplio espacio y excelente desempeño la convierten en una opción ideal.",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -702,38 +702,6 @@
         "img/cars/v-042-3.jpg",
         "img/cars/v-042-4.jpg",
         "img/cars/v-042-5.jpg"
-      ]
-    },
-    {
-      "id": "v-041",
-      "status": "active",
-      "make": "Toyota",
-      "model": "Yaris",
-      "year": 2020,
-      "color": "gris",
-      "mileage": 46616,
-      "price": 12995,
-      "body_type": "sedan",
-      "engine_liters": 0,
-      "cylinders": 4,
-      "drivetrain": "fwd",
-      "transmission": "automatic",
-      "fuel_type": "gasoline",
-      "origin": "local",
-      "registration_fee": "",
-      "condition_tags": [],
-      "notes": "",
-      "featured": false,
-      "sold": false,
-      "photo_urls": [
-        "img/cars/v-041-1.jpg",
-        "img/cars/v-041-2.jpg",
-        "img/cars/v-041-3.jpg",
-        "img/cars/v-041-4.jpg",
-        "img/cars/v-041-5.jpg",
-        "img/cars/v-041-6.jpg",
-        "img/cars/v-041-7.jpg",
-        "img/cars/v-041-8.jpg"
       ]
     },
     {
@@ -754,7 +722,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "",
+      "notes": "Moderna, cómoda y versátil, la SUV ideal para quienes buscan espacio, estilo y un manejo. Su diseño atractivo y excelente combinación de comodidad y tecnología la convierten en una gran opción para toda la familia.",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -786,7 +754,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "",
+      "notes": "Su diseño moderno, manejo cómodo y eficiencia lo convierten en una opción, combina con elegancia, confiabilidad y excelente desempeño.",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -796,35 +764,6 @@
         "img/cars/v-038-4.jpg",
         "img/cars/v-038-5.jpg",
         "img/cars/v-038-6.jpg"
-      ]
-    },
-    {
-      "id": "v-037",
-      "status": "active",
-      "make": "Toyota",
-      "model": "Corolla LE",
-      "year": 2025,
-      "color": "blanco",
-      "mileage": 2785,
-      "price": 22995,
-      "body_type": "sedan",
-      "engine_liters": 0,
-      "cylinders": 4,
-      "drivetrain": "fwd",
-      "transmission": "automatic",
-      "fuel_type": "gasoline",
-      "origin": "local",
-      "registration_fee": "",
-      "condition_tags": [],
-      "notes": "",
-      "featured": false,
-      "sold": false,
-      "photo_urls": [
-        "img/cars/v-037-1.jpg",
-        "img/cars/v-037-2.jpg",
-        "img/cars/v-037-3.jpg",
-        "img/cars/v-037-4.jpg",
-        "img/cars/v-037-5.jpg"
       ]
     },
     {
@@ -845,7 +784,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "",
+      "notes": "Su diseño moderno, comodidad y capacidad la convierten en una excelente opción para el trabajo o la aventura. Ven a conocerla y descubre por qué la Santa Cruz 2024 puede ser tu próxima pickup.",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -876,7 +815,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "",
+      "notes": "Elegancia, estilo y versatilidad. Su diseño moderno y deportivo, combinado con comodidad y excelente desempeño, hacen de esta SUV una opción ideal.",
       "featured": false,
       "sold": false,
       "photo_urls": [
