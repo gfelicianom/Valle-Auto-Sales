@@ -267,7 +267,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "",
+      "notes": "Estilo, espacio combinado un diseño moderno y distintivo con comodidad y excelente practicidad para el día a día. Ideal para quienes buscan algo diferente, versátil y con mucho estilo.",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -297,7 +297,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "",
+      "notes": "Elegante, económico y práctico, es una excelente opción para quienes buscan un vehículo moderno, cómodo y eficiente.Su diseño atractivo y rendimiento lo convierten en una alternativa ideal.",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -327,7 +327,7 @@
       "origin": "imported",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "",
+      "notes": "Potencia, presencia y capacidad en una sola pickup. Esta F-150 4x4 con motor 5.0L es ideal para quienes buscan rendimiento, fuerza y comodidad para el trabajo o el diario.",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -359,7 +359,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "",
+      "notes": "Compacta, moderna y llena de estilo, la Hyundai Venue 2022 es perfecta para quienes buscan practicidad, comodidad y un SUV fácil de manejar. Su diseño atractivo y excelente aprovechamiento del espacio la convierten en una opción ideal.",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -389,7 +389,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "",
+      "notes": "Elegancia, comodidad y versatilidad en un SUV. Su diseño moderno, amplio interior y excelente presencia la convierten en una opción ideal para disfrutar cada aventura.",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -419,7 +419,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "",
+      "notes": "Compacta, moderna y con mucho estilo, la Hyundai Venue 2024 es perfecta para quienes buscan comodidad y tecnología.",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -450,7 +450,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Excelente condición",
+      "notes": "Espaciosa, cómoda y elegante, la Highlander es una excelente opción para quienes buscan un SUV familiar con presencia y versatilidad. Cuenta con un interior amplio y práctico.",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -481,7 +481,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Excelente condición, con detalle de pintura",
+      "notes": "Una pickup con carácter, durabilidad y el estilo que distingue a la Tacoma. Ideal para el trabajo, combinando funcionalidad y la reconocida confiabilidad de Toyota. Unidad tiene detalle de pintura.",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -493,38 +493,6 @@
         "img/cars/v-051-6.jpg",
         "img/cars/v-051-7.jpg",
         "img/cars/v-051-8.jpg"
-      ]
-    },
-    {
-      "id": "v-050",
-      "status": "active",
-      "make": "Honda",
-      "model": "Civic Si",
-      "year": 2015,
-      "color": "rojo",
-      "mileage": 114518,
-      "price": 18495,
-      "body_type": "sedan",
-      "engine_liters": 2.4,
-      "cylinders": 0,
-      "drivetrain": "fwd",
-      "transmission": "manual",
-      "fuel_type": "gasoline",
-      "origin": "local",
-      "registration_fee": "",
-      "condition_tags": [],
-      "notes": "Sunroof",
-      "featured": false,
-      "sold": false,
-      "photo_urls": [
-        "img/cars/v-050-1.jpg",
-        "img/cars/v-050-2.jpg",
-        "img/cars/v-050-3.jpg",
-        "img/cars/v-050-4.jpg",
-        "img/cars/v-050-5.jpg",
-        "img/cars/v-050-6.jpg",
-        "img/cars/v-050-7.jpg",
-        "img/cars/v-050-8.jpg"
       ]
     },
     {
@@ -545,7 +513,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Techo panorámico y asientos en leather",
+      "notes": "Lujo, elegancia y tecnología en perfecta armonía. Un sedán diseñado para quienes buscan una experiencia de manejo sofisticada, con un interior refinado, excelente desempeño y el prestigio que distingue a Mercedes-Benz.",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -575,7 +543,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "",
+      "notes": "Estilo, comodidad y versatilidad en un SUV.\nSu diseño moderno, excelente espacio interior y manejo cómodo lo convierten en una opción ideal.",
       "featured": false,
       "sold": false,
       "photo_urls": [
