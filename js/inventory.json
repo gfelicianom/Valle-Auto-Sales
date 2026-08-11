@@ -826,6 +826,37 @@
       ]
     },
     {
+      "id": "v-037",
+      "status": "active",
+      "make": "Toyota",
+      "model": "Corolla LE",
+      "year": 2025,
+      "color": "blanco",
+      "mileage": 2785,
+      "price": 22995,
+      "body_type": "sedan",
+      "engine_liters": 0,
+      "cylinders": 4,
+      "drivetrain": "fwd",
+      "transmission": "automatic",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Elegancia, comodidad y eficiencia en un solo vehículo. Es perfecto para quienes buscan un sedán moderno, confiable y económico.",
+      "featured": false,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-037-1.jpg",
+        "img/cars/v-037-2.jpg",
+        "img/cars/v-037-3.jpg",
+        "img/cars/v-037-4.jpg",
+        "img/cars/v-037-5.jpg",
+        "img/cars/v-037-6.jpg",
+        "img/cars/v-037-7.jpg"
+      ]
+    },
+    {
       "id": "v-036",
       "status": "active",
       "make": "Hyundai",
