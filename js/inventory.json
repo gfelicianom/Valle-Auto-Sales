@@ -92,35 +92,6 @@
       ]
     },
     {
-      "id": "v-006",
-      "status": "active",
-      "make": "Hyundai",
-      "model": "Palisade SE",
-      "year": 2023,
-      "color": "blanco",
-      "mileage": 26814,
-      "price": 29995,
-      "body_type": "suv",
-      "engine_liters": 0,
-      "cylinders": 6,
-      "drivetrain": "",
-      "transmission": "automatic",
-      "fuel_type": "gasoline",
-      "origin": "local",
-      "registration_fee": "",
-      "condition_tags": [],
-      "notes": "La combinación perfecta de lujo, espacio, comodidad y seguridad para toda la familia. \nDiseño espectacular con 3 filas de asientos.",
-      "featured": true,
-      "sold": false,
-      "photo_urls": [
-        "img/cars/v-006-1.jpg",
-        "img/cars/v-006-2.jpg",
-        "img/cars/v-006-3.jpg",
-        "img/cars/v-006-4.jpg",
-        "img/cars/v-006-5.jpg"
-      ]
-    },
-    {
       "id": "v-005",
       "status": "active",
       "make": "Ram",
