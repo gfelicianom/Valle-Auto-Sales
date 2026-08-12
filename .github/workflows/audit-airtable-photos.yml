@@ -8,10 +8,17 @@ name: Airtable photo storage check
 # "Optimize Airtable photos (manual)", which asks for explicit car IDs and
 # previews by default.
 #
-# Run by hand for now. Adding a monthly `schedule:` here with fail_over_mb set
-# turns it into an early warning — last time the first warning the family got
-# was an email from Airtable saying the base was full.
+# The monthly run is an alarm, not a report nobody reads: it FAILS once enough
+# storage can be reclaimed to be worth a batch, and a failed scheduled run is
+# something GitHub emails about. Last time the first warning the family got was
+# an email from Airtable saying the base was full.
+#
+# Runs started by hand report without failing, unless you type a threshold in.
 on:
+  schedule:
+    # 8:15 AM Puerto Rico time on the 1st of each month.
+    - cron: "15 8 1 * *"
+      timezone: "America/Puerto_Rico"
   workflow_dispatch:
     inputs:
       fail_over_mb:
@@ -39,10 +46,12 @@ jobs:
 
       # AIRTABLE_TOKEN is the existing read-only sync token. This workflow
       # needs nothing more than that; it cannot write to the base.
+      # A hand-started run reports quietly unless a threshold is typed in; the
+      # monthly run always carries one, or it could not raise an alarm.
       - name: Report Airtable photo storage
         env:
           AIRTABLE_TOKEN: ${{ secrets.AIRTABLE_TOKEN }}
-          FAIL_OVER_MB: ${{ inputs.fail_over_mb }}
+          FAIL_OVER_MB: ${{ inputs.fail_over_mb || (github.event_name == 'schedule' && '150' || '') }}
         shell: bash
         run: |
           set -o pipefail

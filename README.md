@@ -201,11 +201,14 @@ replacing the gallery before the next sync would push the old pictures back
 over Mary's new ones. If a run stops with `SAFETY STOP`, let the hourly sync
 run and try again — that is the system working.
 
-The storage check is run by hand for now. It can also raise the alarm on its
-own: give it a `fail_over_mb` value and it fails the run once that much
-storage is reclaimable, and adding a monthly `schedule:` to
-`.github/workflows/audit-airtable-photos.yml` turns that into an email from
-GitHub — earlier warning than Airtable's own "your base is full".
+You do not have to remember to check. The storage check also runs on the 1st
+of each month and **fails the run** once more than 150 MB can be reclaimed,
+which makes GitHub email you — earlier warning than Airtable's own "your base
+is full". A red X on that workflow means "run a batch when you get a chance",
+not "something is broken".
+
+Runs you start by hand report without failing, unless you type a threshold
+into `fail_over_mb` yourself.
 
 Both workflows can also be run from a terminal if you prefer; the scripts are
 `scripts/audit-airtable-photos.mjs` (read-only) and
