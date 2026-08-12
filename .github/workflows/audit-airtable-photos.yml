@@ -1,0 +1,66 @@
+name: Airtable photo storage check
+
+# Reports which cars still hold full-resolution photos in Airtable, and how
+# much storage replacing them would return.
+#
+# READ-ONLY, and it runs on the read-only sync token. It reports; it never
+# replaces a photo. Replacing photos is a separate, deliberate run of
+# "Optimize Airtable photos (manual)", which asks for explicit car IDs and
+# previews by default.
+#
+# Run by hand for now. Adding a monthly `schedule:` here with fail_over_mb set
+# turns it into an early warning — last time the first warning the family got
+# was an email from Airtable saying the base was full.
+on:
+  workflow_dispatch:
+    inputs:
+      fail_over_mb:
+        description: "Fail the run once this many MB can be reclaimed (blank = report only)"
+        required: false
+        default: ""
+        type: string
+
+concurrency:
+  group: audit-airtable-photos
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+
+      # AIRTABLE_TOKEN is the existing read-only sync token. This workflow
+      # needs nothing more than that; it cannot write to the base.
+      - name: Report Airtable photo storage
+        env:
+          AIRTABLE_TOKEN: ${{ secrets.AIRTABLE_TOKEN }}
+          FAIL_OVER_MB: ${{ inputs.fail_over_mb }}
+        shell: bash
+        run: |
+          set -o pipefail
+          threshold=()
+          if [[ -n "$FAIL_OVER_MB" ]]; then
+            threshold=(--fail-over "$FAIL_OVER_MB")
+          fi
+          node scripts/audit-airtable-photos.mjs "${threshold[@]}" \
+            | tee "$RUNNER_TEMP/audit.txt"
+
+      - name: Publish the report on the run summary
+        if: always()
+        shell: bash
+        run: |
+          {
+            echo '## Airtable photo storage'
+            echo
+            echo '```'
+            cat "$RUNNER_TEMP/audit.txt" 2>/dev/null || echo 'the audit produced no output'
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"

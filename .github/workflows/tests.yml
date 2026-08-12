@@ -40,6 +40,16 @@ jobs:
       - name: Test Airtable field mappers
         run: node --test scripts/drivetrain.test.mjs scripts/transmission.test.mjs
 
+      # The photo tooling's safety checks are the only thing standing between
+      # a typo in a workflow input and a wrecked gallery, so they are tested
+      # on every push. The manual workflow runs them again before it does
+      # anything, but that is too late to be the first time anyone notices.
+      - name: Test photo storage audit and optimizer
+        run: >-
+          node --test
+          scripts/audit-airtable-photos.test.mjs
+          scripts/optimize-airtable-photos.test.mjs
+
       - name: Build crawlable inventory and vehicle pages
         run: node scripts/build-seo-pages.mjs
 

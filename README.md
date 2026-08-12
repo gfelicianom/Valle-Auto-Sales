@@ -46,8 +46,15 @@ secondary option.
 - `scripts/build-seo-pages.mjs` — generates crawlable inventory, vehicle, contact, history, financing, and sitemap pages
 - `scripts/seo.test.mjs` — validates canonical URLs, structured data, and sitemap coverage
 - `scripts/submit-indexnow.mjs` — tells participating search engines about changed URLs
+- `scripts/audit-airtable-photos.mjs` — read-only report on Airtable photo storage
+- `scripts/optimize-airtable-photos.mjs` — replaces full-resolution Airtable photos
+  with the website's resized copies
 - `.github/workflows/sync-inventory.yml` — runs the sync hourly from
   6:37 AM to 11:37 PM Puerto Rico time
+- `.github/workflows/audit-airtable-photos.yml` — read-only check on where
+  Airtable photo storage is going
+- `.github/workflows/optimize-airtable-photos.yml` — the manual, preview-first
+  button that replaces full-resolution photos for named cars
 - `CHANGELOG.md` — site-development history and who made each change
 
 Generated files and folders include `js/inventory.json`, `img/cars/`, `autos/`,
@@ -149,6 +156,65 @@ dealership photo:
 npm install --no-save sharp
 node scripts/build-social-preview.mjs
 ```
+
+### Keeping Airtable storage under control
+
+The Airtable plan includes 1 GB of attachments. A full-resolution iPhone photo
+is 3–5 MB and a car has about eight of them, so a base full of originals fills
+up in roughly fifty cars — which is exactly what happened in July 2026.
+
+The website republishes every photo at 1600px wide no matter what is uploaded,
+so an original costs storage and changes nothing a visitor sees. Cleaning that
+up is three clicks in the **Actions** tab on GitHub — no terminal, and nobody
+has to hold an Airtable token.
+
+**Step 1 — find out where storage is going.** Actions → **Airtable photo
+storage check** → *Run workflow*. It is read-only and cannot change anything.
+The run summary groups every car by what should happen to it: full-resolution
+photos worth replacing, sold cars still holding a gallery, galleries the
+website has not downloaded yet, and active cars with no photos at all. It ends
+with the list of car IDs for the next step.
+
+**Step 2 — preview the replacement.** Actions → **Optimize Airtable photos
+(manual)** → *Run workflow*. Paste the car IDs, and **leave the "Replace"
+checkbox unchecked**. Nothing is written. The run shows, per car, the photo
+order it would send and the storage it would return.
+
+**Step 3 — replace, once the preview looks right.** Same workflow, same car
+IDs, this time with the checkbox ticked. Airtable re-fetches each photo from
+valleautosales.com, one car per second, and every record is read back
+afterward to prove the gallery stored in the right order.
+
+Then re-run step 1 to confirm the cars now read as already optimized.
+
+Safety, in short: car IDs are always explicit, there is no "do everything"
+mode, preview is the default, and the whole batch is checked before the first
+write. Most importantly, the optimizer refuses to touch a car whose Airtable
+gallery no longer matches what the last sync downloaded. That check is what
+makes re-uploads safe: a re-uploaded photo gets a new attachment ID, and
+replacing the gallery before the next sync would push the old pictures back
+over Mary's new ones. If a run stops with `SAFETY STOP`, let the hourly sync
+run and try again — that is the system working.
+
+The storage check is run by hand for now. It can also raise the alarm on its
+own: give it a `fail_over_mb` value and it fails the run once that much
+storage is reclaimable, and adding a monthly `schedule:` to
+`.github/workflows/audit-airtable-photos.yml` turns that into an email from
+GitHub — earlier warning than Airtable's own "your base is full".
+
+Both workflows can also be run from a terminal if you prefer; the scripts are
+`scripts/audit-airtable-photos.mjs` (read-only) and
+`scripts/optimize-airtable-photos.mjs`, and each explains its own usage at the
+top of the file.
+
+**Tokens.** The storage check uses the existing read-only `AIRTABLE_TOKEN`
+secret that the hourly sync already uses. The optimizer uses a separate
+`AIRTABLE_MIGRATION_TOKEN` secret, which needs `data.records:write` because
+replacing photos is a write. Keeping them apart is deliberate: the workflow
+that runs on a schedule cannot write to the base even if something goes wrong.
+
+The permanent fix is upstream — resizing on the phone before uploading. See
+the illustrated Spanish instruction sheet in `CHANGELOG.md` (2026-07-30).
 
 ## 3. The lead form (FormSubmit.co)
 
