@@ -171,9 +171,14 @@ has to hold an Airtable token.
 **Step 1 — find out where storage is going.** Actions → **Airtable photo
 storage check** → *Run workflow*. It is read-only and cannot change anything.
 The run summary groups every car by what should happen to it: full-resolution
-photos worth replacing, sold cars still holding a gallery, galleries the
-website has not downloaded yet, and active cars with no photos at all. It ends
-with the list of car IDs for the next step.
+photos worth replacing, galleries the website has not downloaded yet, and
+active cars with no photos at all. It ends with the list of car IDs for the
+next step.
+
+Sold cars are listed separately and never counted as reclaimable. The family
+keeps a couple of photos of each sold car for their own records, and once a
+car leaves the site there is no website copy left to point Airtable at, so
+these can only be shrunk by re-uploading smaller ones by hand.
 
 **Step 2 — preview the replacement.** Actions → **Optimize Airtable photos
 (manual)** → *Run workflow*. Paste the car IDs, and **leave the "Replace"

@@ -56,8 +56,11 @@ export async function fetchRecords(authed) {
 
 export const carIdOf = (record) => String(record.fields?.["ID"] || "").trim();
 
-/* Only "Activo" cars are published, so only their photos earn their
-   storage. Anything else holding a gallery is dead weight. */
+export const estadoOf = (record) => String(record.fields?.["Estado"] || "").trim();
+
+/* Only "Activo" cars are published. Anything else is off the site — which is
+   not the same as "its photos are waste": the family keeps two photos of each
+   sold car for their own records. */
 export const isActive = (record) =>
   String(record.fields?.["Estado"] || "")
     .trim()

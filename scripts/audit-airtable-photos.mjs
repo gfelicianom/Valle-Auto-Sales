@@ -42,6 +42,7 @@ import {
   attachmentsOf,
   carIdOf,
   createAuthedFetch,
+  estadoOf,
   fetchRecords,
   formatBytes,
   galleryIsNormalized,
@@ -109,23 +110,30 @@ export function parseAuditArgs(args) {
  * is what turns "these photos are big" into a number of megabytes that
  * optimizing would actually return.
  */
-export function classifyGallery({ carId, active, attachments, local }) {
+export function classifyGallery({ carId, active, estado = "", attachments, local }) {
   const airtableBytes = totalBytes(attachments);
   const localBytes = totalBytes(local);
   const filenames = attachments.map((a) => String(a.filename || ""));
   const widths = attachments.map((a) => attachmentDimensions(a).width);
   const maxWidth = widths.length ? Math.max(...widths) : 0;
-  const base = { carId, airtableBytes, localBytes, maxWidth, savings: 0 };
+  const base = { carId, estado, airtableBytes, localBytes, maxWidth, savings: 0 };
 
   if (attachments.length === 0) {
     return { ...base, state: active ? "active-without-photos" : "no-photos" };
   }
 
-  /* Checked before anything involving local files: the sync deletes the
-     website copies of a car the moment it stops being Activo, so a sold car
-     always looks "out of sync" and never is. Its photos are simply waste. */
+  /*
+   * Checked before anything involving local files: the sync deletes the
+   * website copies of a car the moment it stops being Activo, so an off-site
+   * car always looks "out of sync" and never is.
+   *
+   * Its storage is reported but deliberately NOT counted as recoverable. The
+   * family keeps a couple of photos of each sold car for their own records,
+   * and with no website copy to point Airtable at, the optimizer cannot touch
+   * these anyway. Anything here is a human decision, not a pending task.
+   */
   if (!active) {
-    return { ...base, state: "inactive-with-photos", savings: airtableBytes };
+    return { ...base, state: "inactive-with-photos" };
   }
 
   if (galleryIsNormalized(carId, filenames)) {
@@ -255,9 +263,9 @@ export function compareSnapshots(before, after) {
 
 const STATE_LABELS = {
   oversized: "full-resolution photos — worth optimizing",
-  "inactive-with-photos": "not on the site but still holding photos — clear the gallery",
   "out-of-sync": "Airtable and website disagree — run the inventory sync first",
   "already-small": "not normalized, but already small — little to gain",
+  "inactive-with-photos": "off the site, photos kept for records — nothing to do automatically",
   optimized: "already optimized",
   "active-without-photos": "on the site with no photos at all",
   "no-photos": "no photos"
@@ -272,24 +280,36 @@ function report(rows) {
     if (!group.length) continue;
 
     console.log(`\n${STATE_LABELS[state]} (${group.length})`);
-    for (const row of group.sort((a, b) => b.savings - a.savings)) {
+    const ranked = [...group].sort(
+      (a, b) => b.savings - a.savings || b.airtableBytes - a.airtableBytes
+    );
+    for (const row of ranked) {
       const airtable = formatBytes(row.airtableBytes).padStart(8);
       const detail =
         row.savings > 0
           ? `${airtable} in Airtable → saves ${formatBytes(row.savings)}`
           : `${airtable} in Airtable`;
+      const estado = row.state === "inactive-with-photos" && row.estado ? `, ${row.estado}` : "";
       const dims = row.maxWidth ? `, widest ${row.maxWidth}px` : "";
-      console.log(`  ${row.carId.padEnd(width)}${detail}${dims}`);
+      console.log(`  ${row.carId.padEnd(width)}${detail}${estado}${dims}`);
     }
   }
 
   const total = totalBytesOf(rows, "airtableBytes");
-  const recoverable = rows
-    .filter((r) => r.state === "oversized" || r.state === "inactive-with-photos")
-    .reduce((sum, r) => sum + r.savings, 0);
+  const recoverable = rows.reduce((sum, r) => sum + r.savings, 0);
+  const offSite = byState("inactive-with-photos");
 
   console.log(`\n${rows.length} car(s), ${formatBytes(total)} of photos in Airtable`);
   console.log(`recoverable now: ${formatBytes(recoverable)}`);
+
+  /* Called out separately rather than folded into "recoverable": these are
+     kept on purpose, and shrinking one means redoing it by hand. */
+  if (offSite.length) {
+    console.log(
+      `held for records on ${offSite.length} off-site car(s): ` +
+      `${formatBytes(totalBytesOf(offSite, "airtableBytes"))}`
+    );
+  }
 
   const toOptimize = byState("oversized").map((r) => r.carId);
   if (toOptimize.length) {
@@ -361,6 +381,7 @@ async function main() {
       classifyGallery({
         carId,
         active: isActive(record),
+        estado: estadoOf(record),
         attachments: attachmentsOf(record),
         local: await localPhotoSizes(carId)
       })

@@ -94,16 +94,21 @@ test("a hand-resized upload is left alone", () => {
   assert.equal(result.state, "already-small");
 });
 
-test("a sold car still holding photos is pure waste, not a sync problem", () => {
+/* The family keeps a couple of photos of each sold car for their own records,
+   so this is reported but never counted as storage waiting to be reclaimed. */
+test("a sold car's kept photos are reported, not counted as recoverable", () => {
   const result = classifyGallery({
     carId: "v-047",
     active: false,
+    estado: "Vendido",
     attachments: [photo("IMG_4700.jpg", 3 * MB)],
     local: [] // the sync deletes website copies as soon as a car leaves the site
   });
 
   assert.equal(result.state, "inactive-with-photos");
-  assert.equal(result.savings, 3 * MB);
+  assert.equal(result.airtableBytes, 3 * MB);
+  assert.equal(result.savings, 0);
+  assert.equal(result.estado, "Vendido");
 });
 
 test("a re-upload the website has not downloaded yet cannot be judged", () => {
