@@ -18,7 +18,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Deportivo, elegante y moderno, combina estilo, eficiencia y tecnología para ofrecerte una experiencia de manejo excepcional.",
+      "notes": "Dinámico, elegante y moderno, combina estilo, eficiencia y tecnología para ofrecerte una experiencia de manejo excepcional.",
       "featured": true,
       "sold": false,
       "photo_urls": [
@@ -37,7 +37,7 @@
       "id": "v-023",
       "status": "active",
       "make": "Toyota",
-      "model": "RAV4 SE",
+      "model": "RAV4 SE Hybrid",
       "year": 2023,
       "color": "gris",
       "mileage": 24500,
@@ -51,7 +51,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Toyota RAV4 Hybrid 2023 combina un diseño moderno con la eficiencia de su tecnología, ideal para quienes buscan una SUV cómoda, elegante y práctica para cada aventura.",
+      "notes": "Combina un diseño moderno con la eficiencia de su tecnología híbrida, ideal para quienes buscan una SUV cómoda, elegante y práctica para cada aventura.",
       "featured": true,
       "sold": false,
       "photo_urls": [
@@ -79,7 +79,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "La Toyota C-HR con diseño deportivo y moderno. Excelente para el diario por su \ncalidad y confiabilidad.",
+      "notes": "La Toyota C-HR combina un diseño llamativo y moderno. Excelente para el diario por su calidad y confiabilidad.",
       "featured": true,
       "sold": false,
       "photo_urls": [
@@ -143,7 +143,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Compacta, moderna y lista para acompañarte en cada aventura. Diseño deportivo con comodidad, tecnología y excelente manejo.",
+      "notes": "Compacta, moderna y lista para acompañarte en cada aventura. Diseño con carácter, comodidad, tecnología y excelente manejo.",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -173,7 +173,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Deportivo, elegante y con el carácter que distingue a un Camaro. Cuenta con motor 2.0L Turbo de 4 cilindros, 275 caballos de fuerza y tracción trasera, combinando excelente desempeño con un estilo espectacular.",
+      "notes": "Deportivo, elegante y con el carácter que distingue a un Camaro. Sus 275 caballos de fuerza y su estilo espectacular lo hacen imposible de ignorar.",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -236,7 +236,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "El Toyota Corolla LE 2020 combina elegancia, economía y tecnología para que manejes con confianza y estilo.",
+      "notes": "Elegancia, economía y tecnología en un solo vehículo, para que manejes con confianza y estilo.",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -262,8 +262,8 @@
       "body_type": "pickup",
       "engine_liters": 2.7,
       "cylinders": 6,
-      "drivetrain": "fwd",
-      "transmission": "",
+      "drivetrain": "4x2",
+      "transmission": "automatic",
       "fuel_type": "gasoline",
       "origin": "imported",
       "registration_fee": "",
@@ -359,7 +359,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Elegante, económico y práctico, es una excelente opción para quienes buscan un vehículo moderno, cómodo y eficiente.Su diseño atractivo y rendimiento lo convierten en una alternativa ideal.",
+      "notes": "Elegante, económico y fácil de manejar. Ideal para el diario, con excelente rendimiento de gasolina y todo el espacio que necesitas.",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -421,7 +421,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Compacta, moderna y llena de estilo, la Hyundai Venue 2022 es perfecta para quienes buscan practicidad, comodidad y un SUV fácil de manejar. Su diseño atractivo y excelente aprovechamiento del espacio la convierten en una opción ideal.",
+      "notes": "Compacta, moderna y llena de estilo, perfecta para quienes buscan practicidad, comodidad y una SUV fácil de manejar. Su diseño atractivo y excelente aprovechamiento del espacio la convierten en una opción ideal.",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -451,7 +451,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Elegancia, comodidad y versatilidad en un SUV. Su diseño moderno, amplio interior y excelente presencia la convierten en una opción ideal para disfrutar cada aventura.",
+      "notes": "Elegancia, comodidad y versatilidad en una SUV. Su diseño moderno, amplio interior y excelente presencia la convierten en una opción ideal para disfrutar cada aventura.",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -481,7 +481,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Compacta, moderna y con mucho estilo, la Hyundai Venue 2024 es perfecta para quienes buscan comodidad y tecnología.",
+      "notes": "Compacta, moderna y con mucho estilo, perfecta para quienes buscan comodidad y tecnología.",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -512,7 +512,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Espaciosa, cómoda y elegante, la Highlander es una excelente opción para quienes buscan un SUV familiar con presencia y versatilidad. Cuenta con un interior amplio y práctico.",
+      "notes": "Espaciosa, cómoda y elegante, la Highlander es una excelente opción para quienes buscan una SUV familiar con presencia y versatilidad. Cuenta con un interior amplio y práctico.",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -543,7 +543,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Una pickup con carácter, durabilidad y el estilo que distingue a la Tacoma. Ideal para el trabajo, combinando funcionalidad y la reconocida confiabilidad de Toyota. Unidad tiene detalle de pintura.",
+      "notes": "Una pickup con carácter, durabilidad y el estilo que distingue a la Tacoma. Ideal para el trabajo, combinando funcionalidad y la reconocida confiabilidad de Toyota. La unidad tiene detalles de pintura.",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -605,7 +605,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Estilo, comodidad y versatilidad en un SUV.\nSu diseño moderno, excelente espacio interior y manejo cómodo lo convierten en una opción ideal.",
+      "notes": "Estilo, comodidad y versatilidad en una SUV.\nSu diseño moderno, excelente espacio interior y manejo cómodo la convierten en una opción ideal.",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -636,7 +636,7 @@
       "origin": "imported",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Su diseño deportivo y potencia, combinado con la versatilidad de la tracción 4x4, hacen de esta F-150 una excelente opción para el trabajo y la aventura.",
+      "notes": "Su diseño imponente y su potencia, combinados con la versatilidad del 4x4, hacen de esta F-150 una excelente opción para el trabajo y la aventura.",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -666,7 +666,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Elegancia, estilo y sofisticación en una SUV. Su diseño moderno, excelente comodidad y manejo hacen de la QX20 una opción ideal.",
+      "notes": "Elegancia, estilo y sofisticación en una SUV. Su diseño moderno, excelente comodidad y manejo hacen de la QX50 una opción ideal.",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -695,7 +695,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Deportivo, moderno y con un estilo que se destaca. Su diseño compacto, excelente manejo y versatilidad lo convierten en la combinación perfecta de elegancia.",
+      "notes": "Ágil, moderno y con un estilo que se destaca. Su diseño compacto, excelente manejo y versatilidad lo convierten en la combinación perfecta de estilo y practicidad.",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -752,7 +752,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Moderna, cómoda y versátil, la SUV ideal para quienes buscan espacio, estilo y un manejo. Su diseño atractivo y excelente combinación de comodidad y tecnología la convierten en una gran opción para toda la familia.",
+      "notes": "Moderna, cómoda y versátil, la SUV ideal para quienes buscan espacio, estilo y un manejo seguro. Su diseño atractivo y excelente combinación de comodidad y tecnología la convierten en una gran opción para toda la familia.",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -784,7 +784,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Su diseño moderno, manejo cómodo y eficiencia lo convierten en una opción, combina con elegancia, confiabilidad y excelente desempeño.",
+      "notes": "Su diseño moderno, manejo cómodo y eficiencia lo convierten en una excelente opción, combinando elegancia, confiabilidad y buen desempeño.",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -845,7 +845,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Su diseño moderno, comodidad y capacidad la convierten en una excelente opción para el trabajo o la aventura. Ven a conocerla y descubre por qué la Santa Cruz 2024 puede ser tu próxima pickup.",
+      "notes": "Su diseño moderno, comodidad y capacidad la convierten en una excelente opción para el trabajo o la aventura. Ven a conocerla y descubre por qué puede ser tu próxima pickup.",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -876,7 +876,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Elegancia, estilo y versatilidad. Su diseño moderno y deportivo, combinado con comodidad y excelente desempeño, hacen de esta SUV una opción ideal.",
+      "notes": "Elegancia, estilo y versatilidad. Su diseño moderno y con carácter, combinado con comodidad y excelente desempeño, hacen de esta SUV una opción ideal.",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -905,7 +905,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Elegancia, comodidad y versatilidad en un SUV que lo tiene todo. Su diseño moderno, amplio interior y excelente confiabilidad hacen de esta RAV4 una opción ideal para disfrutar cada viaje con estilo y seguridad.",
+      "notes": "Elegancia, comodidad y versatilidad en una SUV que lo tiene todo. Su diseño moderno, amplio interior y excelente confiabilidad hacen de esta RAV4 una opción ideal para disfrutar cada viaje con estilo y seguridad.",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -964,7 +964,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Elegancia, economía con diseño moderno y estilo sofisticado. Una alternativa  para quienes buscan comodidad, eficiencia y confiabilidad.",
+      "notes": "Elegancia y economía, con diseño moderno y estilo atractivo. Una alternativa para quienes buscan comodidad, eficiencia y confiabilidad.",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -1053,7 +1053,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Elegancia que marca la diferencia! \nDiseño sofisticado, estilo deportivo y una experiencia de manejo que se disfruta en cada aventura.",
+      "notes": "¡Elegancia que marca la diferencia!\nDiseño sofisticado, estilo deportivo y una experiencia de manejo que se disfruta en cada aventura.",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -1107,13 +1107,13 @@
       "body_type": "sedan",
       "engine_liters": 0,
       "cylinders": 4,
-      "drivetrain": "",
+      "drivetrain": "fwd",
       "transmission": "automatic",
       "fuel_type": "gasoline",
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "",
+      "notes": "Deportivo, elegante y moderno. Combina estilo, tecnología y buen desempeño en un sedán con actitud. Una opción ideal para quienes quieren manejar con carácter sin sacrificar la economía.",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -1143,7 +1143,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Kia Forte perfecto para quienes desean un sedán con tecnología, diseño moderno, presencia elegante y la comodidad que buscas para disfrutar cada aventura.",
+      "notes": "Perfecto para quienes desean un sedán con tecnología, diseño moderno, presencia elegante y la comodidad que buscan para disfrutar cada aventura.",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -1235,7 +1235,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Diseño moderno, comodidad y la reconocida calidad Toyota en un vehículo que combina estilo, eficiencia y confiabilidad. \nUna excelente oportunidad para estrenar tu próximo vehículo.",
+      "notes": "Diseño moderno, comodidad y la reconocida calidad Toyota en un vehículo que combina estilo, eficiencia y confiabilidad.\nUna excelente oportunidad para estrenar tu próximo vehículo.",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -1324,7 +1324,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "SUV diseñada con estilo, comodidad y practicidad en un solo vehículo. Su diseño moderno y su excelente espacio interior la convierten en una opción ideal para el día a día y  disfrutar cada aventura.",
+      "notes": "SUV diseñada con estilo, comodidad y practicidad en un solo vehículo. Su diseño moderno y su excelente espacio interior la convierten en una opción ideal para el día a día y para disfrutar cada aventura.",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -1340,7 +1340,7 @@
       "id": "v-013",
       "status": "active",
       "make": "Jeep",
-      "model": "Grand Cherokee Límite",
+      "model": "Grand Cherokee Limited",
       "year": 2016,
       "color": "blanco",
       "mileage": 95101,
@@ -1383,7 +1383,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "Vehículo moderno, económico y cómodo, el Nissan Versa 2024 es una excelente alternativa para el diario.",
+      "notes": "Moderno, económico y cómodo. Una excelente alternativa para el diario.",
       "featured": false,
       "sold": false,
       "photo_urls": [
