@@ -1,6 +1,37 @@
 {
   "cars": [
     {
+      "id": "v-067",
+      "status": "active",
+      "make": "Jeep",
+      "model": "Grand Cherokee Altitude",
+      "year": 2019,
+      "color": "plata",
+      "mileage": 21540,
+      "price": 24995,
+      "body_type": "suv",
+      "engine_liters": 3.6,
+      "cylinders": 6,
+      "drivetrain": "rwd",
+      "transmission": "",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Una excelente oportunidad para llevarte una Grand Cherokee  en condiciones de marquesina, cuidada y lista para disfrutar. Elegancia, comodidad y el estilo que buscas en una SUV.",
+      "featured": true,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-067-1.jpg",
+        "img/cars/v-067-2.jpg",
+        "img/cars/v-067-3.jpg",
+        "img/cars/v-067-4.jpg",
+        "img/cars/v-067-5.jpg",
+        "img/cars/v-067-6.jpg",
+        "img/cars/v-067-7.jpg"
+      ]
+    },
+    {
       "id": "v-045",
       "status": "active",
       "make": "Toyota",
