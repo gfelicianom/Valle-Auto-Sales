@@ -123,6 +123,37 @@
       ]
     },
     {
+      "id": "v-068",
+      "status": "active",
+      "make": "Toyota",
+      "model": "RAV4 XLE",
+      "year": 2019,
+      "color": "negro",
+      "mileage": 65629,
+      "price": 23995,
+      "body_type": "suv",
+      "engine_liters": 0,
+      "cylinders": 4,
+      "drivetrain": "fwd",
+      "transmission": "",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Una SUV que combina elegancia, comodidad y confiabilidad en un solo vehículo. Ofrece excelente espacio interior, un manejo cómodo y el estilo que buscas para disfrutar cada aventura .",
+      "featured": false,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-068-1.jpg",
+        "img/cars/v-068-2.jpg",
+        "img/cars/v-068-3.jpg",
+        "img/cars/v-068-4.jpg",
+        "img/cars/v-068-5.jpg",
+        "img/cars/v-068-6.jpg",
+        "img/cars/v-068-7.jpg"
+      ]
+    },
+    {
       "id": "v-066",
       "status": "active",
       "make": "Mitsubishi",
