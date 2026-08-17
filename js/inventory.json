@@ -860,36 +860,6 @@
       ]
     },
     {
-      "id": "v-038",
-      "status": "active",
-      "make": "Honda",
-      "model": "Civic LX",
-      "year": 2017,
-      "color": "azul",
-      "mileage": 55633,
-      "price": 13995,
-      "body_type": "sedan",
-      "engine_liters": 2,
-      "cylinders": 4,
-      "drivetrain": "fwd",
-      "transmission": "automatic",
-      "fuel_type": "gasoline",
-      "origin": "local",
-      "registration_fee": "",
-      "condition_tags": [],
-      "notes": "Su diseño moderno, manejo cómodo y eficiencia lo convierten en una excelente opción, combinando elegancia, confiabilidad y buen desempeño.",
-      "featured": false,
-      "sold": false,
-      "photo_urls": [
-        "img/cars/v-038-1.jpg",
-        "img/cars/v-038-2.jpg",
-        "img/cars/v-038-3.jpg",
-        "img/cars/v-038-4.jpg",
-        "img/cars/v-038-5.jpg",
-        "img/cars/v-038-6.jpg"
-      ]
-    },
-    {
       "id": "v-037",
       "status": "active",
       "make": "Toyota",
