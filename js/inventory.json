@@ -406,36 +406,6 @@
       ]
     },
     {
-      "id": "v-059",
-      "status": "active",
-      "make": "Kia",
-      "model": "Rio",
-      "year": 2022,
-      "color": "azul",
-      "mileage": 61476,
-      "price": 11995,
-      "body_type": "sedan",
-      "engine_liters": 0,
-      "cylinders": 4,
-      "drivetrain": "fwd",
-      "transmission": "automatic",
-      "fuel_type": "gasoline",
-      "origin": "local",
-      "registration_fee": "",
-      "condition_tags": [],
-      "notes": "Compacto, elegante y eficiente, es perfecto para quienes buscan comodidad, economía y un estilo moderno para el día a día.",
-      "featured": false,
-      "sold": false,
-      "photo_urls": [
-        "img/cars/v-059-1.jpg",
-        "img/cars/v-059-2.jpg",
-        "img/cars/v-059-3.jpg",
-        "img/cars/v-059-4.jpg",
-        "img/cars/v-059-5.jpg",
-        "img/cars/v-059-6.jpg"
-      ]
-    },
-    {
       "id": "v-058",
       "status": "active",
       "make": "Kia",
