@@ -158,6 +158,37 @@
       ]
     },
     {
+      "id": "v-070",
+      "status": "active",
+      "make": "Toyota",
+      "model": "RAV4 Hybrid XSE",
+      "year": 2022,
+      "color": "gris",
+      "mileage": 45737,
+      "price": 29995,
+      "body_type": "suv",
+      "engine_liters": 0,
+      "cylinders": 4,
+      "drivetrain": "fwd",
+      "transmission": "",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Elegancia, tecnología y eficiencia en un solo vehículo. Disfruta el rendimiento de un híbrido con estilo y sofisticado de la versión XSE. Una SUV que combina potencia, comodidad y economía para llevarte más lejos.",
+      "featured": false,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-070-1.jpg",
+        "img/cars/v-070-2.jpg",
+        "img/cars/v-070-3.jpg",
+        "img/cars/v-070-4.jpg",
+        "img/cars/v-070-5.jpg",
+        "img/cars/v-070-6.jpg",
+        "img/cars/v-070-7.jpg"
+      ]
+    },
+    {
       "id": "v-069",
       "status": "active",
       "make": "Mitsubishi",
@@ -403,6 +434,38 @@
         "img/cars/v-060-5.jpg",
         "img/cars/v-060-6.jpg",
         "img/cars/v-060-7.jpg"
+      ]
+    },
+    {
+      "id": "v-059",
+      "status": "active",
+      "make": "Toyota",
+      "model": "Corolla iM",
+      "year": 2018,
+      "color": "blanco",
+      "mileage": 91369,
+      "price": 11995,
+      "body_type": "sedan",
+      "engine_liters": 0,
+      "cylinders": 4,
+      "drivetrain": "fwd",
+      "transmission": "automatic",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Ideal para el diario, cómodo, práctico y reconocido por su excelente rendimiento. Una gran oportunidad para quien busca un auto confiable y con mucho que ofrecer.",
+      "featured": false,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-059-1.jpg",
+        "img/cars/v-059-2.jpg",
+        "img/cars/v-059-3.jpg",
+        "img/cars/v-059-4.jpg",
+        "img/cars/v-059-5.jpg",
+        "img/cars/v-059-6.jpg",
+        "img/cars/v-059-7.jpg",
+        "img/cars/v-059-8.jpg"
       ]
     },
     {
