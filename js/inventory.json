@@ -93,6 +93,38 @@
       ]
     },
     {
+      "id": "v-006",
+      "status": "active",
+      "make": "Honda",
+      "model": "HR-V LX",
+      "year": 2021,
+      "color": "negro",
+      "mileage": 53166,
+      "price": 17995,
+      "body_type": "suv",
+      "engine_liters": 1.8,
+      "cylinders": 4,
+      "drivetrain": "fwd",
+      "transmission": "automatic",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "¡Estilo, comodidad y versatilidad en un solo vehículo! Un diseño moderno, excelente espacio interior y la confiabilidad que buscas.",
+      "featured": true,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-006-1.jpg",
+        "img/cars/v-006-2.jpg",
+        "img/cars/v-006-3.jpg",
+        "img/cars/v-006-4.jpg",
+        "img/cars/v-006-5.jpg",
+        "img/cars/v-006-6.jpg",
+        "img/cars/v-006-7.jpg",
+        "img/cars/v-006-8.jpg"
+      ]
+    },
+    {
       "id": "v-005",
       "status": "active",
       "make": "Ram",
@@ -124,6 +156,37 @@
         "img/cars/v-005-8.jpg",
         "img/cars/v-005-9.jpg",
         "img/cars/v-005-10.jpg"
+      ]
+    },
+    {
+      "id": "v-073",
+      "status": "active",
+      "make": "Kia",
+      "model": "Seltos LX",
+      "year": 2021,
+      "color": "azul",
+      "mileage": 52658,
+      "price": 14995,
+      "body_type": "suv",
+      "engine_liters": 2,
+      "cylinders": 4,
+      "drivetrain": "fwd",
+      "transmission": "automatic",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "",
+      "featured": false,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-073-1.jpg",
+        "img/cars/v-073-2.jpg",
+        "img/cars/v-073-3.jpg",
+        "img/cars/v-073-4.jpg",
+        "img/cars/v-073-5.jpg",
+        "img/cars/v-073-6.jpg",
+        "img/cars/v-073-7.jpg"
       ]
     },
     {
