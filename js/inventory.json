@@ -93,38 +93,6 @@
       ]
     },
     {
-      "id": "v-006",
-      "status": "active",
-      "make": "Honda",
-      "model": "HR-V LX",
-      "year": 2021,
-      "color": "negro",
-      "mileage": 53166,
-      "price": 17995,
-      "body_type": "suv",
-      "engine_liters": 1.8,
-      "cylinders": 4,
-      "drivetrain": "fwd",
-      "transmission": "automatic",
-      "fuel_type": "gasoline",
-      "origin": "local",
-      "registration_fee": "",
-      "condition_tags": [],
-      "notes": "¡Estilo, comodidad y versatilidad en un solo vehículo! Un diseño moderno, excelente espacio interior y la confiabilidad que buscas.",
-      "featured": true,
-      "sold": false,
-      "photo_urls": [
-        "img/cars/v-006-1.jpg",
-        "img/cars/v-006-2.jpg",
-        "img/cars/v-006-3.jpg",
-        "img/cars/v-006-4.jpg",
-        "img/cars/v-006-5.jpg",
-        "img/cars/v-006-6.jpg",
-        "img/cars/v-006-7.jpg",
-        "img/cars/v-006-8.jpg"
-      ]
-    },
-    {
       "id": "v-005",
       "status": "active",
       "make": "Ram",
@@ -176,7 +144,7 @@
       "origin": "local",
       "registration_fee": "",
       "condition_tags": [],
-      "notes": "",
+      "notes": "Compacta, moderna y lista para acompañarte en cada aventura. Disfruta de su excelente diseño, comodidad y tecnología en un SUV práctico y versátil.",
       "featured": false,
       "sold": false,
       "photo_urls": [
@@ -1672,6 +1640,38 @@
         "img/cars/v-007-4.jpg",
         "img/cars/v-007-5.jpg",
         "img/cars/v-007-6.jpg"
+      ]
+    },
+    {
+      "id": "v-006",
+      "status": "active",
+      "make": "Honda",
+      "model": "HR-V LX",
+      "year": 2021,
+      "color": "negro",
+      "mileage": 53166,
+      "price": 17995,
+      "body_type": "suv",
+      "engine_liters": 1.8,
+      "cylinders": 4,
+      "drivetrain": "fwd",
+      "transmission": "automatic",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "¡Estilo, comodidad y versatilidad en un solo vehículo! Un diseño moderno, excelente espacio interior y la confiabilidad que buscas.",
+      "featured": false,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-006-1.jpg",
+        "img/cars/v-006-2.jpg",
+        "img/cars/v-006-3.jpg",
+        "img/cars/v-006-4.jpg",
+        "img/cars/v-006-5.jpg",
+        "img/cars/v-006-6.jpg",
+        "img/cars/v-006-7.jpg",
+        "img/cars/v-006-8.jpg"
       ]
     }
   ]
