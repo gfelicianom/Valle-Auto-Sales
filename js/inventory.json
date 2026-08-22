@@ -32,39 +32,6 @@
       ]
     },
     {
-      "id": "v-045",
-      "status": "active",
-      "make": "Toyota",
-      "model": "Corolla SE",
-      "year": 2025,
-      "color": "blanco",
-      "mileage": 5143,
-      "price": 26995,
-      "body_type": "sedan",
-      "engine_liters": 0,
-      "cylinders": 4,
-      "drivetrain": "fwd",
-      "transmission": "automatic",
-      "fuel_type": "gasoline",
-      "origin": "local",
-      "registration_fee": "",
-      "condition_tags": [],
-      "notes": "Dinámico, elegante y moderno, combina estilo, eficiencia y tecnología para ofrecerte una experiencia de manejo excepcional.",
-      "featured": true,
-      "sold": false,
-      "photo_urls": [
-        "img/cars/v-045-1.jpg",
-        "img/cars/v-045-2.jpg",
-        "img/cars/v-045-3.jpg",
-        "img/cars/v-045-4.jpg",
-        "img/cars/v-045-5.jpg",
-        "img/cars/v-045-6.jpg",
-        "img/cars/v-045-7.jpg",
-        "img/cars/v-045-8.jpg",
-        "img/cars/v-045-9.jpg"
-      ]
-    },
-    {
       "id": "v-023",
       "status": "active",
       "make": "Toyota",
@@ -124,6 +91,36 @@
         "img/cars/v-005-8.jpg",
         "img/cars/v-005-9.jpg",
         "img/cars/v-005-10.jpg"
+      ]
+    },
+    {
+      "id": "v-076",
+      "status": "active",
+      "make": "Nissan",
+      "model": "Frontier Crew Cab",
+      "year": 2022,
+      "color": "blanco",
+      "mileage": 54247,
+      "price": 27995,
+      "body_type": "pickup",
+      "engine_liters": 3.8,
+      "cylinders": 6,
+      "drivetrain": "4x2",
+      "transmission": "automatic",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Potencia, estilo y capacidad en una sola pickup. Perfecta para el trabajo, la aventura y el día a día. Una Frontier con presencia, comodidad y el desempeño que buscas.",
+      "featured": false,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-076-1.jpg",
+        "img/cars/v-076-2.jpg",
+        "img/cars/v-076-3.jpg",
+        "img/cars/v-076-4.jpg",
+        "img/cars/v-076-5.jpg",
+        "img/cars/v-076-6.jpg"
       ]
     },
     {
@@ -803,6 +800,39 @@
         "img/cars/v-046-4.jpg",
         "img/cars/v-046-5.jpg",
         "img/cars/v-046-6.jpg"
+      ]
+    },
+    {
+      "id": "v-045",
+      "status": "active",
+      "make": "Toyota",
+      "model": "Corolla SE",
+      "year": 2025,
+      "color": "blanco",
+      "mileage": 5143,
+      "price": 26995,
+      "body_type": "sedan",
+      "engine_liters": 0,
+      "cylinders": 4,
+      "drivetrain": "fwd",
+      "transmission": "automatic",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Dinámico, elegante y moderno, combina estilo, eficiencia y tecnología para ofrecerte una experiencia de manejo excepcional.",
+      "featured": false,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-045-1.jpg",
+        "img/cars/v-045-2.jpg",
+        "img/cars/v-045-3.jpg",
+        "img/cars/v-045-4.jpg",
+        "img/cars/v-045-5.jpg",
+        "img/cars/v-045-6.jpg",
+        "img/cars/v-045-7.jpg",
+        "img/cars/v-045-8.jpg",
+        "img/cars/v-045-9.jpg"
       ]
     },
     {
