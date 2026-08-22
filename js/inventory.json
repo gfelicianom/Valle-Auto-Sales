@@ -94,6 +94,36 @@
       ]
     },
     {
+      "id": "v-078",
+      "status": "active",
+      "make": "Toyota",
+      "model": "Corolla LE, w/Premium pkg",
+      "year": 2022,
+      "color": "blanco",
+      "mileage": 30916,
+      "price": 20995,
+      "body_type": "sedan",
+      "engine_liters": 1.8,
+      "cylinders": 4,
+      "drivetrain": "fwd",
+      "transmission": "",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Elegancia, comodidad y economía en un solo vehículo. Disfruta de un Corolla moderno, confiable y con el toque especial del sunroof. Ideal para quienes buscan estilo y excelente rendimiento.",
+      "featured": false,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-078-1.jpg",
+        "img/cars/v-078-2.jpg",
+        "img/cars/v-078-3.jpg",
+        "img/cars/v-078-4.jpg",
+        "img/cars/v-078-5.jpg",
+        "img/cars/v-078-6.jpg"
+      ]
+    },
+    {
       "id": "v-077",
       "status": "active",
       "make": "Honda",
