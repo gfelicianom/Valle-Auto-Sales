@@ -94,6 +94,37 @@
       ]
     },
     {
+      "id": "v-079",
+      "status": "active",
+      "make": "GMC",
+      "model": "Savana EXT",
+      "year": 2022,
+      "color": "blanco",
+      "mileage": 35978,
+      "price": 26995,
+      "body_type": "van",
+      "engine_liters": 4.3,
+      "cylinders": 6,
+      "drivetrain": "rwd",
+      "transmission": "",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "GMC Savana EXT — lista para el trabajo y el negocio. Amplio espacio, excelente capacidad de carga y la versatilidad que necesitas para llevar herramientas, mercancía o equipo. Ideal para contratistas, comerciantes y emprendedores que buscan una Van confiable y práctica. \n¡Haz que tu próximo proyecto comience con el vehículo adecuado!",
+      "featured": false,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-079-1.jpg",
+        "img/cars/v-079-2.jpg",
+        "img/cars/v-079-3.jpg",
+        "img/cars/v-079-4.jpg",
+        "img/cars/v-079-5.jpg",
+        "img/cars/v-079-6.jpg",
+        "img/cars/v-079-7.jpg"
+      ]
+    },
+    {
       "id": "v-078",
       "status": "active",
       "make": "Toyota",
@@ -429,37 +460,6 @@
         "img/cars/v-064-6.jpg",
         "img/cars/v-064-7.jpg",
         "img/cars/v-064-8.jpg"
-      ]
-    },
-    {
-      "id": "v-063",
-      "status": "active",
-      "make": "Honda",
-      "model": "Passport EX-L",
-      "year": 2022,
-      "color": "blanco",
-      "mileage": 45045,
-      "price": 31995,
-      "body_type": "suv",
-      "engine_liters": 3.5,
-      "cylinders": 6,
-      "drivetrain": "fwd",
-      "transmission": "automatic",
-      "fuel_type": "gasoline",
-      "origin": "local",
-      "registration_fee": "",
-      "condition_tags": [],
-      "notes": "Potencia, elegancia y aventura en una sola SUV. Ofrece un excelente desempeño, mientras su amplio interior brinda comodidad y versatilidad. Equipada con tecnología, seguridad y un diseño moderno.",
-      "featured": false,
-      "sold": false,
-      "photo_urls": [
-        "img/cars/v-063-1.jpg",
-        "img/cars/v-063-2.jpg",
-        "img/cars/v-063-3.jpg",
-        "img/cars/v-063-4.jpg",
-        "img/cars/v-063-5.jpg",
-        "img/cars/v-063-6.jpg",
-        "img/cars/v-063-7.jpg"
       ]
     },
     {
