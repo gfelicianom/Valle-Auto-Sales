@@ -94,6 +94,37 @@
       ]
     },
     {
+      "id": "v-077",
+      "status": "active",
+      "make": "Honda",
+      "model": "Civic Sport",
+      "year": 2022,
+      "color": "negro",
+      "mileage": 40459,
+      "price": 24995,
+      "body_type": "sedan",
+      "engine_liters": 2,
+      "cylinders": 4,
+      "drivetrain": "fwd",
+      "transmission": "automatic",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Elegancia, estilo y desempeño en un solo vehículo. El Honda Civic Sport 2022 combina un diseño moderno y deportivo con excelente manejo y comodidad para disfrutar cada viaje.  ¡Una opción ideal para quienes buscan calidad, estilo y confiabilidad!",
+      "featured": false,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-077-1.jpg",
+        "img/cars/v-077-2.jpg",
+        "img/cars/v-077-3.jpg",
+        "img/cars/v-077-4.jpg",
+        "img/cars/v-077-5.jpg",
+        "img/cars/v-077-6.jpg",
+        "img/cars/v-077-7.jpg"
+      ]
+    },
+    {
       "id": "v-076",
       "status": "active",
       "make": "Nissan",
