@@ -1,6 +1,37 @@
 {
   "cars": [
     {
+      "id": "v-080",
+      "status": "active",
+      "make": "Ford",
+      "model": "F-150 STX",
+      "year": 2021,
+      "color": "gris",
+      "mileage": 114307,
+      "price": 30995,
+      "body_type": "pickup",
+      "engine_liters": 2.7,
+      "cylinders": 6,
+      "drivetrain": "4x2",
+      "transmission": "",
+      "fuel_type": "gasoline",
+      "origin": "imported",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Potencia, estilo y versatilidad en una sola pickup. La F-150 STX combina un diseño deportivo con la capacidad que necesitas para el trabajo y el diario. Una excelente opción para quienes buscan una pickup cómoda y moderna.",
+      "featured": true,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-080-1.jpg",
+        "img/cars/v-080-2.jpg",
+        "img/cars/v-080-3.jpg",
+        "img/cars/v-080-4.jpg",
+        "img/cars/v-080-5.jpg",
+        "img/cars/v-080-6.jpg",
+        "img/cars/v-080-7.jpg"
+      ]
+    },
+    {
       "id": "v-067",
       "status": "active",
       "make": "Jeep",
@@ -128,7 +159,7 @@
       "id": "v-078",
       "status": "active",
       "make": "Toyota",
-      "model": "Corolla LE, w/Premium pkg",
+      "model": "Corolla LE",
       "year": 2022,
       "color": "blanco",
       "mileage": 30916,
