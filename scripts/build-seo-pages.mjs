@@ -194,7 +194,7 @@ async function main() {
     dir: "historia",
     title: "Nuestra historia | Valle Auto Sales en Aguada desde 1992",
     description: "Conozca la historia de Valle Auto Sales, negocio familiar de autos en el Barrio Naranjo de Aguada, Puerto Rico, desde julio de 1992.",
-    body: `<section class="section"><div class="section-inner"><h1 class="section-title">Una familia sirviendo a Aguada desde 1992</h1>
+    body: `<section class="section"><div class="section-inner"><h1 class="section-title">Familia de Aguada sirviendo a Puerto Rico desde 1992</h1>
       <figure class="story-photo"><img src="/img/family.jpg" alt="Eligio y Giovanni Feliciano de Valle Auto Sales" loading="lazy"><figcaption>Dos generaciones al frente de Valle Auto Sales.</figcaption></figure>
       <div class="story-body"><p>Valle Auto Sales comenzó como un sueño. Eligio Feliciano Valle pasó años trabajando dentro de una atunera, en el área de producción, y con el tiempo llegó a ser ayudante del supervisor. Aun entonces siempre estaba imaginando el futuro: pensando cómo esta persona podría vender autos, cómo aquella otra podría lavarlos. Soñaba con tener su propio dealer.</p>
       <p>Ese sueño respiró por primera vez en julio de 1992, cuando Eligio abrió un pequeño dealer en un local alquilado en el Barrio Naranjo de Aguada. Según el negocio fue creciendo, compró un terreno grande y construyó sobre él un dealer más amplio.</p>

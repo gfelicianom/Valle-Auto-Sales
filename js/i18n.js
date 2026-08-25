@@ -6,7 +6,7 @@
 const I18N = {
   es: {
     tagline: "Usados e Importados",
-    family_line: "Familia sirviendo a Aguada desde 1992",
+    family_line: "Familia de Aguada sirviendo a Puerto Rico desde 1992",
 
     nav_home: "Inicio",
     nav_inventory: "Inventario",
@@ -203,7 +203,7 @@ const I18N = {
 
   en: {
     tagline: "Used & Imported Cars",
-    family_line: "A family serving Aguada since 1992",
+    family_line: "An Aguada family serving Puerto Rico since 1992",
 
     nav_home: "Home",
     nav_inventory: "Inventory",
