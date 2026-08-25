@@ -340,36 +340,6 @@
       ]
     },
     {
-      "id": "v-069",
-      "status": "active",
-      "make": "Mitsubishi",
-      "model": "Lancer",
-      "year": 2010,
-      "color": "rojo",
-      "mileage": 114433,
-      "price": 4995,
-      "body_type": "sedan",
-      "engine_liters": 0,
-      "cylinders": 4,
-      "drivetrain": "fwd",
-      "transmission": "automatic",
-      "fuel_type": "gasoline",
-      "origin": "local",
-      "registration_fee": "",
-      "condition_tags": [],
-      "notes": "Una excelente opción para quienes buscan estilo, economía y confiabilidad. Este Lancer se encuentra en buenas condiciones.",
-      "featured": false,
-      "sold": false,
-      "photo_urls": [
-        "img/cars/v-069-1.jpg",
-        "img/cars/v-069-2.jpg",
-        "img/cars/v-069-3.jpg",
-        "img/cars/v-069-4.jpg",
-        "img/cars/v-069-5.jpg",
-        "img/cars/v-069-6.jpg"
-      ]
-    },
-    {
       "id": "v-068",
       "status": "active",
       "make": "Toyota",
