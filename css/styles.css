@@ -519,6 +519,7 @@ input[type="range"] { accent-color: var(--red); }
 }
 .footer-tag { font-size: .74rem; text-transform: uppercase; letter-spacing: 2.5px; color: var(--gray-soft); }
 .footer-family { margin-top: .5rem; font-size: .88rem; font-style: italic; color: var(--gray-soft); }
+.footer-since { margin-top: .3rem; font-size: .7rem; text-transform: uppercase; letter-spacing: 2.5px; color: var(--gray); }
 .footer-contact a { display: block; color: var(--white); text-decoration: none; font-weight: 600; margin-bottom: .25rem; }
 .footer-contact a:hover { color: var(--red); }
 .footer-contact p { font-size: .88rem; color: var(--gray-soft); margin-top: .35rem; }
