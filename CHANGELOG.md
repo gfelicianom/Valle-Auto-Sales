@@ -2,6 +2,24 @@
 
 Development history for the Valle Auto Sales website.
 
+## 2026-08-24
+
+### Changed (tagline)
+
+- Gio replaced the tagline "Familia sirviendo a Aguada desde 1992" with "Familia de Aguada sirviendo a Puerto Rico desde 1992", and its English counterpart with "An Aguada family serving Puerto Rico since 1992". The old line described the business as serving a single town. It has always sold to the whole west of the island and beyond, and a buyer searching from another town found nothing in the wording that spoke to them. The new line keeps Aguada as the origin rather than the limit.
+- The wording was chosen over "Familia sirviendo a Puerto Rico desde Aguada", which had been the first instinct. That version collides with the year: "desde Aguada desde 1992" uses the same word for a place and for a date in one breath, and the sentence trips. Changing "desde Aguada" to "de Aguada" keeps the rhythm and removes the collision.
+- All eight copies were updated — both languages of `family_line`, the four meta and schema descriptions in `index.html`, the generated `/historia/` heading in `scripts/build-seo-pages.mjs`, and the text drawn into the shared image by `scripts/build-social-preview.mjs`. The generated history page and social preview image were refreshed, and the live site was verified after deployment.
+- Codex aligned the public Facebook Page presentation with the website while preserving the useful sales details: `Familia de Aguada sirviendo a Puerto Rico desde 1992. Autos usados. Financiamiento disponible, incluso con crédito afectado. Garantía en el 99% de las unidades. | An Aguada family serving Puerto Rico since 1992.`
+
+### Fixed (GitHub Pages deployment)
+
+- The tagline commit accidentally included the local `outputs/` audit folder and its absolute `node_modules` symbolic link. GitHub Pages could not resolve that Mac-only path, so the tests passed but deployment #161 failed and the live site stayed on the previous version.
+- Codex removed `outputs/` from Git tracking without deleting the local audit files, added `/outputs/` to `.gitignore`, and pushed commit `1c00d6d`. Tests and GitHub Pages deployment #162 completed successfully, and the visible tagline, search/social metadata, and published preview image were verified on `valleautosales.com`.
+
+### Added (documentation)
+
+- Claude documented in `README.md` the eight places the tagline lives and the two generators that must be rerun after changing it. The tagline is the only string in the project repeated that widely, and half its copies are generated, so a partial edit leaves no visible trace on the site itself.
+
 ## 2026-08-12
 
 ### Added (permanent Airtable photo storage tooling)

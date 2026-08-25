@@ -256,6 +256,33 @@ history page is generated from `scripts/build-seo-pages.mjs`. Update both source
 locations, then regenerate. Do not edit `historia/index.html` alone because the
 next inventory sync will overwrite it.
 
+The tagline is the other cross-cutting example, and the harder one, because most
+of its copies are generated rather than typed. "Familia de Aguada sirviendo a
+Puerto Rico desde 1992" lives as `family_line` in `js/i18n.js`, but the same
+sentence is repeated as literal text in eight places:
+
+| Location | What it feeds |
+| --- | --- |
+| `js/i18n.js` — `family_line`, Spanish | The footer, Spanish |
+| `js/i18n.js` — `family_line`, English | The footer, English |
+| `index.html` — `meta name="description"` | The Google result |
+| `index.html` — `og:description` | Facebook and WhatsApp link previews |
+| `index.html` — `twitter:description` | Link previews elsewhere |
+| `index.html` — `description` in the schema block | Structured data |
+| `scripts/build-seo-pages.mjs` | The `<h1>` of the generated `/historia/` page |
+| `scripts/build-social-preview.mjs` | The words drawn into the shared image |
+
+Changing the tagline means changing all eight, then running both generators:
+
+```bash
+node scripts/build-seo-pages.mjs
+node scripts/build-social-preview.mjs
+```
+
+Forgetting the second command is the easy mistake. The website then reads
+correctly everywhere while the picture people actually see when the link is
+shared still carries the old wording, and nothing on the site reveals it.
+
 For major JavaScript text updates, changing the query value on the corresponding
 `<script src="...?...">` line in `index.html` can force browsers to download the
 new file instead of displaying a cached copy.
