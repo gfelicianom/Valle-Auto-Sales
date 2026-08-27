@@ -133,6 +133,14 @@ function renderHome() {
     </div>
   </section>
 
+  <section class="section">
+    <div class="section-inner">
+      <h2 class="section-title">${t("local_title")}</h2>
+      <p style="max-width:70ch">${t("local_text")}</p>
+      <p style="margin-top:1rem"><a href="#/inventario" style="font-weight:700">${t("local_link")}</a></p>
+    </div>
+  </section>
+
   <section class="section section-alt">
     <div class="section-inner home-two">
       <div class="home-panel panel-story">

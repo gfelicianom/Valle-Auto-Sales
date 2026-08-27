@@ -16,12 +16,16 @@ const I18N = {
     nav_contact: "Contacto",
 
     // Home
-    hero_title: "Autos usados e importados con la confianza de una familia",
-    hero_sub: "En Aguada, Puerto Rico, desde 1992 ayudamos a nuestra gente a encontrar el auto correcto — al precio correcto.",
+    hero_title: "Autos usados, locales e importados en Aguada, Puerto Rico",
+    hero_sub: "Desde 1992, un negocio de familia en el Barrio Naranjo — ayudando a gente de todo Puerto Rico a encontrar el auto correcto, al precio correcto.",
     hero_cta: "Ver Inventario",
     hero_cta2: "Visítenos",
     featured_title: "Autos Destacados",
     featured_all: "Ver todo el inventario →",
+    local_title: "Locales e importados — usted escoge",
+    local_text: "La mayoría de nuestro inventario son unidades locales: compradas y reacondicionadas aquí en Puerto Rico, con historial que se puede verificar. También traemos unidades importadas cuando vale la pena. Cada auto en el inventario indica su origen, y usted puede filtrar por el que prefiera.",
+    local_link: "Ver el inventario →",
+
     story_teaser_title: "Un negocio de familia",
     story_teaser_text: "Valle Auto Sales comenzó como el sueño de Eligio Feliciano Valle. Hoy, ese sueño sigue vivo en el mismo Barrio Naranjo — atendido por la misma familia.",
     story_teaser_link: "Conozca nuestra historia →",
@@ -213,12 +217,16 @@ const I18N = {
     nav_story: "Our Story",
     nav_contact: "Contact",
 
-    hero_title: "Used & imported cars, with the trust of a family",
-    hero_sub: "In Aguada, Puerto Rico, we've been helping our neighbors find the right car — at the right price — since 1992.",
+    hero_title: "Used, local & imported cars in Aguada, Puerto Rico",
+    hero_sub: "Since 1992, a family business in Barrio Naranjo — helping people from all over Puerto Rico find the right car, at the right price.",
     hero_cta: "Browse Inventory",
     hero_cta2: "Visit Us",
     featured_title: "Featured Cars",
     featured_all: "See full inventory →",
+    local_title: "Local or imported — your call",
+    local_text: "Most of our inventory is local units: bought and reconditioned here in Puerto Rico, with history you can verify. We also bring in imported units when they're worth it. Every car in the inventory shows its origin, and you can filter by the one you prefer.",
+    local_link: "Browse the inventory →",
+
     story_teaser_title: "A family business",
     story_teaser_text: "Valle Auto Sales began as Eligio Feliciano Valle's dream. Today that dream lives on in the same Barrio Naranjo — run by the same family.",
     story_teaser_link: "Read our story →",
