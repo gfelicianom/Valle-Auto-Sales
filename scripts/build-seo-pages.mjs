@@ -256,7 +256,11 @@ async function main() {
       <a class="btn btn-silver" href="https://wa.me/${PHONE.slice(1)}?text=${encodeURIComponent(`Hola, me interesa el ${name} que vi en su página web.`)}">WhatsApp</a>
       <a class="btn btn-silver" href="tel:${PHONE}">Llamar</a></div></div></div></div></section>`;
     await writePage(path.join("autos", car.id), shell({
-      headHtml: head({ title: `${name} usado en Aguada | Valle Auto Sales`, description, canonical, image: images[0], schema }),
+      // The title's budget is ~60 characters before Google truncates, and the car
+      // name alone can eat 35 of them. The dealer name is already on the result
+      // twice — in the domain line above the title and in the description below —
+      // so the space goes to the car and the location instead.
+      headHtml: head({ title: `${name} usado en Aguada, Puerto Rico`, description, canonical, image: images[0], schema }),
       body
     }));
   }
