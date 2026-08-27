@@ -46,6 +46,10 @@ for (const car of inventory) {
   const html = await readFile(`autos/${car.id}/index.html`, "utf8");
   assert.match(html, new RegExp(`<link rel="canonical" href="${url}">`));
   assert.match(html, /"Vehicle","Product"/);
+  // Deliberately checks the format, not a length limit: a genuinely long model
+  // name is valid data and should not fail the build. This catches the dealer
+  // name being reintroduced into the title, or the location being dropped.
+  assert.match(html, /<title>[^<]*usado en Aguada, Puerto Rico<\/title>/);
   assert.match(html, new RegExp(String(car.year)));
   assert.match(sitemap, new RegExp(`<loc>${url}</loc>`));
   assertPhoneHierarchy(html);
