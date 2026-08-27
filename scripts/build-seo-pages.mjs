@@ -175,7 +175,7 @@ async function main() {
     title: "Inventario de autos usados en Aguada, PR | Valle Auto Sales",
     description: inventoryDescription,
     body: `<section class="section"><div class="section-inner"><h1 class="section-title">Autos usados disponibles en Aguada</h1>
-      <p class="seo-note">Explore el inventario actual de Valle Auto Sales. Tenemos autos, SUV y pickups usados e importados en el Barrio Naranjo de Aguada.</p>
+      <p class="seo-note">Explore el inventario actual de Valle Auto Sales. Tenemos autos, SUV y pickups usados — unidades locales e importadas — en el Barrio Naranjo de Aguada, y le vendemos a clientes de todo Puerto Rico.</p>
       <p><a class="btn btn-red" href="/#/inventario">Abrir inventario con filtros</a></p>
       <div class="car-grid">${cars.map(carCard).join("")}</div></div></section>`
   }));

@@ -27,7 +27,10 @@ function assertPhoneHierarchy(html) {
 }
 
 assert.match(home, /<meta name="robots" content="index,follow,max-image-preview:large">/);
-assert.match(home, /Dealer de autos usados e importados en Aguada/);
+// Pinned to intent, not to the exact sentence: the crawlable <h1> must still
+// say what is sold and name the town, so a copy edit does not fail the build
+// but deleting the location does.
+assert.match(home, /<h1>Dealer de autos usados[^<]*en Aguada[^<]*<\/h1>/);
 assert.match(home, /"@type": "AutoDealer"/);
 assertPhoneHierarchy(home);
 
