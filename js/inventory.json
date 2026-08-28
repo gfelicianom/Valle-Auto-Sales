@@ -1,6 +1,37 @@
 {
   "cars": [
     {
+      "id": "v-082",
+      "status": "active",
+      "make": "Toyota",
+      "model": "C-HR",
+      "year": 2020,
+      "color": "plata",
+      "mileage": 45490,
+      "price": 17995,
+      "body_type": "suv",
+      "engine_liters": 2,
+      "cylinders": 4,
+      "drivetrain": "fwd",
+      "transmission": "automatic",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Estilo, comodidad y excelente manejo en un solo vehículo.Su diseño moderno y deportivo la hacen una excelente opción para el día a día.",
+      "featured": true,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-082-1.jpg",
+        "img/cars/v-082-2.jpg",
+        "img/cars/v-082-3.jpg",
+        "img/cars/v-082-4.jpg",
+        "img/cars/v-082-5.jpg",
+        "img/cars/v-082-6.jpg",
+        "img/cars/v-082-7.jpg"
+      ]
+    },
+    {
       "id": "v-080",
       "status": "active",
       "make": "Ford",
@@ -122,6 +153,37 @@
         "img/cars/v-005-8.jpg",
         "img/cars/v-005-9.jpg",
         "img/cars/v-005-10.jpg"
+      ]
+    },
+    {
+      "id": "v-081",
+      "status": "active",
+      "make": "Jeep",
+      "model": "Grand Cherokee Laredo",
+      "year": 2017,
+      "color": "azul",
+      "mileage": 91579,
+      "price": 91579,
+      "body_type": "suv",
+      "engine_liters": 3.6,
+      "cylinders": 6,
+      "drivetrain": "rwd",
+      "transmission": "",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Estilo, comodidad y la versatilidad que buscas en una SUV. Disfruta de su Sunroof, amplio espacio interior y excelente presencia en la carretera.",
+      "featured": false,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-081-1.jpg",
+        "img/cars/v-081-2.jpg",
+        "img/cars/v-081-3.jpg",
+        "img/cars/v-081-4.jpg",
+        "img/cars/v-081-5.jpg",
+        "img/cars/v-081-6.jpg",
+        "img/cars/v-081-7.jpg"
       ]
     },
     {
