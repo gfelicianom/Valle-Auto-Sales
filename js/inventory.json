@@ -804,38 +804,6 @@
       ]
     },
     {
-      "id": "v-051",
-      "status": "active",
-      "make": "Toyota",
-      "model": "Tacoma",
-      "year": 2006,
-      "color": "gris",
-      "mileage": 223000,
-      "price": 11995,
-      "body_type": "pickup",
-      "engine_liters": 0,
-      "cylinders": 6,
-      "drivetrain": "4x2",
-      "transmission": "automatic",
-      "fuel_type": "gasoline",
-      "origin": "local",
-      "registration_fee": "",
-      "condition_tags": [],
-      "notes": "Una pickup con carácter, durabilidad y el estilo que distingue a la Tacoma. Ideal para el trabajo, combinando funcionalidad y la reconocida confiabilidad de Toyota. La unidad tiene detalles de pintura.",
-      "featured": false,
-      "sold": false,
-      "photo_urls": [
-        "img/cars/v-051-1.jpg",
-        "img/cars/v-051-2.jpg",
-        "img/cars/v-051-3.jpg",
-        "img/cars/v-051-4.jpg",
-        "img/cars/v-051-5.jpg",
-        "img/cars/v-051-6.jpg",
-        "img/cars/v-051-7.jpg",
-        "img/cars/v-051-8.jpg"
-      ]
-    },
-    {
       "id": "v-049",
       "status": "active",
       "make": "Mercedes-Benz",
@@ -1109,37 +1077,6 @@
       ]
     },
     {
-      "id": "v-036",
-      "status": "active",
-      "make": "Hyundai",
-      "model": "Santa Cruz",
-      "year": 2024,
-      "color": "azul",
-      "mileage": 9773,
-      "price": 26995,
-      "body_type": "pickup",
-      "engine_liters": 0,
-      "cylinders": 4,
-      "drivetrain": "fwd",
-      "transmission": "automatic",
-      "fuel_type": "gasoline",
-      "origin": "local",
-      "registration_fee": "",
-      "condition_tags": [],
-      "notes": "Su diseño moderno, comodidad y capacidad la convierten en una excelente opción para el trabajo o la aventura. Ven a conocerla y descubre por qué puede ser tu próxima pickup.",
-      "featured": false,
-      "sold": false,
-      "photo_urls": [
-        "img/cars/v-036-1.jpg",
-        "img/cars/v-036-2.jpg",
-        "img/cars/v-036-3.jpg",
-        "img/cars/v-036-4.jpg",
-        "img/cars/v-036-5.jpg",
-        "img/cars/v-036-6.jpg",
-        "img/cars/v-036-7.jpg"
-      ]
-    },
-    {
       "id": "v-035",
       "status": "active",
       "make": "Mitsubishi",
@@ -1197,36 +1134,6 @@
         "img/cars/v-034-5.jpg",
         "img/cars/v-034-6.jpg",
         "img/cars/v-034-7.jpg"
-      ]
-    },
-    {
-      "id": "v-033",
-      "status": "active",
-      "make": "Ford",
-      "model": "F-150 XLT",
-      "year": 2015,
-      "color": "gris",
-      "mileage": 137500,
-      "price": 19995,
-      "body_type": "pickup",
-      "engine_liters": 3.5,
-      "cylinders": 6,
-      "drivetrain": "4x2",
-      "transmission": "automatic",
-      "fuel_type": "gasoline",
-      "origin": "imported",
-      "registration_fee": "",
-      "condition_tags": [],
-      "notes": "Fuerza, presencia y elegancia en una sola pickup. Diseñada para quienes buscan potencia, capacidad y confiabilidad. Una excelente opción para el trabajo, el diario o cualquier aventura.",
-      "featured": false,
-      "sold": false,
-      "photo_urls": [
-        "img/cars/v-033-1.jpg",
-        "img/cars/v-033-2.jpg",
-        "img/cars/v-033-3.jpg",
-        "img/cars/v-033-4.jpg",
-        "img/cars/v-033-5.jpg",
-        "img/cars/v-033-6.jpg"
       ]
     },
     {
