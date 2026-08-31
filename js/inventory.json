@@ -803,34 +803,6 @@
       ]
     },
     {
-      "id": "v-043",
-      "status": "active",
-      "make": "Toyota",
-      "model": "Corolla Hatchback SE",
-      "year": 2022,
-      "color": "rojo",
-      "mileage": 26654,
-      "price": 19995,
-      "body_type": "hatchback",
-      "engine_liters": 2,
-      "cylinders": 4,
-      "drivetrain": "fwd",
-      "transmission": "automatic",
-      "fuel_type": "gasoline",
-      "origin": "local",
-      "registration_fee": "",
-      "condition_tags": [],
-      "notes": "Ágil, moderno y con un estilo que se destaca. Su diseño compacto, excelente manejo y versatilidad lo convierten en la combinación perfecta de estilo y practicidad.",
-      "featured": false,
-      "sold": false,
-      "photo_urls": [
-        "img/cars/v-043-1.jpg",
-        "img/cars/v-043-2.jpg",
-        "img/cars/v-043-3.jpg",
-        "img/cars/v-043-4.jpg"
-      ]
-    },
-    {
       "id": "v-042",
       "status": "active",
       "make": "Toyota",
