@@ -1,0 +1,46 @@
+name: Notify IndexNow
+
+# The inventory sync notifies IndexNow itself, but only when it commits. A merge
+# to main that rewrites pages without touching inventory — a copy edit, a change
+# to the page generator — reached Bing only if someone remembered to run the sync
+# by hand with "submit every URL" ticked. This closes that gap.
+#
+# It cannot double up with the sync: pushes made with the default GITHUB_TOKEN,
+# which is what the sync pushes with, do not trigger workflows.
+#
+# The paths below mirror exactly what urlsForPath() in the script can resolve, so
+# the workflow only starts when there is genuinely something to submit. Changing a
+# shared asset alone (js/i18n.js, js/app.js, css/styles.css) alters what every page
+# renders but maps to no single URL, so it submits nothing — for a sweeping change
+# like that, run "Sync inventory from Airtable" manually with the IndexNow box
+# ticked, which submits the whole sitemap.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "index.html"
+      - "autos/**/index.html"
+      - "inventario/index.html"
+      - "financiamiento/index.html"
+      - "historia/index.html"
+      - "contacto/index.html"
+      - "js/inventory.json"
+
+permissions:
+  contents: read
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      # changedUrls() diffs HEAD^..HEAD, which a depth-1 checkout cannot do.
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 2
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+
+      - name: Notify IndexNow about the pages this push changed
+        run: node scripts/submit-indexnow.mjs --changed
