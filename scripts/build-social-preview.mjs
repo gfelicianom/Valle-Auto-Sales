@@ -51,11 +51,11 @@ const branding = Buffer.from(`
     </defs>
     <rect x="300" width="660" height="${HEIGHT}" fill="url(#shade)"/>
     <rect width="625" height="${HEIGHT}" fill="url(#carbon)"/>
-    <rect x="58" y="280" width="7" height="170" rx="3.5" fill="#e01f26"/>
+    <rect x="58" y="280" width="7" height="170" rx="3.5" fill="#bb0102"/>
     <text x="88" y="326" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="43" font-weight="700" letter-spacing="0.8">USADOS E IMPORTADOS</text>
     <text x="88" y="382" fill="#d8dce2" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="700" letter-spacing="0.4">AGUADA, PUERTO RICO</text>
     <text x="88" y="440" fill="#d8dce2" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">Familia de Aguada sirviendo a Puerto Rico desde 1992.</text>
-    <rect x="0" y="612" width="${WIDTH}" height="18" fill="#e01f26"/>
+    <rect x="0" y="612" width="${WIDTH}" height="18" fill="#bb0102"/>
   </svg>
 `);
 

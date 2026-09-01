@@ -8,8 +8,14 @@
   --black-soft: #1a1a1a;
   --panel: #161616;
   --panel-raised: #1e1e1e;
-  --red: #e01f26;
-  --red-dark: #b3161c;
+  /* The logo art is #BB0102, and it is the one colour we cannot change without
+     re-cutting vinyl and reprinting. The site used to draw its own brighter red
+     beside it, so the header logo and the buttons under it were two different
+     colours (Delta E 12.2 — plainly visible). The site now matches the logo.
+     --red-dark keeps the same hue and the same perceived hover jump the old
+     pair had (Delta E ~16). */
+  --red: #bb0102;
+  --red-dark: #950102;
   --silver: #c7cbd1;
   --gray: #6b7280;
   --gray-soft: #9aa1ab;

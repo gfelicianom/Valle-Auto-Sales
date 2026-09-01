@@ -92,7 +92,7 @@ function head({ title, description, canonical, image, schema }) {
 <meta name="twitter:title" content="${esc(title)}">
 <meta name="twitter:description" content="${esc(description)}">
 <meta name="twitter:image" content="${esc(shareImage)}">
-<meta name="theme-color" content="#e01f26">
+<meta name="theme-color" content="#bb0102">
 <script type="application/ld+json">${JSON.stringify(schema).replace(/</g, "\\u003c")}</script>
 <link rel="icon" href="/img/brand/valle-auto-sales-logo.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
