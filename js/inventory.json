@@ -979,6 +979,36 @@
       ]
     },
     {
+      "id": "v-033",
+      "status": "active",
+      "make": "Ford",
+      "model": "F-150 XLT",
+      "year": 2015,
+      "color": "gris",
+      "mileage": 138767,
+      "price": 18995,
+      "body_type": "pickup",
+      "engine_liters": 3.5,
+      "cylinders": 6,
+      "drivetrain": "4x2",
+      "transmission": "automatic",
+      "fuel_type": "gasoline",
+      "origin": "imported",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Fuerza, presencia y elegancia en una sola pickup. Diseñada para quienes buscan potencia, capacidad y confiabilidad. Una excelente opción para el trabajo, el diario o cualquier aventura.",
+      "featured": false,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-033-1.jpg",
+        "img/cars/v-033-2.jpg",
+        "img/cars/v-033-3.jpg",
+        "img/cars/v-033-4.jpg",
+        "img/cars/v-033-5.jpg",
+        "img/cars/v-033-6.jpg"
+      ]
+    },
+    {
       "id": "v-032",
       "status": "active",
       "make": "Mitsubishi",
