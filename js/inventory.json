@@ -184,6 +184,36 @@
       ]
     },
     {
+      "id": "v-086",
+      "status": "active",
+      "make": "Hyundai",
+      "model": "Accent",
+      "year": 2021,
+      "color": "blanco",
+      "mileage": 42430,
+      "price": 10995,
+      "body_type": "sedan",
+      "engine_liters": 1.6,
+      "cylinders": 4,
+      "drivetrain": "fwd",
+      "transmission": "",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "¡Compacto, elegante y listo para ti! \nExcelente opción para el día a día, con comodidad, economía y el estilo que buscas.",
+      "featured": false,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-086-1.jpg",
+        "img/cars/v-086-2.jpg",
+        "img/cars/v-086-3.jpg",
+        "img/cars/v-086-4.jpg",
+        "img/cars/v-086-5.jpg",
+        "img/cars/v-086-6.jpg"
+      ]
+    },
+    {
       "id": "v-084",
       "status": "active",
       "make": "Nissan",
