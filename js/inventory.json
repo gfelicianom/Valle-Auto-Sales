@@ -184,6 +184,37 @@
       ]
     },
     {
+      "id": "v-093",
+      "status": "active",
+      "make": "Toyota",
+      "model": "Corolla LE",
+      "year": 2026,
+      "color": "blanco",
+      "mileage": 9398,
+      "price": 24995,
+      "body_type": "sedan",
+      "engine_liters": 2,
+      "cylinders": 4,
+      "drivetrain": "fwd",
+      "transmission": "automatic",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Elegancia, economía y confiabilidad en un solo vehículo. Diseño moderno, comodidad  y el reconocido rendimiento de Toyota.",
+      "featured": false,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-093-1.jpg",
+        "img/cars/v-093-2.jpg",
+        "img/cars/v-093-3.jpg",
+        "img/cars/v-093-4.jpg",
+        "img/cars/v-093-5.jpg",
+        "img/cars/v-093-6.jpg",
+        "img/cars/v-093-7.jpg"
+      ]
+    },
+    {
       "id": "v-092",
       "status": "active",
       "make": "Kia",
