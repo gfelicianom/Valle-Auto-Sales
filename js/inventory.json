@@ -184,6 +184,37 @@
       ]
     },
     {
+      "id": "v-094",
+      "status": "active",
+      "make": "Chevrolet",
+      "model": "Camaro RS",
+      "year": 2018,
+      "color": "dorado",
+      "mileage": 74942,
+      "price": 20995,
+      "body_type": "coupe",
+      "engine_liters": 3.6,
+      "cylinders": 6,
+      "drivetrain": "rwd",
+      "transmission": "automatic",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Un deportivo que combina estilo, presencia y emoción al conducir. Equipado con sunroof para disfrutar cada recorrido con ese toque especial. Un vehículo que definitivamente se destaca dondequiera que llegues.",
+      "featured": false,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-094-1.jpg",
+        "img/cars/v-094-2.jpg",
+        "img/cars/v-094-3.jpg",
+        "img/cars/v-094-4.jpg",
+        "img/cars/v-094-5.jpg",
+        "img/cars/v-094-6.jpg",
+        "img/cars/v-094-7.jpg"
+      ]
+    },
+    {
       "id": "v-093",
       "status": "active",
       "make": "Toyota",
