@@ -1,6 +1,37 @@
 {
   "cars": [
     {
+      "id": "v-095",
+      "status": "active",
+      "make": "Toyota",
+      "model": "Corolla LE",
+      "year": 2023,
+      "color": "gris",
+      "mileage": 50351,
+      "price": 19995,
+      "body_type": "sedan",
+      "engine_liters": 2,
+      "cylinders": 4,
+      "drivetrain": "fwd",
+      "transmission": "automatic",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Elegancia, economía y confiabilidad en un solo vehículo. Un sedán moderno, cómodo y excelente para el diario, con el respaldo de una de las marcas más reconocidas.",
+      "featured": true,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-095-1.jpg",
+        "img/cars/v-095-2.jpg",
+        "img/cars/v-095-3.jpg",
+        "img/cars/v-095-4.jpg",
+        "img/cars/v-095-5.jpg",
+        "img/cars/v-095-6.jpg",
+        "img/cars/v-095-7.jpg"
+      ]
+    },
+    {
       "id": "v-080",
       "status": "active",
       "make": "Ford",
@@ -181,6 +212,37 @@
         "img/cars/v-007-4.jpg",
         "img/cars/v-007-5.jpg",
         "img/cars/v-007-6.jpg"
+      ]
+    },
+    {
+      "id": "v-097",
+      "status": "active",
+      "make": "Toyota",
+      "model": "Corolla SE",
+      "year": 2023,
+      "color": "rojo",
+      "mileage": 7577,
+      "price": 21995,
+      "body_type": "hatchback",
+      "engine_liters": 2,
+      "cylinders": 4,
+      "drivetrain": "fwd",
+      "transmission": "automatic",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Estilo deportivo, excelente rendimiento y el espacio perfecto para tu día a día. Una opción moderna, cómoda y económica que combina diseño y practicidad en un solo vehículo.",
+      "featured": false,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-097-1.jpg",
+        "img/cars/v-097-2.jpg",
+        "img/cars/v-097-3.jpg",
+        "img/cars/v-097-4.jpg",
+        "img/cars/v-097-5.jpg",
+        "img/cars/v-097-6.jpg",
+        "img/cars/v-097-7.jpg"
       ]
     },
     {
