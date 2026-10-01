@@ -246,6 +246,36 @@
       ]
     },
     {
+      "id": "v-096",
+      "status": "active",
+      "make": "Jeep",
+      "model": "Renegade Latitude",
+      "year": 2023,
+      "color": "blanco",
+      "mileage": 3287,
+      "price": 20995,
+      "body_type": "suv",
+      "engine_liters": 1.3,
+      "cylinders": 4,
+      "drivetrain": "4wd",
+      "transmission": "",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Estilo, comodidad y capacidad de una Renegade Latitude 4x4 prácticamente nueva, con un millaje increíblemente bajo. Ideal para quien busca un SUV moderno, versátil y listo para acompañarte en cualquier camino.",
+      "featured": false,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-096-1.jpg",
+        "img/cars/v-096-2.jpg",
+        "img/cars/v-096-3.jpg",
+        "img/cars/v-096-4.jpg",
+        "img/cars/v-096-5.jpg",
+        "img/cars/v-096-6.jpg"
+      ]
+    },
+    {
       "id": "v-094",
       "status": "active",
       "make": "Chevrolet",
@@ -514,6 +544,35 @@
         "img/cars/v-086-4.jpg",
         "img/cars/v-086-5.jpg",
         "img/cars/v-086-6.jpg"
+      ]
+    },
+    {
+      "id": "v-085",
+      "status": "active",
+      "make": "Mercedes-Benz",
+      "model": "GLA 250",
+      "year": 2016,
+      "color": "blanco",
+      "mileage": 80365,
+      "price": 15995,
+      "body_type": "suv",
+      "engine_liters": 2,
+      "cylinders": 4,
+      "drivetrain": "fwd",
+      "transmission": "",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Una SUV compacta con el estilo y la elegancia que distingue a Mercedes-Benz, perfecta para quienes buscan algo diferente, sofisticado y con excelente presencia en la carretera.",
+      "featured": false,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-085-1.jpg",
+        "img/cars/v-085-2.jpg",
+        "img/cars/v-085-3.jpg",
+        "img/cars/v-085-4.jpg",
+        "img/cars/v-085-5.jpg"
       ]
     },
     {
