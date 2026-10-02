@@ -215,6 +215,36 @@
       ]
     },
     {
+      "id": "v-104",
+      "status": "active",
+      "make": "Honda",
+      "model": "Accord LX",
+      "year": 2020,
+      "color": "blanco",
+      "mileage": 74854,
+      "price": 20995,
+      "body_type": "sedan",
+      "engine_liters": 1.5,
+      "cylinders": 4,
+      "drivetrain": "fwd",
+      "transmission": "automatic",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Descubre el equilibrio perfecto entre elegancia, confort y rendimiento. Este sofisticado Honda Accord ofrece una excelente experiencia de manejo, gran eficiencia y la confiabilidad que caracteriza a la marca Honda.",
+      "featured": false,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-104-1.jpg",
+        "img/cars/v-104-2.jpg",
+        "img/cars/v-104-3.jpg",
+        "img/cars/v-104-4.jpg",
+        "img/cars/v-104-5.jpg",
+        "img/cars/v-104-6.jpg"
+      ]
+    },
+    {
       "id": "v-103",
       "status": "active",
       "make": "Toyota",
@@ -243,6 +273,36 @@
         "img/cars/v-103-5.jpg",
         "img/cars/v-103-6.jpg",
         "img/cars/v-103-7.jpg"
+      ]
+    },
+    {
+      "id": "v-102",
+      "status": "active",
+      "make": "Nissan",
+      "model": "Kicks SV",
+      "year": 2024,
+      "color": "plata",
+      "mileage": 34427,
+      "price": 16995,
+      "body_type": "hatchback",
+      "engine_liters": 1.6,
+      "cylinders": 4,
+      "drivetrain": "fwd",
+      "transmission": "automatic",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Diseño moderno y manejo ágil  que necesitas para disfrutar cada aventura.\nCombina estilo, comodidad y excelente rendimiento.",
+      "featured": false,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-102-1.jpg",
+        "img/cars/v-102-2.jpg",
+        "img/cars/v-102-3.jpg",
+        "img/cars/v-102-4.jpg",
+        "img/cars/v-102-5.jpg",
+        "img/cars/v-102-6.jpg"
       ]
     },
     {
