@@ -215,6 +215,37 @@
       ]
     },
     {
+      "id": "v-105",
+      "status": "active",
+      "make": "Hyundai",
+      "model": "Accent",
+      "year": 2022,
+      "color": "blanco",
+      "mileage": 24363,
+      "price": 10995,
+      "body_type": "sedan",
+      "engine_liters": 1.6,
+      "cylinders": 4,
+      "drivetrain": "fwd",
+      "transmission": "automatic",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Compacta, económica y perfecta para el diario vivir. Su excelente manejo, interior cómodo y eficiencia en gasolina lo convierten en una opción ideal para quienes buscan calidad y tranquilidad al conducir.",
+      "featured": false,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-105-1.jpg",
+        "img/cars/v-105-2.jpg",
+        "img/cars/v-105-3.jpg",
+        "img/cars/v-105-4.jpg",
+        "img/cars/v-105-5.jpg",
+        "img/cars/v-105-6.jpg",
+        "img/cars/v-105-7.jpg"
+      ]
+    },
+    {
       "id": "v-104",
       "status": "active",
       "make": "Honda",
