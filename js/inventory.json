@@ -246,6 +246,37 @@
       ]
     },
     {
+      "id": "v-108",
+      "status": "active",
+      "make": "Toyota",
+      "model": "Tacoma SR5",
+      "year": 2022,
+      "color": "blanco",
+      "mileage": 17426,
+      "price": 19995,
+      "body_type": "pickup",
+      "engine_liters": 3.5,
+      "cylinders": 6,
+      "drivetrain": "4x2",
+      "transmission": "",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Una pickup reconocida por su durabilidad, capacidad y excelente desempeño, ideal para quienes buscan fuerza y confiabilidad en una sola unidad.",
+      "featured": false,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-108-1.jpg",
+        "img/cars/v-108-2.jpg",
+        "img/cars/v-108-3.jpg",
+        "img/cars/v-108-4.jpg",
+        "img/cars/v-108-5.jpg",
+        "img/cars/v-108-6.jpg",
+        "img/cars/v-108-7.jpg"
+      ]
+    },
+    {
       "id": "v-106",
       "status": "active",
       "make": "Hyundai",
