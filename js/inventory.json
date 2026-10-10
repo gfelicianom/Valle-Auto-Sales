@@ -246,6 +246,36 @@
       ]
     },
     {
+      "id": "v-110",
+      "status": "active",
+      "make": "Hyundai",
+      "model": "Venue SE",
+      "year": 2023,
+      "color": "rojo",
+      "mileage": 26380,
+      "price": 15995,
+      "body_type": "sedan",
+      "engine_liters": 1.6,
+      "cylinders": 4,
+      "drivetrain": "fwd",
+      "transmission": "automatic",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "¡Estilo, comodidad y economía en una SUV compacta ideal para cada aventura! Disfruta de su diseño moderno, interior cómodo y excelente rendimiento de gasolina, perfecta para moverte con confianza y estilo.",
+      "featured": false,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-110-1.jpg",
+        "img/cars/v-110-2.jpg",
+        "img/cars/v-110-3.jpg",
+        "img/cars/v-110-4.jpg",
+        "img/cars/v-110-5.jpg",
+        "img/cars/v-110-6.jpg"
+      ]
+    },
+    {
       "id": "v-109",
       "status": "active",
       "make": "Nissan",
