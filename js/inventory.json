@@ -246,6 +246,36 @@
       ]
     },
     {
+      "id": "v-109",
+      "status": "active",
+      "make": "Nissan",
+      "model": "Rogue S",
+      "year": 2021,
+      "color": "gris",
+      "mileage": 53655,
+      "price": 16995,
+      "body_type": "suv",
+      "engine_liters": 2.5,
+      "cylinders": 4,
+      "drivetrain": "fwd",
+      "transmission": "automatic",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Descubre la comodidad, el estilo y la versatilidad que buscas en una SUV ideal para toda la familia. Disfruta de un interior espacioso, excelente comodidad al conducir y un diseño moderno para acompañarte en cada aventura.",
+      "featured": false,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-109-1.jpg",
+        "img/cars/v-109-2.jpg",
+        "img/cars/v-109-3.jpg",
+        "img/cars/v-109-4.jpg",
+        "img/cars/v-109-5.jpg",
+        "img/cars/v-109-6.jpg"
+      ]
+    },
+    {
       "id": "v-108",
       "status": "active",
       "make": "Toyota",
