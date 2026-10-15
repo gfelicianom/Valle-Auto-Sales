@@ -246,6 +246,37 @@
       ]
     },
     {
+      "id": "v-111",
+      "status": "active",
+      "make": "Nissan",
+      "model": "Sentra SR",
+      "year": 2024,
+      "color": "blanco",
+      "mileage": 764,
+      "price": 24995,
+      "body_type": "sedan",
+      "engine_liters": 2,
+      "cylinders": 4,
+      "drivetrain": "fwd",
+      "transmission": "automatic",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Una combinación perfecta de elegancia, tecnología y comodidad. Diseño deportivo, confort excepcional y una experiencia de manejo distinguida.",
+      "featured": false,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-111-1.jpg",
+        "img/cars/v-111-2.jpg",
+        "img/cars/v-111-3.jpg",
+        "img/cars/v-111-4.jpg",
+        "img/cars/v-111-5.jpg",
+        "img/cars/v-111-6.jpg",
+        "img/cars/v-111-7.jpg"
+      ]
+    },
+    {
       "id": "v-110",
       "status": "active",
       "make": "Hyundai",
