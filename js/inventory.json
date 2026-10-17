@@ -1,6 +1,37 @@
 {
   "cars": [
     {
+      "id": "v-113",
+      "status": "active",
+      "make": "Honda",
+      "model": "Civic Si",
+      "year": 2018,
+      "color": "azul",
+      "mileage": 139138,
+      "price": 20995,
+      "body_type": "sedan",
+      "engine_liters": 1.5,
+      "cylinders": 4,
+      "drivetrain": "fwd",
+      "transmission": "manual",
+      "fuel_type": "gasoline",
+      "origin": "imported",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Disfruta de su estilo deportivo, transmisión manual y excelente desempeño, ideal para quienes buscan una experiencia de manejo emocionante y dinámica.",
+      "featured": true,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-113-1.jpg",
+        "img/cars/v-113-2.jpg",
+        "img/cars/v-113-3.jpg",
+        "img/cars/v-113-4.jpg",
+        "img/cars/v-113-5.jpg",
+        "img/cars/v-113-6.jpg",
+        "img/cars/v-113-7.jpg"
+      ]
+    },
+    {
       "id": "v-107",
       "status": "active",
       "make": "Ford",
@@ -1983,7 +2014,7 @@
       "year": 2019,
       "color": "blanco",
       "mileage": 28027,
-      "price": 15995,
+      "price": 14995,
       "body_type": "suv",
       "engine_liters": 0,
       "cylinders": 4,
