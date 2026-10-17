@@ -277,6 +277,36 @@
       ]
     },
     {
+      "id": "v-119",
+      "status": "active",
+      "make": "Toyota",
+      "model": "Tacoma SR5",
+      "year": 2016,
+      "color": "gris",
+      "mileage": 105682,
+      "price": 25995,
+      "body_type": "pickup",
+      "engine_liters": 3.5,
+      "cylinders": 6,
+      "drivetrain": "4x2",
+      "transmission": "",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Una pickup que combina potencia, diseño deportivo y funcionalidad, ideal para quienes buscan rendimiento y presencia en cada camino.",
+      "featured": false,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-119-1.jpg",
+        "img/cars/v-119-2.jpg",
+        "img/cars/v-119-3.jpg",
+        "img/cars/v-119-4.jpg",
+        "img/cars/v-119-5.jpg",
+        "img/cars/v-119-6.jpg"
+      ]
+    },
+    {
       "id": "v-118",
       "status": "active",
       "make": "Ford",
@@ -366,6 +396,36 @@
         "img/cars/v-116-5.jpg",
         "img/cars/v-116-6.jpg",
         "img/cars/v-116-7.jpg"
+      ]
+    },
+    {
+      "id": "v-114",
+      "status": "active",
+      "make": "Toyota",
+      "model": "Corolla",
+      "year": 2023,
+      "color": "negro",
+      "mileage": 22424,
+      "price": 20995,
+      "body_type": "sedan",
+      "engine_liters": 2,
+      "cylinders": 4,
+      "drivetrain": "fwd",
+      "transmission": "automatic",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Estilo, economía y confiabilidad en un solo lugar\nUn vehículo que combina diseño moderno, comodidad y excelente economía de gasolina, ideal para quienes valoran la calidad en cada detalle.",
+      "featured": false,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-114-1.jpg",
+        "img/cars/v-114-2.jpg",
+        "img/cars/v-114-3.jpg",
+        "img/cars/v-114-4.jpg",
+        "img/cars/v-114-5.jpg",
+        "img/cars/v-114-6.jpg"
       ]
     },
     {
