@@ -2104,7 +2104,7 @@
       "year": 2022,
       "color": "gris",
       "mileage": 34835,
-      "price": 11995,
+      "price": 10995,
       "body_type": "sedan",
       "engine_liters": 0,
       "cylinders": 4,
@@ -2242,36 +2242,6 @@
         "img/cars/v-012-3.jpg",
         "img/cars/v-012-4.jpg",
         "img/cars/v-012-5.jpg"
-      ]
-    },
-    {
-      "id": "v-008",
-      "status": "active",
-      "make": "Ford",
-      "model": "F-150 Cabina 1/2 Off-Road",
-      "year": 2017,
-      "color": "gris",
-      "mileage": 148922,
-      "price": 19995,
-      "body_type": "pickup",
-      "engine_liters": 3.5,
-      "cylinders": 6,
-      "drivetrain": "4x4",
-      "transmission": "automatic",
-      "fuel_type": "gasoline",
-      "origin": "imported",
-      "registration_fee": "",
-      "condition_tags": [],
-      "notes": "Fuerte, práctica y directa al grano. Su motor de 3.5L y la tracción 4x4 le dan capacidad de sobra, y la cabina 1/2 la hace más fácil de maniobrar y estacionar. La opción ideal para quien necesita una pickup de trabajo sin pagar de más.",
-      "featured": false,
-      "sold": false,
-      "photo_urls": [
-        "img/cars/v-008-1.jpg",
-        "img/cars/v-008-2.jpg",
-        "img/cars/v-008-3.jpg",
-        "img/cars/v-008-4.jpg",
-        "img/cars/v-008-5.jpg",
-        "img/cars/v-008-6.jpg"
       ]
     },
     {
