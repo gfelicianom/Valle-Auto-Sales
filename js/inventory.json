@@ -277,6 +277,36 @@
       ]
     },
     {
+      "id": "v-124",
+      "status": "active",
+      "make": "Toyota",
+      "model": "Corolla SE",
+      "year": 2022,
+      "color": "azul",
+      "mileage": 22221,
+      "price": 20995,
+      "body_type": "hatchback",
+      "engine_liters": 2,
+      "cylinders": 4,
+      "drivetrain": "fwd",
+      "transmission": "automatic",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Un diseño deportivo, elegante y moderno, ideal para quienes buscan estilo, comodidad y eficiencia en cada viaje.",
+      "featured": false,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-124-1.jpg",
+        "img/cars/v-124-2.jpg",
+        "img/cars/v-124-3.jpg",
+        "img/cars/v-124-4.jpg",
+        "img/cars/v-124-5.jpg",
+        "img/cars/v-124-6.jpg"
+      ]
+    },
+    {
       "id": "v-123",
       "status": "active",
       "make": "Nissan",
@@ -305,6 +335,36 @@
         "img/cars/v-123-5.jpg",
         "img/cars/v-123-6.jpg",
         "img/cars/v-123-7.jpg"
+      ]
+    },
+    {
+      "id": "v-122",
+      "status": "active",
+      "make": "Toyota",
+      "model": "RAV4 XLE Premium",
+      "year": 2023,
+      "color": "verde",
+      "mileage": 23400,
+      "price": 30995,
+      "body_type": "suv",
+      "engine_liters": 2.5,
+      "cylinders": 4,
+      "drivetrain": "fwd",
+      "transmission": "automatic",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Elegancia, comodidad y versatilidad en una sola SUV. Disfruta de una experiencia de manejo superior con su elegante diseño y sunroof, que aporta amplitud, luz natural y un toque de distinción.",
+      "featured": false,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-122-1.jpg",
+        "img/cars/v-122-2.jpg",
+        "img/cars/v-122-3.jpg",
+        "img/cars/v-122-4.jpg",
+        "img/cars/v-122-5.jpg",
+        "img/cars/v-122-6.jpg"
       ]
     },
     {
