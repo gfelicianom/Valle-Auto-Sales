@@ -1,6 +1,38 @@
 {
   "cars": [
     {
+      "id": "v-129",
+      "status": "active",
+      "make": "Toyota",
+      "model": "Camry LE",
+      "year": 2021,
+      "color": "rojo",
+      "mileage": 62886,
+      "price": 22995,
+      "body_type": "sedan",
+      "engine_liters": 2.5,
+      "cylinders": 4,
+      "drivetrain": "fwd",
+      "transmission": "automatic",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Elegancia, comodidad y confiabilidad en un solo vehículo. Excelente opción para quienes buscan calidad y estilo.",
+      "featured": true,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-129-1.jpg",
+        "img/cars/v-129-2.jpg",
+        "img/cars/v-129-3.jpg",
+        "img/cars/v-129-4.jpg",
+        "img/cars/v-129-5.jpg",
+        "img/cars/v-129-6.jpg",
+        "img/cars/v-129-7.jpg",
+        "img/cars/v-129-8.jpg"
+      ]
+    },
+    {
       "id": "v-113",
       "status": "active",
       "make": "Honda",
@@ -334,37 +366,6 @@
         "img/cars/v-124-4.jpg",
         "img/cars/v-124-5.jpg",
         "img/cars/v-124-6.jpg"
-      ]
-    },
-    {
-      "id": "v-123",
-      "status": "active",
-      "make": "Nissan",
-      "model": "Frontier",
-      "year": 2022,
-      "color": "gris",
-      "mileage": 31511,
-      "price": 29995,
-      "body_type": "pickup",
-      "engine_liters": 3.8,
-      "cylinders": 6,
-      "drivetrain": "4x4",
-      "transmission": "",
-      "fuel_type": "gasoline",
-      "origin": "local",
-      "registration_fee": "",
-      "condition_tags": [],
-      "notes": "Potencia, versatilidad y estilo.\nDiseñada para quienes buscan capacidad y elegancia. Excelente opción para el trabajo y la aventura.",
-      "featured": false,
-      "sold": false,
-      "photo_urls": [
-        "img/cars/v-123-1.jpg",
-        "img/cars/v-123-2.jpg",
-        "img/cars/v-123-3.jpg",
-        "img/cars/v-123-4.jpg",
-        "img/cars/v-123-5.jpg",
-        "img/cars/v-123-6.jpg",
-        "img/cars/v-123-7.jpg"
       ]
     },
     {
@@ -1160,7 +1161,7 @@
       "year": 2022,
       "color": "rojo",
       "mileage": 19498,
-      "price": 30995,
+      "price": 29995,
       "body_type": "pickup",
       "engine_liters": 2.3,
       "cylinders": 4,
