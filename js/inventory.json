@@ -1,6 +1,37 @@
 {
   "cars": [
     {
+      "id": "v-131",
+      "status": "active",
+      "make": "Toyota",
+      "model": "Corolla Cross XLE",
+      "year": 2022,
+      "color": "rojo",
+      "mileage": 6194,
+      "price": 22995,
+      "body_type": "suv",
+      "engine_liters": 2,
+      "cylinders": 4,
+      "drivetrain": "fwd",
+      "transmission": "automatic",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Elegancia, comodidad y estilo en un solo vehículo. Con solo 6,000 millas, sunroof y asientos en leather, una excelente combinación para disfrutar cada viaje.",
+      "featured": true,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-131-1.jpg",
+        "img/cars/v-131-2.jpg",
+        "img/cars/v-131-3.jpg",
+        "img/cars/v-131-4.jpg",
+        "img/cars/v-131-5.jpg",
+        "img/cars/v-131-6.jpg",
+        "img/cars/v-131-7.jpg"
+      ]
+    },
+    {
       "id": "v-129",
       "status": "active",
       "make": "Toyota",
@@ -306,6 +337,37 @@
         "img/cars/v-007-4.jpg",
         "img/cars/v-007-5.jpg",
         "img/cars/v-007-6.jpg"
+      ]
+    },
+    {
+      "id": "v-130",
+      "status": "active",
+      "make": "Nissan",
+      "model": "Murano SL",
+      "year": 2018,
+      "color": "negro",
+      "mileage": 59272,
+      "price": 14995,
+      "body_type": "suv",
+      "engine_liters": 3.5,
+      "cylinders": 6,
+      "drivetrain": "rwd",
+      "transmission": "",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Elegancia, comodidad y estilo en una sola SUV. Equipada con motor V6 3.5L, techo panorámico y solo 59 mil millas. ¡Una excelente oportunidad para estrenar!",
+      "featured": false,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-130-1.jpg",
+        "img/cars/v-130-2.jpg",
+        "img/cars/v-130-3.jpg",
+        "img/cars/v-130-4.jpg",
+        "img/cars/v-130-5.jpg",
+        "img/cars/v-130-6.jpg",
+        "img/cars/v-130-7.jpg"
       ]
     },
     {
