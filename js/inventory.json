@@ -217,6 +217,37 @@
       ]
     },
     {
+      "id": "v-133",
+      "status": "active",
+      "make": "Ford",
+      "model": "Explorer Sport Trac Adrenalin",
+      "year": 2010,
+      "color": "plata",
+      "mileage": 105636,
+      "price": 13995,
+      "body_type": "suv",
+      "engine_liters": 4,
+      "cylinders": 6,
+      "drivetrain": "4x2",
+      "transmission": "",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Pickup que combina un diseño deportivo, comodidad y versatilidad. Con Sunroof y en óptimas condiciones. Una excelente oportunidad para quienes buscan algo diferente.",
+      "featured": false,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-133-1.jpg",
+        "img/cars/v-133-2.jpg",
+        "img/cars/v-133-3.jpg",
+        "img/cars/v-133-4.jpg",
+        "img/cars/v-133-5.jpg",
+        "img/cars/v-133-6.jpg",
+        "img/cars/v-133-7.jpg"
+      ]
+    },
+    {
       "id": "v-132",
       "status": "active",
       "make": "Honda",
