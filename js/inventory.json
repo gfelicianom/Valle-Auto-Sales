@@ -217,6 +217,36 @@
       ]
     },
     {
+      "id": "v-134",
+      "status": "active",
+      "make": "Toyota",
+      "model": "Tacoma Sport",
+      "year": 2017,
+      "color": "gris",
+      "mileage": 88574,
+      "price": 24995,
+      "body_type": "pickup",
+      "engine_liters": 3.5,
+      "cylinders": 6,
+      "drivetrain": "4x2",
+      "transmission": "",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Potencia, estilo y versatilidad en una sola pickup! Excelente oportunidad para quienes buscan calidad, comodidad y rendimiento.",
+      "featured": false,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-134-1.jpg",
+        "img/cars/v-134-2.jpg",
+        "img/cars/v-134-3.jpg",
+        "img/cars/v-134-4.jpg",
+        "img/cars/v-134-5.jpg",
+        "img/cars/v-134-6.jpg"
+      ]
+    },
+    {
       "id": "v-133",
       "status": "active",
       "make": "Ford",
@@ -639,35 +669,6 @@
         "img/cars/v-114-4.jpg",
         "img/cars/v-114-5.jpg",
         "img/cars/v-114-6.jpg"
-      ]
-    },
-    {
-      "id": "v-112",
-      "status": "active",
-      "make": "Honda",
-      "model": "Accord Sport",
-      "year": 2021,
-      "color": "rojo",
-      "mileage": 87374,
-      "price": 20995,
-      "body_type": "sedan",
-      "engine_liters": 1.5,
-      "cylinders": 4,
-      "drivetrain": "fwd",
-      "transmission": "automatic",
-      "fuel_type": "gasoline",
-      "origin": "local",
-      "registration_fee": "",
-      "condition_tags": [],
-      "notes": "Elegancia, comodidad y estilo en una sola unidad. Disfruta de una excelente experiencia de manejo con el espacio y la sofisticación que buscas.",
-      "featured": false,
-      "sold": false,
-      "photo_urls": [
-        "img/cars/v-112-1.jpg",
-        "img/cars/v-112-2.jpg",
-        "img/cars/v-112-3.jpg",
-        "img/cars/v-112-4.jpg",
-        "img/cars/v-112-5.jpg"
       ]
     },
     {
@@ -1822,37 +1823,6 @@
       ]
     },
     {
-      "id": "v-021",
-      "status": "active",
-      "make": "Toyota",
-      "model": "Highlander",
-      "year": 2016,
-      "color": "blanco",
-      "mileage": 98224,
-      "price": 18995,
-      "body_type": "suv",
-      "engine_liters": 0,
-      "cylinders": 4,
-      "drivetrain": "fwd",
-      "transmission": "automatic",
-      "fuel_type": "gasoline",
-      "origin": "local",
-      "registration_fee": "",
-      "condition_tags": [],
-      "notes": "Una SUV diseñada para quienes buscan comodidad, amplitud y un manejo excepcional. Su elegante diseño y sus tres filas de asientos la convierten en una excelente opción para toda la familia.",
-      "featured": false,
-      "sold": false,
-      "photo_urls": [
-        "img/cars/v-021-1.jpg",
-        "img/cars/v-021-2.jpg",
-        "img/cars/v-021-3.jpg",
-        "img/cars/v-021-4.jpg",
-        "img/cars/v-021-5.jpg",
-        "img/cars/v-021-6.jpg",
-        "img/cars/v-021-7.jpg"
-      ]
-    },
-    {
       "id": "v-018",
       "status": "active",
       "make": "Hyundai",
@@ -1910,36 +1880,6 @@
         "img/cars/v-015-4.jpg",
         "img/cars/v-015-5.jpg",
         "img/cars/v-015-6.jpg"
-      ]
-    },
-    {
-      "id": "v-014",
-      "status": "active",
-      "make": "Hyundai",
-      "model": "Tucson",
-      "year": 2019,
-      "color": "blanco",
-      "mileage": 28027,
-      "price": 14995,
-      "body_type": "suv",
-      "engine_liters": 0,
-      "cylinders": 4,
-      "drivetrain": "fwd",
-      "transmission": "automatic",
-      "fuel_type": "gasoline",
-      "origin": "local",
-      "registration_fee": "",
-      "condition_tags": [],
-      "notes": "SUV diseñada con estilo, comodidad y practicidad en un solo vehículo. Su diseño moderno y su excelente espacio interior la convierten en una opción ideal para el día a día y para disfrutar cada aventura.",
-      "featured": false,
-      "sold": false,
-      "photo_urls": [
-        "img/cars/v-014-1.jpg",
-        "img/cars/v-014-2.jpg",
-        "img/cars/v-014-3.jpg",
-        "img/cars/v-014-4.jpg",
-        "img/cars/v-014-5.jpg",
-        "img/cars/v-014-6.jpg"
       ]
     },
     {
