@@ -248,6 +248,36 @@
       ]
     },
     {
+      "id": "v-135",
+      "status": "active",
+      "make": "Honda",
+      "model": "HR-V Sport",
+      "year": 2022,
+      "color": "gris",
+      "mileage": 64269,
+      "price": 17995,
+      "body_type": "suv",
+      "engine_liters": 1.8,
+      "cylinders": 4,
+      "drivetrain": "fwd",
+      "transmission": "automatic",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Combinación perfecta de versatilidad, diseño moderno y eficiencia. Ideal para quienes buscan comodidad, tecnología y espacio sin sacrificar estilo. ¡Una excelente oportunidad para estrenar tu próximo vehículo!",
+      "featured": false,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-135-1.jpg",
+        "img/cars/v-135-2.jpg",
+        "img/cars/v-135-3.jpg",
+        "img/cars/v-135-4.jpg",
+        "img/cars/v-135-5.jpg",
+        "img/cars/v-135-6.jpg"
+      ]
+    },
+    {
       "id": "v-134",
       "status": "active",
       "make": "Toyota",
