@@ -217,6 +217,37 @@
       ]
     },
     {
+      "id": "v-136",
+      "status": "active",
+      "make": "Nissan",
+      "model": "Frontier",
+      "year": 2019,
+      "color": "blanco",
+      "mileage": 22731,
+      "price": 19995,
+      "body_type": "pickup",
+      "engine_liters": 0,
+      "cylinders": 6,
+      "drivetrain": "4x2",
+      "transmission": "",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Potencia, comodidad y versatilidad en una sola pickup. Equipada con Sunroof. Una excelente oportunidad para quienes buscan calidad y excelentes condiciones.",
+      "featured": false,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-136-1.jpg",
+        "img/cars/v-136-2.jpg",
+        "img/cars/v-136-3.jpg",
+        "img/cars/v-136-4.jpg",
+        "img/cars/v-136-5.jpg",
+        "img/cars/v-136-6.jpg",
+        "img/cars/v-136-7.jpg"
+      ]
+    },
+    {
       "id": "v-134",
       "status": "active",
       "make": "Toyota",
@@ -426,36 +457,6 @@
         "img/cars/v-124-4.jpg",
         "img/cars/v-124-5.jpg",
         "img/cars/v-124-6.jpg"
-      ]
-    },
-    {
-      "id": "v-122",
-      "status": "active",
-      "make": "Toyota",
-      "model": "RAV4 XLE Premium",
-      "year": 2023,
-      "color": "verde",
-      "mileage": 23400,
-      "price": 30995,
-      "body_type": "suv",
-      "engine_liters": 2.5,
-      "cylinders": 4,
-      "drivetrain": "fwd",
-      "transmission": "automatic",
-      "fuel_type": "gasoline",
-      "origin": "local",
-      "registration_fee": "",
-      "condition_tags": [],
-      "notes": "Elegancia, comodidad y versatilidad en una sola SUV. Disfruta de una experiencia de manejo superior con su elegante diseño y sunroof, que aporta amplitud, luz natural y un toque de distinción.",
-      "featured": false,
-      "sold": false,
-      "photo_urls": [
-        "img/cars/v-122-1.jpg",
-        "img/cars/v-122-2.jpg",
-        "img/cars/v-122-3.jpg",
-        "img/cars/v-122-4.jpg",
-        "img/cars/v-122-5.jpg",
-        "img/cars/v-122-6.jpg"
       ]
     },
     {
