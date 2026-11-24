@@ -1,6 +1,66 @@
 {
   "cars": [
     {
+      "id": "v-140",
+      "status": "active",
+      "make": "Toyota",
+      "model": "Corolla",
+      "year": 2023,
+      "color": "negro",
+      "mileage": 22425,
+      "price": 20995,
+      "body_type": "sedan",
+      "engine_liters": 2,
+      "cylinders": 4,
+      "drivetrain": "fwd",
+      "transmission": "automatic",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "✨ ¡Elegancia, comodidad y economía en un solo vehículo!\nUna excelente opción para quienes buscan estilo, eficiencia y confiabilidad. ¡Llévate un vehículo moderno, cómodo y perfecto para el día a día!",
+      "featured": true,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-140-1.jpg",
+        "img/cars/v-140-2.jpg",
+        "img/cars/v-140-3.jpg",
+        "img/cars/v-140-4.jpg",
+        "img/cars/v-140-5.jpg",
+        "img/cars/v-140-6.jpg"
+      ]
+    },
+    {
+      "id": "v-137",
+      "status": "active",
+      "make": "Honda",
+      "model": "Civic Si",
+      "year": 2015,
+      "color": "blanco",
+      "mileage": 125401,
+      "price": 17995,
+      "body_type": "sedan",
+      "engine_liters": 2.4,
+      "cylinders": 4,
+      "drivetrain": "fwd",
+      "transmission": "manual",
+      "fuel_type": "gasoline",
+      "origin": "imported",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Honda Civic Si, una combinación perfecta de diseño deportivo, potencia y excelente desempeño.",
+      "featured": true,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-137-1.jpg",
+        "img/cars/v-137-2.jpg",
+        "img/cars/v-137-3.jpg",
+        "img/cars/v-137-4.jpg",
+        "img/cars/v-137-5.jpg",
+        "img/cars/v-137-6.jpg"
+      ]
+    },
+    {
       "id": "v-129",
       "status": "active",
       "make": "Toyota",
@@ -214,6 +274,36 @@
         "img/cars/v-007-4.jpg",
         "img/cars/v-007-5.jpg",
         "img/cars/v-007-6.jpg"
+      ]
+    },
+    {
+      "id": "v-141",
+      "status": "active",
+      "make": "Toyota",
+      "model": "Corolla LE",
+      "year": 2023,
+      "color": "gris",
+      "mileage": 53038,
+      "price": 19995,
+      "body_type": "sedan",
+      "engine_liters": 2,
+      "cylinders": 4,
+      "drivetrain": "fwd",
+      "transmission": "automatic",
+      "fuel_type": "gasoline",
+      "origin": "local",
+      "registration_fee": "",
+      "condition_tags": [],
+      "notes": "Elegancia, comodidad y economía de combustible en un solo vehículo. Ideal para tu día a día, con el respaldo de una marca reconocida por su durabilidad. ¡Una excelente oportunidad que no puedes dejar pasar!",
+      "featured": false,
+      "sold": false,
+      "photo_urls": [
+        "img/cars/v-141-1.jpg",
+        "img/cars/v-141-2.jpg",
+        "img/cars/v-141-3.jpg",
+        "img/cars/v-141-4.jpg",
+        "img/cars/v-141-5.jpg",
+        "img/cars/v-141-6.jpg"
       ]
     },
     {
